@@ -1,16 +1,21 @@
 <script setup>
-    import VignetteCategorie from '@/components/AccueilSite/VignetteCategorie.vue'
-    
-    import categorieData from '@/assets/json/categories.json'
+    import { ref, onMounted } from 'vue';
+    import VignetteCategorie from '@/components/AccueilSite/VignetteCategorie.vue';
+    import categorieData from '@/assets/json/categories.json';
+    const imagePaths = import.meta.glob('@/assets/img/*.jpg', { eager: true, as: 'url' });
 
-    const imagePaths = import.meta.glob('@/assets/img/*.jpg', {eager: true, as: 'url'}); // subfolders also
-    for(const categorie of categorieData){
-        categorie.img = imagePaths['@' + categorie.img];
-    }
+    // Update the image paths in the categorieData array
+    const updatedCategorieData = ref([]);
 
-    console.log("start")
-    console.log(imagePaths)
-    console.log("end")
+    onMounted(() => {
+        for (const categorie of categorieData) {
+        const imagePath = imagePaths['@/' + categorie.img];
+        if (imagePath) {
+            categorie.img = imagePath.default; // Access the default property of the imported image path
+        }
+        updatedCategorieData.value.push(categorie);
+        }
+    });
 </script>
 
 <template>
@@ -34,7 +39,7 @@
 
         <div class="listeVignetteCat" v-if="categorieData">
             <h2>Explorer nos locations</h2>
-            <VignetteCategorie v-for="categorie in categorieData" :key="categorie.id"
+            <VignetteCategorie v-for="categorie in updatedCategorieData" :key="categorie.id"
                 :objCat="categorie" 
             />
         </div>
