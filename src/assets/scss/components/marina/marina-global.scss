@@ -24,7 +24,7 @@
                 right: 0;
                 z-index: -1;
                 opacity: 0.1;
-                background-image: url("@/assets/img/jpg/wavy_bg_thin.jpg");
+                background-image: url("@/assets/img/wavy_bg_thin.jpg");
                 background-size: cover;
             }
 
@@ -117,7 +117,7 @@
             @include setFlex(row, space-between, center);
             width: 100%;
             padding: 50px 100px;
-            background: top 15% left / cover no-repeat url("@/assets/img/svg/map_location.svg");
+            background: top 15% left / cover no-repeat url("@/assets/img/map_location.svg");
             
             &>.liste-service{
                 width: 400px;

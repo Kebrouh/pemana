@@ -165,7 +165,7 @@
 
             &:hover{
                 // cursor: url(../images/cursor-oeil.svg) 52 52,auto!important;
-                cursor: url('@/assets/img/svg/cursor_dots.svg') 15 15, auto;
+                cursor: url('@/assets/img/cursor_dots.svg') 15 15, auto;
 
                 &::after{
                     display: block;
