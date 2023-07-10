@@ -2,20 +2,21 @@
   import { ref, onMounted } from 'vue';
   import VignetteCategorie from '@/components/AccueilSite/VignetteCategorie.vue';
   import categorieData from '@/assets/json/categories.json';
-  const imagePaths = import.meta.glob('@/assets/img/*.jpg', { eager: true, as: 'url' });
+  const imagePaths = import.meta.glob('/assets/img/*.jpg', { globstar: true });
 
   onMounted(() => {
-    for (const categorie of categorieData) {
-      const imagePath = imagePaths['@/' + categorie.img];
+    const updatedCategorieData = categorieData.map((categorie) => {
+      const imagePath = imagePaths['/assets/img/' + categorie.img];
       if (imagePath) {
-        categorie.img = imagePath.default;
+        categorie.img = imagePath().default;
       }
-    }
-    console.log('Updated categorieData:', categorieData);
+      return categorie;
+    });
+
+    console.log('Updated categorieData:', updatedCategorieData);
   });
 
   const updatedCategorieData = ref(categorieData);
-  console.log('updatedCategorieData:', updatedCategorieData);
 </script>
 
 <template>
