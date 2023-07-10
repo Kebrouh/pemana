@@ -8,8 +8,8 @@
             "code-postal": "QC J7Y 2V4",
             "room": "2",
             "bathroom": "1",
-            "description": "Meublé (tout inclus), Chauffé, éclairé & service internet",
-            "prix": "1 800$",
+            "description": "Belle maison avec beaucoup de cachet, entièrement rénovée de A à Z fin 2022, comprenant un foyer au bois. Entièrement meublée, décorée et équipée, elle offre 2 chambres à coucher avec 4 lits. Une belle terrasse à l'arrière et une cour privée avec accès direct à la rivière du Nord complètent cet ensemble. Elle est située à une distance de marche du centre-ville de Saint-Jérôme. Toute la famille y trouvera son bonheur. À noter que cet appartement est chauffé, éclairé et dispose d'une connexion internet, tous inclus dans le prix de la location.",
+            "prix": "1 950$",
             "images": [
                 "/assets/569_00.jpg",
                 
@@ -28,7 +28,7 @@
             "code-postal": "QC J7Y 2V4",
             "room": "4",
             "bathroom": "1",
-            "description": "Meublé (tout inclus), Chauffé, éclairé & service internet",
+            "description": "Très grand appartement construit et rénové fin 2022, comprenant 4 chambres à coucher avec une très grande salle de bain. Il dispose de portes-fenêtres donnant directement sur la cour. Cet appartement est entièrement meublé, équipé et décoré. Avec ses 8 lits, toute la famille y trouvera son bonheur. Il est situé à une distance de marche du centre-ville de Saint-Jérôme, avec un accès direct à la rivière du Nord depuis la cour.",
             "prix": "2 400$",
             "images": [
             ]
@@ -41,7 +41,8 @@
             "code-postal": "QC J5L 2H6",
             "room": "2",
             "bathroom": "1",
-            "description": "Chauffé, éclairé & service internet",
+            "description": "Un beau 4 1/2 rénové au goût du jour, accès à la cour, possibilité de louer un garage.",
+            "prix": "1 400$",
             "images": [
                 "/assets/1003_00.jpg",
                 "/assets/1003_01.jpg"
@@ -55,7 +56,8 @@
             "code-postal": "QC J5L 2H6",
             "room": "4",
             "bathroom": "1½",
-            "description": "Chauffé, éclairé & service internet",
+            "description": "Très grand appartement rénové au goût du jour avec 4 chambres à coucher, 1 salle de bain et 1 salle d'eau. Une superbe salle à manger avec beaucoup de fenestration offre un accès à la cour. Possibilité d'avoir un garage en supplément. Il est situé dans un secteur tranquille, à quelques minutes du centre-ville de Saint-Jérôme. Le prix de location inclut Internet et l'électricité.",
+            "prix": "2 350$",
             "images": [
                 "/assets/1003_00.jpg",
                 "/assets/1003_01.jpg",
