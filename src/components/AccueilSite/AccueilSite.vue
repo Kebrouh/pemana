@@ -11,9 +11,11 @@
         categorie.img = imagePath.default;
       }
     }
+    console.log('Updated categorieData:', categorieData);
   });
 
   const updatedCategorieData = ref(categorieData);
+  console.log('updatedCategorieData:', updatedCategorieData);
 </script>
 
 <template>
