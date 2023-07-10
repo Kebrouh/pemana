@@ -1,18 +1,17 @@
 <script setup>
-    import { resolveAsset } from 'vite'
-    import { defineProps } from 'vue'
+  import noImage from '@/assets/img/no-img.png'
 
-    const props = defineProps({
-        objCat : null
-    })
+  const props = defineProps({
+    objCat: null
+  })
 
-    const getImagePath = (img) => {
+  const getImagePath = (img) => {
     if (img) {
-        return resolveAsset(`./img/${img}`)
+      return import(`@/assets/img/${img}`).then((module) => module.default)
     } else {
-        return resolveAsset('./img/no-img.png')
+      return Promise.resolve(noImage)
     }
-    }
+  }
 </script>
 
 <template>
