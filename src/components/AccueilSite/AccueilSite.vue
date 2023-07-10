@@ -1,26 +1,19 @@
 <script setup>
-  import { ref, onMounted, reactive } from 'vue';
+  import { ref, onMounted } from 'vue';
   import VignetteCategorie from '@/components/AccueilSite/VignetteCategorie.vue';
   import categorieData from '@/assets/json/categories.json';
   const imagePaths = import.meta.glob('@/assets/img/*.jpg', { eager: true, as: 'url' });
 
-  // Update the image paths in the categorieData array
-  const updatedCategorieData = ref([]);
-
   onMounted(() => {
-    const updatedData = reactive({});
-
     for (const categorie of categorieData) {
       const imagePath = imagePaths['@/' + categorie.img];
       if (imagePath) {
-        categorie.img = imagePath.default; // Access the default property of the imported image path
+        categorie.img = imagePath.default;
       }
-      updatedData[categorie.id] = categorie;
     }
-
-    // Assign updatedData to updatedCategorieData
-    updatedCategorieData.value = Object.values(updatedData);
   });
+
+  const updatedCategorieData = ref(categorieData);
 </script>
 
 <template>
