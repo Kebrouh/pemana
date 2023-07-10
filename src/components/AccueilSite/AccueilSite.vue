@@ -2,13 +2,15 @@
   import { ref, onMounted } from 'vue';
   import VignetteCategorie from '@/components/AccueilSite/VignetteCategorie.vue';
   import categorieData from '@/assets/json/categories.json';
-  const imagePaths = import.meta.glob('/assets/img/*.jpg', { globstar: true });
+  const imagePaths = import.meta.glob('/assets/img/**/*.jpg');
 
   onMounted(() => {
     const updatedCategorieData = categorieData.map((categorie) => {
-      const imagePath = imagePaths['/assets/img/' + categorie.img];
-      if (imagePath) {
-        categorie.img = imagePath().default;
+      for (const path in imagePaths) {
+        if (path.includes(categorie.img)) {
+          categorie.img = imagePaths[path]().default;
+          break;
+        }
       }
       return categorie;
     });
@@ -18,6 +20,7 @@
 
   const updatedCategorieData = ref(categorieData);
 </script>
+
 
 <template>
     <div class="accueil-site">
