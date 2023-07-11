@@ -1,22 +1,13 @@
 <script setup>
-  import { ref, onMounted } from 'vue';
   import VignetteCategorie from '@/components/AccueilSite/VignetteCategorie.vue';
   import categorieData from '@/assets/json/categories.json';
-  const imagePaths = import.meta.glob('/assets/img/*.jpg');
 
-  onMounted(() => {
-    const updatedCategorieData = categorieData.map((categorie) => {
-      const matchingPath = Object.keys(imagePaths).find((path) => path.endsWith(categorie.img));
-      if (matchingPath) {
-        categorie.img = imagePaths[matchingPath]().default;
-      }
-      return categorie;
-    });
+  const imagePaths = import.meta.glob('@/assets/img/*.jpg', {eager: true, as: 'url'}); // subfolders also
 
-    console.log('Updated categorieData:', updatedCategorieData);
-  });
-
-  const updatedCategorieData = ref(categorieData);
+  for(const categorie of categorieData){
+    categorie.img = imagePaths['@' + categorie.img];
+  }
+  console.log(imagePaths)
 </script>
 
 
@@ -37,10 +28,10 @@
         </div>
       </div>
   
-      <div class="listeVignetteCat" v-if="updatedCategorieData">
+      <div class="listeVignetteCat" v-if="categorieData">
         <h2>Explorer nos locations</h2>
 
-        <VignetteCategorie v-for="categorie in updatedCategorieData" :key="categorie.id" :objCat="categorie" />
+        <VignetteCategorie v-for="categorie in categorieData" :key="categorie.id" :objCat="categorie" />
       </div>
     </div>
   </template>
