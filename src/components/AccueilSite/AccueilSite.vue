@@ -2,12 +2,14 @@
   import VignetteCategorie from '@/components/AccueilSite/VignetteCategorie.vue';
   import categorieData from '@/assets/json/categories.json';
 
-  const imagePaths = import.meta.glob('@/assets/img/*.jpg', {eager: true, as: 'url'}); // subfolders also
-  
-  for(const categorie of categorieData){
-    categorie.img = imagePaths['.' + categorie.img];
+  const imagePaths = import.meta.glob('@/assets/img/*.jpg', { eager: true, as: 'url' });
+
+  for (const categorie of categorieData) {
+    const imagePathKey = `./src/assets/img${categorie.img.split('/img')[1]}`;
+    categorie.img = imagePaths[imagePathKey];
   }
-  console.log(imagePaths)
+
+  console.log(imagePaths);
 </script>
 
 
