@@ -3,9 +3,9 @@
   import categorieData from '@/assets/json/categories.json';
 
   const imagePaths = import.meta.glob('@/assets/img/*.jpg', {eager: true, as: 'url'}); // subfolders also
-
+  
   for(const categorie of categorieData){
-    categorie.img = imagePaths['@' + categorie.img];
+    categorie.img = imagePaths['.' + categorie.img];
   }
   console.log(imagePaths)
 </script>
