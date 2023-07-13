@@ -5,7 +5,7 @@
   const imagePaths = import.meta.glob('@/assets/img/*.jpg', { eager: true, as: 'url' });
 
   for (const categorie of categorieData) {
-    categorie.img = '.' + categorie.img;
+    categorie.img = imagePaths['.' + categorie.img];
   }
 
   console.log(imagePaths);
@@ -32,9 +32,7 @@
       <div class="listeVignetteCat" v-if="categorieData">
         <h2>Explorer nos locations</h2>
 
-        <VignetteCategorie v-for="categorie in categorieData" :key="categorie.id" :objCat="categorie">
-          <img :src="getImagePath(categorie.img)" :alt="categorie.img">
-        </VignetteCategorie>
+        <VignetteCategorie v-for="categorie in categorieData" :key="categorie.id" :objCat="categorie" />
       </div>
     </div>
   </template>
