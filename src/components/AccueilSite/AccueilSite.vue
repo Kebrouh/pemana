@@ -1,16 +1,17 @@
 <script setup>
-  import { ref } from 'vue';
   import VignetteCategorie from '@/components/AccueilSite/VignetteCategorie.vue';
   import categorieData from '@/assets/json/categories.json';
 
-  const updatedCategorieData = ref([]);
-
   const imagePaths = import.meta.glob('@/assets/img/*.jpg', { eager: true, as: 'url' });
+  
+  console.log(imagePaths);
+
   for (const categorie of categorieData) {
-    const imagePath = imagePaths['.' + categorie.img];
-    const updatedCategorie = { ...categorie, img: imagePath };
-    updatedCategorieData.value.push(updatedCategorie);
+    categorie.img = imagePaths['.' + categorie.img];
   }
+
+  
+
 </script>
 
 
@@ -31,13 +32,10 @@
         </div>
       </div>
   
-      <div class="listeVignetteCat" v-if="updatedCategorieData">
+      <div class="listeVignetteCat" v-if="categorieData">
         <h2>Explorer nos locations</h2>
-        <VignetteCategorie
-          v-for="categorie in updatedCategorieData"
-          :key="categorie.id"
-          :objCat="categorie"
-        />
+
+        <VignetteCategorie v-for="categorie in categorieData" :key="categorie.id" :objCat="categorie" />
       </div>
     </div>
   </template>
