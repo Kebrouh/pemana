@@ -4,13 +4,17 @@
         objCat : null
     })
 
+    function getImagePath(imgPath) {
+    return imgPath.startsWith('/') ? imgPath.slice(1) : imgPath;
+    }
+
 </script>
 
 <template>
 
     <RouterLink class="vignetteCategorie" :to="props.objCat.link">
         <div class="wrapImg">
-            <img v-if="props.objCat.img" :src="props.objCat.img" :alt="props.objCat.name">
+            <img v-if="props.objCat.img" :src="getImagePath(props.objCat.img)" :alt="props.objCat.name">
             <img v-else src="@/assets/img/no-img.png" :alt="props.objCat.name">
         </div>
     
@@ -21,6 +25,8 @@
     </RouterLink>
     
 </template>
+
+
 
 <style scoped>
 
