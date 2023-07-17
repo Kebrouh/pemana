@@ -4,27 +4,27 @@
     "name": "Quai Marina Zool",
     "icon": "anchor",
     "link": "/marina",
-    "img": "/assets/marina_3d_1000x.jpg"
+    "img": "/assets/marina_3d_1000x-fe1eaf2e.jpg"
   },
   {
     "id": 1,
     "name": "Logement Lac-Supérieur",
     "icon": "home",
     "link": "/lac-superieur",
-    "img": "/assets/69-71_00.jpg"
+    "img": "/assets/69-71_00-503abac0.jpg"
   },
   {
     "id": 2,
     "name": "Logement Saint-Jérôme",
     "icon": "home",
     "link": "/saint-jerome",
-    "img": "/assets/1003_00.jpg"
+    "img": "/assets/1003_00-b1463ccc.jpg"
   },
   {
     "id": 3,
     "name": "Projet à venir",
     "icon": "map",
     "link": "/a-venir",
-    "img": "/assets/proj_a_venir.jpg"
+    "img": "/assets/proj_a_venir-d31f3cfc.jpg"
   }
 ]
