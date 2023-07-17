@@ -35,7 +35,7 @@
       <div class="listeVignetteCat" v-if="categorieData">
         <h2>Explorer nos locations</h2>
 
-        <p v-text="categorie.img"></p>
+        <p v-text="imagePaths"></p>
 
         <VignetteCategorie v-for="categorie in categorieData" :key="categorie.id" :objCat="categorie" :img="categorie.img" />
       </div>
