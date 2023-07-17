@@ -4,16 +4,22 @@
 
   const imagePaths = import.meta.glob('@/assets/img/*.jpg', { eager: true, as: 'url' });
 
+  console.log('categorieData:', categorieData);
+  console.log('imagePaths:', imagePaths);
+
   const modifiedCategories = categorieData.map(categorie => {
     const imageName = categorie.img.substring(categorie.img.lastIndexOf('/') + 1);
     const imagePath = imagePaths['./' + imageName];
+    console.log('imageName:', imageName);
+    console.log('imagePath:', imagePath);
     return {
       ...categorie,
       img: imagePath
     };
   });
-</script>
 
+  console.log('modifiedCategories:', modifiedCategories);
+</script>
 
 <template>
     <div class="accueil-site">
