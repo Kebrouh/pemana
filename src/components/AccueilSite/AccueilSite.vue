@@ -5,6 +5,8 @@
 
   const imagePaths = import.meta.glob('@/assets/img/*.jpg', { eager: true, as: 'url' });
 
+  console.log(imagePaths);
+  
   // for (const categorie of categorieData) {
   //   categorie.img = imagePaths['.' + categorie.img];
   //   console.log(categorie.img)
