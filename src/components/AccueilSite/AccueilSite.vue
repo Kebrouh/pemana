@@ -1,15 +1,16 @@
 <script setup>
   import VignetteCategorie from '@/components/AccueilSite/VignetteCategorie.vue';
 
-  const categorieData = JSON.parse(JSON.stringify(await import('@/assets/json/categories.json')));
+  const categorieData = import('@/assets/json/categories.json');
 
-  const imagePaths = import.meta.glob('/img/*.jpg', { eager: true, as: 'url' });
+  const imagePaths = import.meta.glob('@/assets/img/*.jpg', { eager: true, as: 'url' });
+  
+  console.log(imagePaths);
 
-  for (const categorie of categorieData) {
-    categorie.img = imagePaths['./' + categorie.img]?.default;
-  }
+  // for (const categorie of categorieData) {
+  //   categorie.img = imagePaths['.' + categorie.img];
+  // }
 
-  console.log(categorieData);
 </script>
 
 
@@ -32,7 +33,6 @@
   
       <div class="listeVignetteCat" v-if="categorieData">
         <h2>Explorer nos locations</h2>
-
         <VignetteCategorie v-for="categorie in categorieData" :key="categorie.id" :objCat="categorie"/>
       </div>
     </div>
