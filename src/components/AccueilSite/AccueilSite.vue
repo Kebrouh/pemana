@@ -41,7 +41,7 @@
 
         <p v-text="imagePaths"></p>
 
-        <VignetteCategorie v-for="categorie in categorieData" :key="categorie.id" :objCat="categorie" :img="categorie.img" />
+        <VignetteCategorie v-for="categorie in categorieData" :key="categorie.id" :objCat="categorie"/>
       </div>
     </div>
   </template>
