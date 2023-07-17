@@ -1,25 +1,17 @@
 <script setup>
   import VignetteCategorie from '@/components/AccueilSite/VignetteCategorie.vue';
-  import categorieData from '@/assets/json/categories.json';
 
-  const imagePaths = import.meta.glob('@/assets/img/*.jpg', { eager: true, as: 'url' });
+  const categorieData = JSON.parse(JSON.stringify(await import('@/assets/json/categories.json')));
 
-  console.log('categorieData:', categorieData);
-  console.log('imagePaths:', imagePaths);
+  const imagePaths = import.meta.glob('/img/*.jpg', { eager: true, as: 'url' });
 
-  const modifiedCategories = categorieData.map(categorie => {
-    const imageName = categorie.img.substring(categorie.img.lastIndexOf('/') + 1);
-    const imagePath = imagePaths['./' + imageName];
-    console.log('imageName:', imageName);
-    console.log('imagePath:', imagePath);
-    return {
-      ...categorie,
-      img: imagePath
-    };
-  });
+  for (const categorie of categorieData) {
+    categorie.img = imagePaths['./' + categorie.img]?.default;
+  }
 
-  console.log('modifiedCategories:', modifiedCategories);
+  console.log(categorieData);
 </script>
+
 
 <template>
     <div class="accueil-site">
@@ -38,9 +30,10 @@
         </div>
       </div>
   
-      <div class="listeVignetteCat" v-if="modifiedCategories">
+      <div class="listeVignetteCat" v-if="categorieData">
         <h2>Explorer nos locations</h2>
-        <VignetteCategorie v-for="categorie in modifiedCategories" :key="categorie.id" :objCat="categorie" />
+
+        <VignetteCategorie v-for="categorie in categorieData" :key="categorie.id" :objCat="categorie"/>
       </div>
     </div>
   </template>
