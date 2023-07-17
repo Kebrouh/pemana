@@ -1,13 +1,16 @@
 <script setup>
   import VignetteCategorie from '@/components/AccueilSite/VignetteCategorie.vue';
-  import categorieData from '@/assets/json/categories.json';
+  import { reactive } from 'vue';
+
+  const categorieData = reactive(import('@/assets/json/categories.json'));
 
   const imagePaths = import.meta.glob('@/assets/img/*.jpg', { eager: true, as: 'url' });
   
   console.log(imagePaths);
 
   for (const categorie of categorieData) {
-    categorie.img = imagePaths['.' + categorie.img];
+    const imageName = categorie.img.split('/').pop(); // Extract the image file name
+    categorie.img = imagePaths[`./${imageName}`];
   }
 
   
