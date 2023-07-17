@@ -6,12 +6,8 @@
   
   console.log(imagePaths);
 
-  const modifiedImagePaths = Object.fromEntries(
-    Object.entries(imagePaths).map(([key, value]) => [key.slice(1), value])
-  );
-
   for (const categorie of categorieData) {
-    categorie.img = modifiedImagePaths[categorie.img];
+    categorie.img = imagePaths['.' + categorie.img];
   }
 
   
