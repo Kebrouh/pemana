@@ -1,7 +1,11 @@
 <script setup>
     import AffichageMarina from '@/components/AffichageData/AffichageMarina.vue'
-
     import FooterApp from '@/components/commun/FooterApp/FooterApp.vue'
+
+    import { onBeforeMount } from 'vue'
+    onBeforeMount(() => {
+        window.scrollTo({top:0});
+    })
 </script>
 
 <template>
