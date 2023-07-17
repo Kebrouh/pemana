@@ -24,7 +24,9 @@
 
     onBeforeMount(() => {
         data.id = routeId.value;
-        data.emplacement = routeEmplacement.value;       
+        data.emplacement = routeEmplacement.value;
+        
+        window.scrollTo({top:0});
     })
 
 
