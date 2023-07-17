@@ -1,6 +1,12 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 
 const router = createRouter({
+
+  scrollBehavior(to, from, savedPosition) {
+    // always scroll to top
+    return { top: 0 }
+  },
+
   history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
     {
