@@ -1,15 +1,15 @@
 <script setup>
   import VignetteCategorie from '@/components/AccueilSite/VignetteCategorie.vue';
-
-  const categorieData = import('@/assets/json/categories.json');
+   
+  import categorieData from '@/assets/json/categories.json'
 
   const imagePaths = import.meta.glob('@/assets/img/*.jpg', { eager: true, as: 'url' });
-  
-  console.log(imagePaths);
 
   // for (const categorie of categorieData) {
   //   categorie.img = imagePaths['.' + categorie.img];
-  // }
+  //   console.log(categorie.img)
+  // } //img gets undefined
+  
 
 </script>
 
