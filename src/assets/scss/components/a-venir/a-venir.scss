@@ -8,11 +8,12 @@
         @include setFlex(column, center, center);
         min-height: 100vh;
         
-        & .grid-a-venir{
+        &>.grid-a-venir{
+            position: relative;
             @include setFlex(column, center, start);
             display: grid;
             width: 80%;
-            margin: 150px 0;
+            margin: 50px 0 125px 0;
             grid-template-columns: 500px 150px 500px;
             grid-template-rows: 100px 1fr 1fr 1fr;
 
@@ -245,6 +246,36 @@
                     top: -50px;
                     left: -250px;
                     width: 500px;
+
+                    &>img{
+                        width: 100%;
+                        object-fit: contain;
+                    }
+                }
+            }
+            &>.goop3{
+                position: absolute;
+                z-index: -10;
+                bottom: 50px;
+                left: 0;
+                
+                &>.wrapImg{
+                    width: 200px;
+
+                    &>img{
+                        width: 100%;
+                        object-fit: contain;
+                    }
+                }
+            }
+            &>.goop2{
+                position: absolute;
+                z-index: -10;
+                top: 200px;
+                right: 0;
+                
+                &>.wrapImg{
+                    width: 200px;
 
                     &>img{
                         width: 100%;
