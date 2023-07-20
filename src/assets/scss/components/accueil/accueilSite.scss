@@ -63,7 +63,7 @@
 
             z-index: 10;
 
-            & .info-container{
+            &>.info-container{
                 position: relative;
                 text-align: center;
 
@@ -78,7 +78,7 @@
                     color: white;
                 }
 
-                & .wrapImg{
+                &>.wrapImg{
                     @include setFlex(column, center, center);
                     position: absolute;
                     top: 0;
@@ -93,6 +93,22 @@
                     opacity: 35%;
                 }
             }
+        }
+        &>.wrapGoop1{
+            position: absolute;
+            width: 400px;
+            top: -160px;
+            right: -160px;
+            z-index: 10;
+            opacity: 90%;
+        }
+        &>.wrapGoop2{
+            position: absolute;
+            width: 400px;
+            bottom: -160px;
+            left: -160px;
+            z-index: 10;
+            opacity: 90%;
         }
     }
 

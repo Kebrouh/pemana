@@ -31,6 +31,12 @@
             </div>
           </div>
         </div>
+        <div class="wrapGoop1">
+          <img src="@/assets/img/goop4.svg" alt="goop4">
+        </div>
+        <div class="wrapGoop2">
+          <img src="@/assets/img/goop4.svg" alt="goop4">
+        </div>
       </div>
   
       <div class="listeVignetteCat" v-if="categorieData">
