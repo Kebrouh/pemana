@@ -48,6 +48,16 @@
                     <img src="@/assets/img/goop.svg" alt="goop">
                 </div>
             </div>
+            <div class="goop2">
+                <div class="wrapImg">
+                    <img src="@/assets/img/goop2.svg" alt="goop2">
+                </div>
+            </div>
+            <div class="goop3">
+                <div class="wrapImg">
+                    <img src="@/assets/img/goop3.svg" alt="goop3">
+                </div>
+            </div>
         </div>
 
     </div>
