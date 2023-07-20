@@ -21,17 +21,19 @@
                     <img src="@/assets/img/logo_chertsey.svg" alt="logo_chertsey">
                 </div>
                 <div class="wrapImg">
-                    <img src="@/assets/img/lac_lilly.jpg" alt="">
+                    <img src="@/assets/img/lac_lilly.jpg" alt="lac_lilly">
                 </div>
             </div>
             <div class="lac-simon">
-                <h3>Logement au</h3>
-                <h2>Lac Simon</h2>
+                <div class="wrapTitre">
+                    <h3>Logement au</h3>
+                    <h2>Lac Simon</h2>
+                </div>
                 <div class="wrapImg">
-                    <img src="@/assets/img/no-img.png" alt="">
+                    <img src="@/assets/img/lac_simon.jpg" alt="lac_simon">
                 </div>
                 <div class="wrapLogo">
-                    <img src="@/assets/img/no-img.png" alt="">
+                    <img src="@/assets/img/logo_outaouais.jpg" alt="logo_outaouais">
                 </div>
             </div>
             <div class="et-plus">
