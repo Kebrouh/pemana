@@ -41,6 +41,11 @@
                     <img src="@/assets/img/logo_pemana_light_plein.svg" alt="">
                 </div>
             </div>
+            <div class="goop">
+                <div class="wrapImg">
+                    <img src="@/assets/img/goop.svg" alt="goop">
+                </div>
+            </div>
         </div>
 
     </div>

@@ -213,6 +213,28 @@
                     }
                 }
             }
+
+            &>.goop{
+                grid-column-start: 2;
+                grid-column-end: 3;
+                grid-row-start: 3;
+                grid-row-end: 4;
+
+                position: relative;
+                z-index: -10;
+                
+                &>.wrapImg{
+                    position: absolute;
+                    top: -50px;
+                    left: -250px;
+                    width: 500px;
+
+                    &>img{
+                        width: 100%;
+                        object-fit: contain;
+                    }
+                }
+            }
         }
     }
 }
