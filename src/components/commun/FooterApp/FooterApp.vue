@@ -4,7 +4,6 @@
 </script>
 
 <template>
-    <!-- CHANGER LA CLASS DU DIV ↴ -->
     <div class="footer">
 
         <div class="wrapInfo">
