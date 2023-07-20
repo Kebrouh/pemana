@@ -5,7 +5,36 @@
 .footer{
     width: 100%;
     padding: 1em;
-    background-color: rgb(230, 230, 230);
+    // background-color: rgb(230, 230, 230);
+    position: relative;
+    color: white;
+
+    &::before{
+        display: block;
+        position: absolute;
+        width: 27%;
+        height: 115%;
+        padding: 0;
+        content: "";
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+        border-radius: 0 20px 0 0;
+        background-color: rgb(230, 230, 230);
+    }
+    &::after{
+        display: block;
+        position: absolute;
+        width: 73%;
+        height: 100%;
+        padding: 0;
+        content: "";
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        border-radius: 20px 0 0 0;
+        background-color: var(--vert-lime);
+    }
     
     & .wrapInfo{
         @include setFlex(row, space-around, center);
@@ -29,7 +58,7 @@
                     bottom: -20px;
                     border-radius: 1px;
                     background-color: rgb(220, 220, 220);
-                  }
+                }
 
                 & img{
                     width: 100%;
@@ -53,6 +82,9 @@
 
         & .contact{
 
+            &>h3{
+                font-weight: bold;
+            }
             & ul{
                 padding: 0;
                 margin: 15px;
@@ -64,13 +96,24 @@
         }
 
         & .navFooter{
-    
+            width: 250px;
+
+            &>h3{
+                font-weight: bold;
+            }
             & .links{
                 @include setFlex(column, start, start);
                 margin-left: 15px;
                 
                 & p{
                     margin: 3px;
+
+                    &:hover{
+                        transition: 175ms;
+                        
+                        padding-left: 5px;
+                        font-weight: bold;
+                      }
                 }
             }
         }
