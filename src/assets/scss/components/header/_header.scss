@@ -41,8 +41,10 @@
         position: absolute;
         width: 100px;
         top: 30px;
+        right: 10px;
 
         @include breakpoint-min(768){
+            right: auto;
             top: 300px;
         }
 
