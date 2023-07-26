@@ -69,13 +69,21 @@
 
                 &>h1{
                     font-family: 'Permanent Marker', cursive;
-                    font-size: 5em;
+                    font-size: 3em;
                     color: white;
+
+                    @include breakpoint-min(992){
+                        font-weight: 5em;
+                    }
                 }
                 &>h3{
-                    font-size: 1.7em;
+                    font-size: 1em;
                     font-weight: 300;
                     color: white;
+
+                    @include breakpoint-min(992){
+                        font-weight: 1.7em;
+                    }
                 }
 
                 &>.wrapImg{
@@ -96,36 +104,58 @@
         }
         &>.wrapGoop1{
             position: absolute;
-            width: 400px;
-            top: -160px;
-            right: -160px;
+            width: 100px;
+            top: -50px;
+            right: -50px;
             z-index: 10;
             opacity: 90%;
+
+            @include breakpoint-min(992){
+                width: 400px;
+                top: -160px;
+                right: -160px;
+            }
         }
         &>.wrapGoop2{
             position: absolute;
-            width: 400px;
-            bottom: -160px;
-            left: -160px;
+            width: 100px;
+            bottom: -50px;
+            left: -50px;
             z-index: 10;
             opacity: 90%;
+
+            @include breakpoint-min(992){
+                width: 400px;
+                bottom: -160px;
+                left: -160px;
+            }
         }
     }
 
     & .listeVignetteCat{
         display: grid;
         width: 80%;
-        margin: 150px 0;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 70px 1fr 40px 1fr;
+        margin: 50px 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 1fr 1fr 1fr 1fr;
+        gap: 10px;
+
+        @include breakpoint-min(992){
+            margin: 150px 0;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 70px 1fr 40px 1fr;
+        }
         
         &>h2{
-            grid-column-start: 1;
-            grid-column-end: 4;
             text-align: center;
             font-weight: 200;
             text-decoration: underline;
             text-decoration-thickness: 1px;
+
+            @include breakpoint-min(992){
+                grid-column-start: 1;
+                grid-column-end: 4;
+            }
         }
 
         & .vignetteCategorie{
@@ -192,10 +222,14 @@
             }
         }
         &>.vignetteCategorie:last-of-type{
-            grid-column-start: 1;
-            grid-column-end: 4;
-            grid-row-start: 4;
-            grid-row-end: 5;
+            
+
+            @include breakpoint-min(992){
+                grid-column-start: 1;
+                grid-column-end: 4;
+                grid-row-start: 4;
+                grid-row-end: 5;
+            }
         }
     }
 }
