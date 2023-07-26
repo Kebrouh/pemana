@@ -25,7 +25,7 @@
         <div class="wrapInfo">
           <div class="info-container">
             <h1>Pemana Inc.</h1>
-            <h3>Location de quai et de logement</h3>
+            <h3>Location de logement et de quai</h3>
             <div class="wrapImg">
               <img src="@/assets/img/logo_pemana_light.svg" alt="logo-light-full">
             </div>
