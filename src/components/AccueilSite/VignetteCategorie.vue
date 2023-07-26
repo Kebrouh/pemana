@@ -14,6 +14,8 @@
         <div class="wrapImg">
             <img v-if="props.objCat.img" :src="props.objCat.img" :alt="props.objCat.name">
             <img v-else src="@/assets/img/no-img.png" :alt="props.objCat.name">
+            
+            <!-- <img src="@/assets/img/no-img.png" :alt="props.objCat.name"> -->
         </div>
     
         <div class="wrapInfo">
