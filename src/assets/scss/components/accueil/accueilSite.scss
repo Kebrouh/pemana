@@ -174,10 +174,10 @@
                 position: absolute;
                 padding: 0;
                 content: "";
-                bottom: 0;
+                bottom: 30px;
                 left: 0;
                 width: 200px;
-                height: 100px;
+                height: 75px;
                 border-radius: 0 20px 0 0;
                 z-index: 1;
                 background-color: rgba(102, 153, 51, 0.9);
@@ -230,6 +230,14 @@
                     bottom: 0;
                     left: 0;
                     right: 0;
+                }
+
+                &>span{
+                    display: none;
+
+                    @include breakpoint-min(768){
+                        display: block;
+                    }
                 }
 
                 &>p{
