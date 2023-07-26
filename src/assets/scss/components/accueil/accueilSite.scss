@@ -202,8 +202,7 @@
                 position: absolute;
                 bottom: 0;
                 left: 0;
-                width: 200px;
-                height: 100px;
+                max-width: 150px;
                 margin-top: auto;
                 margin-bottom: auto;
                 margin-left: auto;
@@ -232,6 +231,7 @@
                     font-size: 1em;
                     font-weight: 300;
                     padding: 10px;
+                    margin: 0 0 10px 0;
                     border-radius: 0 30px 0 0;
                     background-color: rgba(102, 153, 51, 0.9);
 
