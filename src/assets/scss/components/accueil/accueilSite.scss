@@ -6,6 +6,7 @@
     @include setFlex(column, start, center);
     width: 100%;
     min-height: 100vh;
+    margin: 0 0 50px 0;
 
     & .accueil-top{
         position: relative;
@@ -147,10 +148,18 @@
             grid-template-rows: 50px 350px 350px 350px 175px;
         }
         @include breakpoint-min(768){
-            margin: 150px 0;
+            margin: 50px 0;
             grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 70px 1fr 40px 1fr;
+            grid-template-rows: 70px 150px 10px 120px;
             gap: 0;
+        }
+        @include breakpoint-min(992){
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 70px 200px 10px 180px;
+        }
+        @include breakpoint-min(1200){
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 70px 1fr 10px 1fr;
         }
         
         &>h2{
