@@ -193,14 +193,11 @@
             
             &>.wrapImg{
                 @include setFlex(column, center, center);
-                width: 100%;
-                height: 300px;
+                max-width: 350px;
+                max-height: 350px;
                 overflow: hidden;
-                
-                
 
                 & img{
-                    max-height: 350px;
                     object-fit: cover;
                 }
             }
