@@ -6,13 +6,17 @@
     @include setFlex(column, start, start);
     width: 100%;
     margin-top: 100px;
+
     
     & .affichage-lacSup{
-        @include setFlex(row, space-between, start);
+        @include setFlex(column, space-between, start);
         width: 100%;
         min-height: 100vh;
         padding: 0;
-
+        
+        @include breakpoint-min(768){
+            @include setFlex(row, space-between, start);
+        }
         @include breakpoint-min(992){
             padding: 0 30px;
         }
