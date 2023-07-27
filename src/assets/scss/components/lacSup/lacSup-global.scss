@@ -88,7 +88,11 @@
         & .liste-vignette-logement{
             @include setFlex(column, start, end);
             position: relative;
-            width: 70%;
+            width: 100%;
+
+            @include breakpoint-min(1400){
+                width: 70%;
+            }
 
             &::after{
                 display: block;
