@@ -31,12 +31,12 @@
 
             & h2{
                 position: relative;
-                top: 140px;
                 font-size: 1em;
                 font-weight: 300;
-
+                
                 @include breakpoint-min(768){
                     position: fixed;
+                    top: 140px;
                 }
                 @include breakpoint-min(1200){
                     font-size: 1.5em;
@@ -47,13 +47,13 @@
             }
             & h1{
                 position: relative;
-                top: 155px;
                 font-size: 2em;
                 font-weight: 900;
                 color: var(--vert-lime);
                 
                 @include breakpoint-min(768){
                     position: fixed;
+                    top: 155px;
                 }
                 @include breakpoint-min(1200){
                     top: 165px;
