@@ -4,43 +4,71 @@
 
 .footer{
     width: 100%;
-    padding: 1em;
-    // background-color: rgb(230, 230, 230);
+    margin-top: 30px;
+    padding: 2em;
+    // background-color: fuchsia;
     position: relative;
     color: white;
+
+    @include breakpoint-min(768){
+        padding: 1em;
+    }
 
     &::before{
         display: block;
         position: absolute;
-        width: 25%;
-        height: 115%;
+        width: 75%;
+        height: 40%;
         padding: 0;
         content: "";
-        left: 0;
-        bottom: 0;
+        top: -20px;
+        right: 0;
         z-index: -1;
-        border-radius: 0 20px 0 0;
+        border-radius: 20px 0 0 20px;
         background-color: rgb(230, 230, 230);
+
+        @include breakpoint-min(768){
+            width: 25%;
+            height: 115%;
+            left: 0;
+            bottom: 0;
+            border-radius: 0 20px 0 0;
+        }
     }
     &::after{
         display: block;
         position: absolute;
-        width: 75%;
-        height: 100%;
         padding: 0;
         content: "";
-        right: 0;
+        top: 0;
         bottom: 0;
-        z-index: -1;
-        border-radius: 20px 0 0 0;
+        left: 0;
+        right: 0;
+        z-index: -2;
         background-color: var(--vert-lime);
+        
+        @include breakpoint-min(768){
+            width: 75%;
+            height: 100%;
+            left: 25%;
+            border-radius: 20px 0 0 0;
+        }
     }
     
     & .wrapInfo{
-        @include setFlex(row, space-around, center);
+        @include setFlex(column, space-between, start);
+        
+        @include breakpoint-min(768){
+            @include setFlex(row, space-around, center);
+        }
         
         & .entreprise{
             @include setFlex(column, center, center);
+            margin: 0 auto;
+
+            @include breakpoint-min(768){
+                margin: 0;
+            }
             
             &>.wrapLogo{
                 position: relative;
@@ -81,6 +109,11 @@
         }
 
         & .contact{
+            margin: 15px 0;
+
+            @include breakpoint-min(768){
+                margin: 0;
+            }
 
             &>h3{
                 font-weight: bold;
