@@ -30,11 +30,14 @@
             margin: 30px;
 
             & h2{
-                position: fixed;
+                position: relative;
                 top: 140px;
                 font-size: 1em;
                 font-weight: 300;
 
+                @include breakpoint-min(768){
+                    position: fixed;
+                }
                 @include breakpoint-min(1200){
                     font-size: 1.5em;
                 }
@@ -43,12 +46,15 @@
                 }
             }
             & h1{
-                position: fixed;
+                position: relative;
                 top: 155px;
                 font-size: 2em;
                 font-weight: 900;
                 color: var(--vert-lime);
                 
+                @include breakpoint-min(768){
+                    position: fixed;
+                }
                 @include breakpoint-min(1200){
                     top: 165px;
                     font-size: 2.5em;
