@@ -116,10 +116,13 @@
             max-width: 350px;
 
             @include breakpoint-min(768){
-                margin-left: 60px;
+                max-width: 250px;
             }
             @include breakpoint-min(992){
-                margin: 0;
+                max-width: 350px;
+            }
+            @include breakpoint-min(1200){
+                max-width: 450px;
             }
 
             &>h3{
