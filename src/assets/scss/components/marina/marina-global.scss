@@ -114,13 +114,34 @@
         }
 
         &>.marina-service{
-            @include setFlex(row, space-between, center);
+            @include setFlex(column, space-between, center);
             width: 100%;
-            padding: 50px 100px;
+            padding: 20px 10px;
             background: top 15% left / cover no-repeat url("@/assets/img/map_location.svg");
             
+            @include breakpoint-min(768){
+                @include setFlex(row, space-between, center);
+                padding: 10px 50px;
+            }
+            @include breakpoint-min(992){
+                padding: 30px 70px;
+            }
+            @include breakpoint-min(1200){
+                padding: 40px 80px;
+            }
+            @include breakpoint-min(1400){
+                padding: 50px 100px;
+            }
+            
             &>.liste-service{
-                width: 400px;
+                max-width: 500px;
+
+                @include breakpoint-min(768){
+                    max-width: 300px;
+                }
+                @include breakpoint-min(992){
+                    max-width: 400px;
+                }
 
                 &>ul{
                     list-style: circle;
@@ -132,6 +153,12 @@
             }
 
             &>.adresse{
+                max-width: 500px;
+                margin: 30px 0;
+
+                @include breakpoint-min(768){
+                    max-width: 200px;
+                }
 
                 &>p{
                     margin: 5px;
@@ -144,8 +171,29 @@
                 position: relative;
                 
                 &>.wrapImg{
-                    width: 500px;
-                    height: 500px;
+                    width: 350px;
+                    height: 350px;
+
+                    @include breakpoint-min(400){
+                        width: 400px;
+                        height: 400px;
+                    }
+                    @include breakpoint-min(768){
+                        width: 250px;
+                        height: 250px;
+                    }
+                    @include breakpoint-min(992){
+                        width: 300px;
+                        height: 300px;
+                    }
+                    @include breakpoint-min(1200){
+                        width: 400px;
+                        height: 400px;
+                    }
+                    @include breakpoint-min(1400){
+                        width: 500px;
+                        height: 500px;
+                    }
                     
                     &>img{
                         width: 100%;
