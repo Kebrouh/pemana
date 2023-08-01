@@ -33,7 +33,7 @@
             </div>
             <div class="wrapInfo">
                 <h3>Projet de construction près de la marina</h3>
-                <p>À venir : <span>Condo à louer pour long terme</span> &amp; <span>Gîte disponible pour location journalière</span></p>
+                <p>À venir : <span>Condo à louer pour long terme</span> &amp; <br><span>Gîte disponible pour location journalière</span></p>
             </div>
         </div>
 
