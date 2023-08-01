@@ -163,10 +163,21 @@
 
     & .wrapImg{
       position: absolute;
-      top: -200px;
+      top: -175px;
       left: 100px;
-      width: 300px;
+      width: 200px;
       padding: 0;
+
+      @include breakpoint-min(400){
+        top: -180px;
+        left: 125px;
+        width: 250px;
+      }
+      @include breakpoint-min(576){
+        top: -200px;
+        left: 100px;
+        width: 300px;
+      }
 
       & img{
         width: 100%;
