@@ -261,8 +261,9 @@
 
     &::after{
         color: white !important;
-        -webkit-text-stroke-width: 3px;
+        -webkit-text-stroke-width: 2px;
         -webkit-text-stroke-color: var(--vert-lime);
+        font-size: 4em !important;
     }
 }
 .swiper-button-next{    
@@ -277,8 +278,9 @@
 
     &::after{
         color: white !important;
-        -webkit-text-stroke-width: 3px;
+        -webkit-text-stroke-width: 2px;
         -webkit-text-stroke-color: var(--vert-lime);
+        font-size: 4em !important;
     }
 }
 .swiper-button-next{
