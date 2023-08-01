@@ -33,7 +33,7 @@
                     <img src="@/assets/img/lac_simon.jpg" alt="lac_simon">
                 </div>
                 <div class="wrapLogo">
-                    <img src="@/assets/img/logo_outaouais.jpg" alt="logo_outaouais">
+                    <img src="@/assets/img/logo_lac_simon.jpg" alt="logo_lac_simon">
                 </div>
             </div>
             <div class="et-plus">
