@@ -14,23 +14,69 @@
             display: grid;
             width: 80%;
             margin: 50px 0 125px 0;
-            grid-template-columns: 500px 150px 500px;
-            grid-template-rows: 100px 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 100px 1fr 1fr;
+            grid-row-gap: 20px;
+            
+            @include breakpoint-min(576){
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            @include breakpoint-min(768){
+                grid-template-columns: 300px 50px 300px;
+            }
+            @include breakpoint-min(992){
+                grid-template-columns: 400px 75px 400px;
+            }
+            @include breakpoint-min(1200){
+                grid-template-columns: 450px 100px 450px;
+            }
+            @include breakpoint-min(1400){
+                grid-template-columns: 500px 150px 500px;
+            }
 
             &>.titre{
                 grid-column-start: 1;
-                grid-column-end: 2;
+                grid-column-end: 5;
                 grid-row-start: 1;
-                grid-row-end: 3;
+                grid-row-end: 2;
                 position: relative;
+                width: 100%;
+
+                @include breakpoint-min(576){
+                    grid-column-start: 1;
+                    grid-column-end: 4;
+                    grid-row-start: 1;
+                    grid-row-end: 2;
+                }
+                @include breakpoint-min(768){
+                    grid-column-start: 1;
+                    grid-column-end: 2;
+                    grid-row-start: 1;
+                    grid-row-end: 3;
+                }
 
                 &>.wrapImg{
                     position: absolute;
-                    width: 700px;
+                    width: 300px;
                     top: 0;
-                    left: -100px;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
                     z-index: -1;
     
+                    @include breakpoint-min(768){
+                        width: 400px;
+                    }
+                    @include breakpoint-min(992){
+                        width: 500px;
+                    }
+                    @include breakpoint-min(1200){
+                        width: 600px;
+                    }
+                    @include breakpoint-min(1400){
+                        width: 700px;
+                    }
+
                     & img{
                         width: 100%;
                         object-fit: contain;
@@ -38,11 +84,24 @@
                 }
             }
             & .lac-lilly{
-                grid-column-start: 3;
-                grid-column-end: 4;
+                grid-column-start: 2;
+                grid-column-end: 5;
                 grid-row-start: 2;
-                grid-row-end: 4;
+                grid-row-end: 3;
                 position: relative;
+
+                @include breakpoint-min(576){
+                    grid-column-start: 2;
+                    grid-column-end: 4;
+                    grid-row-start: 2;
+                    grid-row-end: 3;
+                }
+                @include breakpoint-min(768){
+                    grid-column-start: 3;
+                    grid-column-end: 4;
+                    grid-row-start: 2;
+                    grid-row-end: 4;
+                }
 
                 &>.wrapTitre{
                     padding: 10px;
@@ -101,12 +160,56 @@
                         object-fit: contain;
                     }
                 }
+                &>.goop2{
+                    position: absolute;
+                    z-index: -10;
+                    bottom: 20px;
+                    right: -20px;
+                    width: 100px;
+
+                    @include breakpoint-min(576){
+                        width: 150px;
+                    }
+                    @include breakpoint-min(768){
+                        bottom: -100px;
+                        right: -40px;
+                        width: 200px;
+                    }
+                    @include breakpoint-min(992){
+                        width: 250px;
+                    }
+                    @include breakpoint-min(1200){
+                        width: 300px;
+                    }
+                    
+                    &>.wrapImg{
+                        width: 100%;
+    
+                        &>img{
+                            width: 100%;
+                            object-fit: contain;
+                        }
+                    }
+                }
             }
             & .lac-simon{
                 grid-column-start: 1;
-                grid-column-end: 2;
+                grid-column-end: 4;
                 grid-row-start: 3;
-                grid-row-end: 5;
+                grid-row-end: 4;
+
+                @include breakpoint-min(576){
+                    grid-column-start: 1;
+                    grid-column-end: 3;
+                    grid-row-start: 3;
+                    grid-row-end: 4;
+                }
+                @include breakpoint-min(768){
+                    grid-column-start: 1;
+                    grid-column-end: 2;
+                    grid-row-start: 3;
+                    grid-row-end: 5;
+                }
 
                 position: relative;
 
@@ -145,7 +248,7 @@
                     position: absolute;
                     top: 60px;
                     right: 50px;
-                    width: 100px;
+                    width: 125px;
                     max-height: 200px;
                     padding: 10px;
                     background-color: white;
@@ -167,115 +270,140 @@
                         object-fit: contain;
                     }
                 }
-            }
-            &>.et-plus{
-                grid-column-start: 3;
-                grid-column-end: 4;
-                grid-row-start: 4;
-                grid-row-end: 5;
-
-                position: relative;
-                @include setFlex(column, center, center);
-                height: 100%;
-
-                &>h3{
-                    font-size: 1em;
-                    font-weight: 300;
-                    
-                    @include breakpoint-min(1200){
-                        font-size: 1.5em;
-                    }
-                    @include breakpoint-min(1400){
-                        font-size: 2em;
-                    }
-                }
-                &>h2{
-                    font-size: 2em;
-                    font-weight: 900;
-                    color: var(--vert-lime);
-                    
-                    @include breakpoint-min(1200){
-                        top: 165px;
-                        font-size: 2.5em;
-                    }
-                    @include breakpoint-min(1400){
-                        top: 175px;
-                        font-size: 3em;
-                    }
-                }
-
-                &>.wrapImg{
+                &>.goop3{
                     position: absolute;
-                    @include setFlex(column, center, center);
-                    width: 200px;
-                    top: 0;
-                    bottom: 0;
-                    left: 0;
-                    right: 0;
-                    margin-top: auto;
-                    margin-bottom: auto;
-                    margin-left: auto;
-                    margin-right: auto;
-                    z-index: -1;
-    
-                    @include breakpoint-min(1200){
+                    z-index: -10;
+                    bottom: 20px;
+                    left: -20px;
+                    width: 100px;
+
+                    @include breakpoint-min(576){
+                        width: 150px;
+                    }
+                    @include breakpoint-min(768){
+                        bottom: -100px;
+                        left: -40px;
+                        width: 200px;
+                    }
+                    @include breakpoint-min(992){
                         width: 250px;
                     }
-                    @include breakpoint-min(1400){
+                    @include breakpoint-min(1200){
                         width: 300px;
                     }
-    
-                    & img{
+                    
+                    &>.wrapImg{
                         width: 100%;
-                        object-fit: contain;
+    
+                        &>img{
+                            width: 100%;
+                            object-fit: contain;
+                        }
                     }
                 }
             }
+            // &>.et-plus{
+            //     grid-column-start: 3;
+            //     grid-column-end: 4;
+            //     grid-row-start: 4;
+            //     grid-row-end: 5;
+
+            //     position: relative;
+            //     @include setFlex(column, center, center);
+            //     height: 100%;
+
+            //     &>h3{
+            //         font-size: 1em;
+            //         font-weight: 300;
+                    
+            //         @include breakpoint-min(1200){
+            //             font-size: 1.5em;
+            //         }
+            //         @include breakpoint-min(1400){
+            //             font-size: 2em;
+            //         }
+            //     }
+            //     &>h2{
+            //         font-size: 2em;
+            //         font-weight: 900;
+            //         color: var(--vert-lime);
+                    
+            //         @include breakpoint-min(1200){
+            //             top: 165px;
+            //             font-size: 2.5em;
+            //         }
+            //         @include breakpoint-min(1400){
+            //             top: 175px;
+            //             font-size: 3em;
+            //         }
+            //     }
+
+            //     &>.wrapImg{
+            //         position: absolute;
+            //         @include setFlex(column, center, center);
+            //         width: 200px;
+            //         top: 0;
+            //         bottom: 0;
+            //         left: 0;
+            //         right: 0;
+            //         margin-top: auto;
+            //         margin-bottom: auto;
+            //         margin-left: auto;
+            //         margin-right: auto;
+            //         z-index: -1;
+    
+            //         @include breakpoint-min(1200){
+            //             width: 250px;
+            //         }
+            //         @include breakpoint-min(1400){
+            //             width: 300px;
+            //         }
+    
+            //         & img{
+            //             width: 100%;
+            //             object-fit: contain;
+            //         }
+            //     }
+            // }
 
             &>.goop{
                 grid-column-start: 2;
-                grid-column-end: 3;
+                grid-column-end: 4;
                 grid-row-start: 3;
                 grid-row-end: 4;
 
                 position: relative;
                 z-index: -10;
+
+                @include breakpoint-min(576){
+                    grid-column-start: 2;
+                    grid-column-end: 3;
+                    grid-row-start: 3;
+                    grid-row-end: 4;
+                }
                 
                 &>.wrapImg{
                     position: absolute;
-                    top: -50px;
-                    left: -250px;
-                    width: 500px;
+                    display: none;
 
-                    &>img{
-                        width: 100%;
-                        object-fit: contain;
+                    @include breakpoint-min(768){
+                        display: block;
+                        top: -50px;
+                        left: -200px;
+                        width: 350px;
                     }
-                }
-            }
-            &>.goop3{
-                position: absolute;
-                z-index: -10;
-                bottom: 50px;
-                left: 0;
-                
-                &>.wrapImg{
-                    width: 200px;
-
-                    &>img{
-                        width: 100%;
-                        object-fit: contain;
+                    @include breakpoint-min(992){
+                        left: -225px;
+                        width: 400px;
                     }
-                }
-            }
-            &>.goop2{
-                position: absolute;
-                z-index: -10;
-                top: 200px;
-                right: 0;
-                
-                &>.wrapImg{
-                    width: 200px;
+                    @include breakpoint-min(1200){
+                        left: -250px;
+                        width: 450px;
+                    }
+                    @include breakpoint-min(1400){
+                        top: -50px;
+                        width: 500px;
+                    }
 
                     &>img{
                         width: 100%;
