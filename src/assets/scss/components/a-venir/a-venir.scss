@@ -13,7 +13,7 @@
             @include setFlex(column, center, start);
             display: grid;
             width: 80%;
-            margin: 50px 0 125px 0;
+            margin: 50px 0 50px 0;
             grid-template-columns: 1fr 1fr 1fr 1fr;
             grid-template-rows: 100px 1fr 1fr;
             grid-row-gap: 20px;
@@ -27,6 +27,7 @@
             }
             @include breakpoint-min(992){
                 grid-template-columns: 400px 75px 400px;
+                margin-bottom: 125px;
             }
             @include breakpoint-min(1200){
                 grid-template-columns: 450px 100px 450px;
