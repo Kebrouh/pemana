@@ -9,10 +9,14 @@
         min-height: 100vh;
         
         & .marina-top{
-            @include setFlex(row, center, center);
+            @include setFlex(column, center, center);
             position: relative;
             width: 100%;
             padding: 50px;
+            
+            @include breakpoint-min(768){
+                @include setFlex(row, center, center);
+            }
             
             &::after{
                 display: block;
@@ -30,26 +34,45 @@
 
             &>.titre{
                 position: relative;
-                margin: 8% 50px auto 0;
-                top: 30%;
+                margin: 8% 150px 50px 0;
+                top: 0;
                 z-index: 10;
+                
+                @include breakpoint-min(768){
+                    margin: 8% 50px auto 0;
+                    top: 30%;
+                }
                 
                 &>h1{
                     margin: 0;
-                    font-size: 4em;
+                    font-size: 2em;
                     font-weight: 900;
                     color: var(--bleu-marina);
+
+                    @include breakpoint-min(768){
+                        font-size: 4em;
+                    }
                 }
                 &>h2{
-                    font-size: 2em;
+                    font-size: 1em;
                     font-weight: 300;
+
+                    @include breakpoint-min(768){
+                        font-size: 2em;
+                    }
                 }
                 &>.wrapImg{
                     position: absolute;
                     width: 140%;
-                    bottom: 0;
+                    bottom: -20%;
                     left: -20%;
                     z-index: -1;
+                    
+                    @include breakpoint-min(768){
+                        bottom: 0;
+                        width: 140%;
+                        left: -20%;
+                    }
 
                     &>img{
                         width: 100%;
@@ -62,14 +85,35 @@
                 
                 &>.wrapImg:first-of-type{
                     position: relative;
-                    width: 700px;
-                    height: 700px;
+                    width: 300px;
+                    height: 300px;
+
+                    @include breakpoint-min(576){
+                        width: 400px;
+                        height: 400px;
+                    }
+                    @include breakpoint-min(768){
+                        width: 400px;
+                        height: 400px;
+                    }
+                    @include breakpoint-min(992){
+                        width: 500px;
+                        height: 500px;
+                    }
+                    @include breakpoint-min(1200){
+                        width: 600px;
+                        height: 600px;
+                    }
+                    @include breakpoint-min(1400){
+                        width: 700px;
+                        height: 700px;
+                    }
 
                     &::after{
                         display: block;
                         position: absolute;
-                        width: 250px;
-                        height: 50px;
+                        width: 150px;
+                        height: 25px;
                         padding: 0;
                         content: "";
                         left: -25px;
@@ -77,6 +121,11 @@
                         z-index: 10;
                         border-radius: 10px 0 50px 0;
                         background-color: var(--bleu-marina);
+
+                        @include breakpoint-min(768){
+                            width: 250px;
+                            height: 50px;
+                        }
                     }
                     &>img{
                         object-fit: cover;
@@ -88,10 +137,16 @@
                 }
                 &>.wrapImg:nth-of-type(2){
                     position: absolute;
-                    width: 350px;
-                    height: 350px;
-                    bottom: 50px;
-                    left: -200px;
+                    width: 50%;
+                    height: 50%;
+                    bottom: -7%;
+                    left: -7%;
+                    
+                    @include breakpoint-min(768){
+                        bottom: 7%;
+                        left: -30%;
+                    }
+
                     &>img{
                         object-fit: cover;
                         width: 100%;
@@ -102,7 +157,7 @@
                 }
                 &>.wrapLogo{
                     position: absolute;
-                    width: 150px;
+                    width: 20%;
                     top: 10px;
                     right: 10px;
                     &>img{
@@ -121,13 +176,13 @@
             
             @include breakpoint-min(768){
                 @include setFlex(row, space-between, center);
-                padding: 10px 50px;
+                padding: 5px 50px;
             }
             @include breakpoint-min(992){
-                padding: 30px 70px;
+                padding: 10px 70px;
             }
             @include breakpoint-min(1200){
-                padding: 40px 80px;
+                padding: 30px 80px;
             }
             @include breakpoint-min(1400){
                 padding: 50px 100px;
@@ -143,11 +198,30 @@
                     max-width: 400px;
                 }
 
+                &>h2{
+                    font-size: 1.2em;
+
+                    @include breakpoint-min(768){
+                        font-size: 1.5em;
+                    }
+                    @include breakpoint-min(992){
+                        font-size: 2em;
+                    }
+                }
+
                 &>ul{
                     list-style: circle;
 
                     &>li{
                         margin: 10px 0;
+                        font-size: 0.7em;
+
+                        @include breakpoint-min(768){
+                            font-size: 0.8em;
+                        }
+                        @include breakpoint-min(992){
+                            font-size: 1em;
+                        }
                     }
                 }
             }
@@ -159,10 +233,30 @@
                 @include breakpoint-min(768){
                     max-width: 200px;
                 }
+                @include breakpoint-min(992){
+                    max-width: 225px;
+                }
+                @include breakpoint-min(1200){
+                    max-width: 250px;
+                }
+                @include breakpoint-min(1400){
+                    max-width: 350px;
+                }
+                @include breakpoint-min(1600){
+                    max-width: 450px;
+                }
 
                 &>p{
                     margin: 5px;
                     text-align: right;
+                    font-size: 0.7em;
+
+                    @include breakpoint-min(768){
+                        font-size: 0.8em;
+                    }
+                    @include breakpoint-min(992){
+                        font-size: 1em;
+                    }
                 }
             }
 
@@ -215,45 +309,106 @@
         }
         
         &>.marina-logement{
-            @include setFlex(row, center, center);
+            @include setFlex(column, center, center);
             position: relative;
-            padding: 50px;
+            padding: 0;
+
+            @include breakpoint-min(768){
+                padding: 50px;
+                @include setFlex(row, center, center);
+            }
             
             &>.wrapImg{
                 position: relative;
-                width: 500px;
-                margin: 10px;
 
-                &::after{
-                    display: block;
-                    position: absolute;
-                    width: 200px;
-                    height: 50px;
-                    padding: 0;
-                    content: "";
-                    left: -50px;
-                    top: 25px;
-                    z-index: 10;
-                    border-radius: 0 10px 0 50px;
-                    background-color: var(--bleu-marina);
+                @include breakpoint-min(576){
+                    width: 100%;
+                }
+                @include breakpoint-min(768){
+                    margin: 10px;
+                    width: 400px;
+                }
+                @include breakpoint-min(992){
+                    width: 500px;
                 }
 
                 &>img{
                     width: 100%;
                     object-fit: contain;
                 }
+
+                &::after{
+                    display: block;
+                    position: absolute;
+                    width: 100px;
+                    height: 25px;
+                    padding: 0;
+                    content: "";
+                    left: -50px;
+                    top: 25px;
+                    z-index: 10;
+                    border-radius: 0 50px 0 10px;
+                    background-color: var(--bleu-marina);
+
+                    @include breakpoint-min(576){
+                        width: 150px;
+                        height: 50px;
+                    }
+                    @include breakpoint-min(768){
+                        width: 200px;
+                        height: 50px;
+                        left: -50px;
+                        top: 25px;
+                        border-radius: 0 10px 0 50px;
+                    }
+                }
+
             }
             &>.wrapInfo{
                 position: relative;
-                width: 450px;
+                width: 80%;
                 padding: 10px 30px;
                 top: -40px;
-                left: -40px;
                 background-color: white;
                 border-radius: 20px;
 
+                @include breakpoint-min(768){
+                    max-width: 370px;
+                    top: -40px;
+                    left: -80px;
+                }
+                @include breakpoint-min(992){
+                    width: 450px;
+                    top: -40px;
+                    left: -50px;
+                }
+                @include breakpoint-min(992){
+                    width: 500px;
+                    left: -40px;
+                }
+
+                &>h3{
+
+                    font-size: 1.2em;
+
+                    @include breakpoint-min(768){
+                        font-size: 1.5em;
+                    }
+                    @include breakpoint-min(992){
+                        font-size: 2em;
+                    }
+                }
+
                 &>p{
                     margin: 0;
+                    font-size: 0.7em;
+
+                    @include breakpoint-min(768){
+                        font-size: 0.8em;
+                    }
+                    @include breakpoint-min(992){
+                        font-size: 1em;
+                    }
 
                     &>span{
                         font-weight: 700;
