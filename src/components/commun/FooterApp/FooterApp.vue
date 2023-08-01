@@ -15,6 +15,7 @@
                 </RouterLink>
                 
                 <div class="reseauxSociaux">
+                    <!-- <a target="_blank" href="https://icons8.com/icon/01GWmP9aUoPj/twitterx">Twitter</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> -->
                     <div class="wrapLogo">
                         <img src="@/assets/img/icons8-facebook.svg" alt="icons-facebook">
                     </div>

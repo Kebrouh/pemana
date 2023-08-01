@@ -59,10 +59,9 @@
             "description": "Un beau 4 1/2 rénové au goût du jour, accès à la cour, possibilité de louer un garage.",
             "prix": "1 400$",
             "images": [
-                "/assets/1001_00-a1c22bf2.jpg",
                 "/assets/1001_01-232095d2.jpg",
+                "/assets/1001_00-a1c22bf2.jpg",
                 "/assets/1001_20-9afca8d6.jpg",
-                "/assets/1001_03-007b2354.jpg",
                 "/assets/1001_04-54b58bdc.jpg"
             ]
         },
@@ -73,7 +72,7 @@
             "adresse": "1003 Rue Ruel, Saint-Jérôme",
             "code-postal": "QC J5L 2H6",
             "room": "4",
-            "bathroom": "1½",
+            "bathroom": "2",
             "description": "Très grand appartement rénové au goût du jour avec 4 chambres à coucher, 1 salle de bain et 1 salle d'eau. Une superbe salle à manger avec beaucoup de fenestration offre un accès à la cour. Possibilité d'avoir un garage en supplément. Il est situé dans un secteur tranquille, à quelques minutes du centre-ville de Saint-Jérôme. Le prix de location inclut Internet et l'électricité.",
             "prix": "2 350$",
             "images": [
@@ -83,7 +82,6 @@
                 "/assets/1001_51-8b35e8d2.jpg",
                 "/assets/1001_52-aa9dcfa4.jpg",
                 "/assets/1001_53-68d86a40.jpg",
-                "/assets/1001_03-007b2354.jpg",
                 "/assets/1001_04-54b58bdc.jpg"
             ]
         }
@@ -91,10 +89,31 @@
 
     "lacSup": [
         {
+            "id": 1,
+            "emplacement": "lacSup",
+            "name": "Rez-de-jardin",
+            "adresse": "23 Chem. Brunette, Lac-Supérieur",
+            "code-postal": "QC J0T 1J0",
+            "room": "1",
+            "bathroom": "1",
+            "description": "Propriété de construction 2023, grand 3 ½ avec poêle à bois, 2 chambres à coucher et 1 salle de bain complète. Ce magnifique appartement extrêmement lumineux a été construit avec des matériaux de qualité qui ne laisseront personne indifférent. Situé dans un secteur paisible avec accès au lac, il offre la possibilité d'avoir un garage en supplément. Il se trouve à 10 km du village de Saint-Jovite où vous aurez accès à toutes les commodités nécessaires. Pour des locations avec bail à moyen et long terme. Veuillez noter que les services de télévision, d'internet et d'électricité sont inclus dans le prix du logement.",
+            "prix": "1 365$",
+            "images": [
+                "/assets/69-71_02-c446ee0d.jpg",
+                "/assets/69-71_00-503abac0.jpg",
+                "/assets/69-71_01-595f5104.jpg",
+                "/assets/69-71_03-4d42c28c.jpg",
+                "/assets/69-71_04-dce10690.jpg",
+                "/assets/69-71_05-011fee81.jpg",
+                "/assets/69-71_39-1a97e4d3.jpg",
+                "/assets/69-71_40-656147a0.jpg"
+            ]
+        },
+        {
             "id": 0,
             "emplacement": "lacSup",
             "name": "Maison 2 étages",
-            "adresse": "23 Chem. Brunette, Lac-Supérieur",
+            "adresse": "25 Chem. Brunette, Lac-Supérieur",
             "code-postal": "QC J0T 1J0",
             "room": "3",
             "bathroom": "2",
@@ -145,27 +164,6 @@
             ]
         },
         {
-            "id": 1,
-            "emplacement": "lacSup",
-            "name": "Rez-de-jardin",
-            "adresse": "25 Chem. Brunette, Lac-Supérieur",
-            "code-postal": "QC J0T 1J0",
-            "room": "2",
-            "bathroom": "2",
-            "description": "Propriété de construction 2023, grand 4 ½ avec poêle à bois, 2 chambres à coucher et 1 salle de bain complète. Ce magnifique appartement extrêmement lumineux a été construit avec des matériaux de qualité qui ne laisseront personne indifférent. Situé dans un secteur paisible avec accès au lac, il offre la possibilité d'avoir un garage en supplément. Il se trouve à 10 km du village de Saint-Jovite où vous aurez accès à toutes les commodités nécessaires. Pour des locations avec bail à moyen et long terme. Veuillez noter que les services de télévision, d'internet et d'électricité sont inclus dans le prix du logement.",
-            "prix": "1 365$",
-            "images": [
-                "/assets/69-71_00-503abac0.jpg",
-                "/assets/69-71_01-595f5104.jpg",
-                "/assets/69-71_02-c446ee0d.jpg",
-                "/assets/69-71_03-4d42c28c.jpg",
-                "/assets/69-71_04-dce10690.jpg",
-                "/assets/69-71_05-011fee81.jpg",
-                "/assets/69-71_39-1a97e4d3.jpg",
-                "/assets/69-71_40-656147a0.jpg"
-            ]
-        },
-        {
             "id": 2,
             "emplacement": "lacSup",
             "name": "Maison 2 étages",
@@ -176,8 +174,8 @@
             "description": "DISPONIBLE POUR LA SAISON D'ÉTÉ ET D'HIVER, MINIMUM 3 MOIS, DATE FLEXIBLE. Propriété de construction 2023 entièrement meublé, disponible dès maintenant. Elle peut accueillir jusqu'à 12 personnes grâce à ses 3 chambres à coucher et son boudoir actuellement utilisé comme chambre (2 lits Queen, 4 lits doubles, 3 lits King). Cette maison est parfaite pour une grande famille ou plusieurs familles souhaitant profiter d'un séjour au Lac Supérieur. La tranquillité et l'intimité sont garanties grâce au terrain entouré d'arbres, tandis que le foyer aux bois du salon ajoute une touche chaleureuse à l'ensemble. Contactez-nous pour une visite!",
             "prix": "3 700$",
             "images": [
-                "/assets/69-71_00-503abac0.jpg",
                 "/assets/69-71_01-595f5104.jpg",
+                "/assets/69-71_00-503abac0.jpg",
                 "/assets/69-71_02-c446ee0d.jpg",
                 "/assets/69-71_03-4d42c28c.jpg",
                 "/assets/69-71_04-dce10690.jpg",
@@ -225,15 +223,15 @@
             "name": "Rez-de-jardin",
             "adresse": "41 Chem. Brunette, Lac-Supérieur",
             "code-postal": "QC J0T 1J0",
-            "room": "2",
-            "bathroom": "2",
-            "description": "Propriété de construction 2023, grand 4 ½ avec poêle à bois, 2 chambres à coucher et 1 salle de bain complète. Ce magnifique appartement extrêmement lumineux a été construit avec des matériaux de qualité qui ne laisseront personne indifférent. Situé dans un secteur paisible avec accès au lac, il offre la possibilité d'avoir un garage en supplément. Il se trouve à 10 km du village de Saint-Jovite où vous aurez accès à toutes les commodités nécessaires. Pour des locations avec bail à moyen et long terme. Veuillez noter que les services de télévision, d'internet et d'électricité sont inclus dans le prix du logement.",
+            "room": "1",
+            "bathroom": "1",
+            "description": "Propriété de construction 2023, grand 3 ½ avec poêle à bois, 2 chambres à coucher et 1 salle de bain complète. Ce magnifique appartement extrêmement lumineux a été construit avec des matériaux de qualité qui ne laisseront personne indifférent. Situé dans un secteur paisible avec accès au lac, il offre la possibilité d'avoir un garage en supplément. Il se trouve à 10 km du village de Saint-Jovite où vous aurez accès à toutes les commodités nécessaires. Pour des locations avec bail à moyen et long terme. Veuillez noter que les services de télévision, d'internet et d'électricité sont inclus dans le prix du logement.",
             "prix": "1 365$",
             "images": [
+                "/assets/69-71_03-4d42c28c.jpg",
                 "/assets/69-71_00-503abac0.jpg",
                 "/assets/69-71_01-595f5104.jpg",
                 "/assets/69-71_02-c446ee0d.jpg",
-                "/assets/69-71_03-4d42c28c.jpg",
                 "/assets/69-71_04-dce10690.jpg",
                 "/assets/69-71_05-011fee81.jpg",
                 "/assets/69-71_39-1a97e4d3.jpg",
@@ -251,11 +249,11 @@
             "description": "DISPONIBLE POUR LA SAISON D'ÉTÉ ET D'HIVER, MINIMUM 3 MOIS, DATE FLEXIBLE. Propriété de construction 2023 entièrement meublé, disponible dès maintenant. Elle peut accueillir jusqu'à 12 personnes grâce à ses 3 chambres à coucher et son boudoir actuellement utilisé comme chambre (2 lits Queen, 4 lits doubles, 3 lits King). Cette maison est parfaite pour une grande famille ou plusieurs familles souhaitant profiter d'un séjour au Lac Supérieur. La tranquillité et l'intimité sont garanties grâce au terrain entouré d'arbres, tandis que le foyer aux bois du salon ajoute une touche chaleureuse à l'ensemble. Contactez-nous pour une visite!",
             "prix": "3 700$",
             "images": [
+                "/assets/69-71_04-dce10690.jpg",
                 "/assets/69-71_00-503abac0.jpg",
                 "/assets/69-71_01-595f5104.jpg",
                 "/assets/69-71_02-c446ee0d.jpg",
                 "/assets/69-71_03-4d42c28c.jpg",
-                "/assets/69-71_04-dce10690.jpg",
                 "/assets/69-71_05-011fee81.jpg",
                 "/assets/69-71_06-42428d43.jpg",
                 "/assets/69-71_07-dae5a69a.jpg",
@@ -300,11 +298,12 @@
             "name": "Rez-de-jardin",
             "adresse": "57 Chem. Brunette, Lac-Supérieur",
             "code-postal": "QC J0T 1J0",
-            "room": "2",
-            "bathroom": "2",
-            "description": "Propriété de construction 2023, grand 4 ½ avec poêle à bois, 2 chambres à coucher et 1 salle de bain complète. Ce magnifique appartement extrêmement lumineux a été construit avec des matériaux de qualité qui ne laisseront personne indifférent. Situé dans un secteur paisible avec accès au lac, il offre la possibilité d'avoir un garage en supplément. Il se trouve à 10 km du village de Saint-Jovite où vous aurez accès à toutes les commodités nécessaires. Pour des locations avec bail à moyen et long terme. Veuillez noter que les services de télévision, d'internet et d'électricité sont inclus dans le prix du logement.",
+            "room": "1",
+            "bathroom": "1",
+            "description": "Propriété de construction 2023, grand 3 ½ avec poêle à bois, 2 chambres à coucher et 1 salle de bain complète. Ce magnifique appartement extrêmement lumineux a été construit avec des matériaux de qualité qui ne laisseront personne indifférent. Situé dans un secteur paisible avec accès au lac, il offre la possibilité d'avoir un garage en supplément. Il se trouve à 10 km du village de Saint-Jovite où vous aurez accès à toutes les commodités nécessaires. Pour des locations avec bail à moyen et long terme. Veuillez noter que les services de télévision, d'internet et d'électricité sont inclus dans le prix du logement.",
             "prix": "1 365$",
             "images": [
+                "/assets/69-71_06-42428d43.jpg",
                 "/assets/69-71_00-503abac0.jpg",
                 "/assets/69-71_01-595f5104.jpg",
                 "/assets/69-71_02-c446ee0d.jpg",
@@ -326,6 +325,7 @@
             "description": "DISPONIBLE POUR LA SAISON D'ÉTÉ ET D'HIVER, MINIMUM 3 MOIS, DATE FLEXIBLE. Propriété de construction 2023 entièrement meublé, disponible dès maintenant. Elle peut accueillir jusqu'à 12 personnes grâce à ses 3 chambres à coucher et son boudoir actuellement utilisé comme chambre (2 lits Queen, 4 lits doubles, 3 lits King). Cette maison est parfaite pour une grande famille ou plusieurs familles souhaitant profiter d'un séjour au Lac Supérieur. La tranquillité et l'intimité sont garanties grâce au terrain entouré d'arbres, tandis que le foyer aux bois du salon ajoute une touche chaleureuse à l'ensemble. Contactez-nous pour une visite!",
             "prix": "3 700$",
             "images": [
+                "/assets/69-71_39-1a97e4d3.jpg",
                 "/assets/69-71_00-503abac0.jpg",
                 "/assets/69-71_01-595f5104.jpg",
                 "/assets/69-71_02-c446ee0d.jpg",
@@ -365,7 +365,6 @@
                 "/assets/69-71_36-09217fe5.jpg",
                 "/assets/69-71_37-4bbf7f93.jpg",
                 "/assets/69-71_38-c56b271e.jpg",
-                "/assets/69-71_39-1a97e4d3.jpg",
                 "/assets/69-71_40-656147a0.jpg"
             ]
         },
@@ -375,17 +374,17 @@
             "name": "Rez-de-jardin",
             "adresse": "71 Chem. Brunette, Lac-Supérieur",
             "code-postal": "QC J0T 1J0",
-            "room": "2",
-            "bathroom": "2",
-            "description": "Propriété de construction 2023, grand 4 ½ avec poêle à bois, 2 chambres à coucher et 1 salle de bain complète. Ce magnifique appartement extrêmement lumineux a été construit avec des matériaux de qualité qui ne laisseront personne indifférent. Situé dans un secteur paisible avec accès au lac, il offre la possibilité d'avoir un garage en supplément. Il se trouve à 10 km du village de Saint-Jovite où vous aurez accès à toutes les commodités nécessaires. Pour des locations avec bail à moyen et long terme. Veuillez noter que les services de télévision, d'internet et d'électricité sont inclus dans le prix du logement.",
+            "room": "1",
+            "bathroom": "1",
+            "description": "Propriété de construction 2023, grand 3 ½ avec poêle à bois, 2 chambres à coucher et 1 salle de bain complète. Ce magnifique appartement extrêmement lumineux a été construit avec des matériaux de qualité qui ne laisseront personne indifférent. Situé dans un secteur paisible avec accès au lac, il offre la possibilité d'avoir un garage en supplément. Il se trouve à 10 km du village de Saint-Jovite où vous aurez accès à toutes les commodités nécessaires. Pour des locations avec bail à moyen et long terme. Veuillez noter que les services de télévision, d'internet et d'électricité sont inclus dans le prix du logement.",
             "prix": "1 365$",
             "images": [
+                "/assets/69-71_05-011fee81.jpg",
                 "/assets/69-71_00-503abac0.jpg",
                 "/assets/69-71_01-595f5104.jpg",
                 "/assets/69-71_02-c446ee0d.jpg",
                 "/assets/69-71_03-4d42c28c.jpg",
                 "/assets/69-71_04-dce10690.jpg",
-                "/assets/69-71_05-011fee81.jpg",
                 "/assets/69-71_39-1a97e4d3.jpg",
                 "/assets/69-71_40-656147a0.jpg"
             ]
