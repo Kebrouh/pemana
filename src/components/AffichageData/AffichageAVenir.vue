@@ -14,7 +14,7 @@
             </div>
             <div class="lac-lilly">
                 <div class="wrapTitre">
-                    <h3>Logement au</h3>
+                    <h3>Location court terme</h3>
                     <h2>Lac Lilly</h2>
                 </div>
                 <div class="wrapLogo">
@@ -26,7 +26,7 @@
             </div>
             <div class="lac-simon">
                 <div class="wrapTitre">
-                    <h3>Logement au</h3>
+                    <h3>Location long terme</h3>
                     <h2>Lac Simon</h2>
                 </div>
                 <div class="wrapImg">
