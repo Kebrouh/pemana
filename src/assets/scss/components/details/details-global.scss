@@ -249,14 +249,31 @@
     }
 }
 
-.swiper-button-next, .swiper-button-prev{    
+.swiper-button-prev{    
     padding: 40% 30px !important;
     margin: 0 !important;
     top: 0 !important;
     bottom: 0 !important;
 
     &:hover{
-        background-color: rgba(255, 255, 255, 0.5);
+        background: linear-gradient(270deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    }
+
+    &::after{
+        color: white !important;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: var(--vert-lime);
+        width: 100px !important;
+    }
+}
+.swiper-button-next{    
+    padding: 40% 30px !important;
+    margin: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+
+    &:hover{
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
     }
 
     &::after{
