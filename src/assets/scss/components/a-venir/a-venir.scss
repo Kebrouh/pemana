@@ -193,6 +193,9 @@
                     @include breakpoint-min(1200){
                         width: 300px;
                     }
+                    @include breakpoint-min(1600){
+                        right: -100px;
+                    }
                     
                     &>.wrapImg{
                         width: 100%;
@@ -312,6 +315,9 @@
                     }
                     @include breakpoint-min(1200){
                         width: 300px;
+                    }
+                    @include breakpoint-min(1600){
+                        left: -100px;
                     }
                     
                     &>.wrapImg{
