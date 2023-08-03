@@ -172,7 +172,7 @@
             @include setFlex(column, space-between, center);
             width: 100%;
             padding: 20px 10px;
-            background: top 15% left / cover no-repeat url("@/assets/img/map_location.svg");
+            background: top 15% left / cover no-repeat url("@/assets/img/map_location_v2.svg");
             
             @include breakpoint-min(768){
                 @include setFlex(row, space-between, center);

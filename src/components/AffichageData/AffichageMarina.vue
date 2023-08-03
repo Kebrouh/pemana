@@ -57,7 +57,7 @@
             </div>
             <div class="wrapMap">
                 <div class="wrapImg">
-                    <img src="@/assets/img/map_location_zoom.svg" alt="">
+                    <img src="@/assets/img/map_zoom_v2.svg" alt="">
                 </div>
                 <a href="https://www.google.com/maps/place/692+Chem.+des+Outaouais,+Pointe-Fortune,+QC+J0P+1N0/@45.5615963,-74.3823692,17z/data=!3m1!4b1!4m6!3m5!1s0x4ccec4fbaea2a129:0xde46e275c0255d68!8m2!3d45.5615926!4d-74.3797889!16s%2Fg%2F11cph362pk?entry=ttu" target="_blank">Directions</a>
             </div>
