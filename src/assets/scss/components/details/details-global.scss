@@ -66,10 +66,14 @@
                 }
 
                 & .wrapImg{
-                    width: 450px;
-                    height: 350px;
+                    width: 350px;
+                    height: 300px;
                     overflow: hidden;
 
+                    @include breakpoint-min(576){
+                        width: 450px;
+                        height: 350px;
+                    }
                     @include breakpoint-min(768){
                         width: 300px;
                         height: 200px;
