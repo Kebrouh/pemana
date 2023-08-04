@@ -258,10 +258,14 @@
 }
 
 .swiper-button-prev{    
-    padding: 40% 30px !important;
+    padding: 45% 30px !important;
     margin: 0 !important;
     top: 0 !important;
     bottom: 0 !important;
+
+    @include breakpoint-min(768){
+        padding: 40% 30px !important;
+    }
 
     &:hover{
         background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
@@ -275,10 +279,14 @@
     }
 }
 .swiper-button-next{    
-    padding: 50% 30px !important;
+    padding: 45% 30px !important;
     margin: 0 !important;
     top: 0 !important;
     bottom: 0 !important;
+
+    @include breakpoint-min(768){
+        padding: 40% 30px !important;
+    }
 
     &:hover{
         background: linear-gradient(270deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
