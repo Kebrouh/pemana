@@ -69,9 +69,9 @@
                 }
             }
             &>.wrapImg{
-                position: relative;
+                position: absolute;
                 width: 200px;
-                top: 125px;
+                top: 0;
                 left: 30px;
                 z-index: -1;
                 
@@ -79,7 +79,7 @@
                     position: fixed;
                     width: 200px;
                     top: 125px;
-                    left: 200px;
+                    left: 150px;
                 }
                 @include breakpoint-min(1200){
                     width: 250px;
@@ -100,6 +100,9 @@
             position: relative;
             width: 100%;
 
+            @include breakpoint-min(768){
+                width: 60%;
+            }
             @include breakpoint-min(1400){
                 width: 70%;
             }
@@ -108,13 +111,14 @@
                 display: none;
                 position: absolute;
                 width: 100%;
-                height: 110%;
+                height: 120%;
                 padding: 0;
                 content: "";
-                right: 1%; //why? good question
-                bottom: 0;
-                z-index: -1;
+                right: -2.5%; //why? good question
+                bottom: -5%;
+                z-index: -100;
                 background-color: rgb(250, 250, 250);
+                // background-color: fuchsia;
 
                 @include breakpoint-min(768){
                     display: block;
