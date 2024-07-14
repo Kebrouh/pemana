@@ -3,6 +3,20 @@
         {
             "id": 0,
             "emplacement": "saintJe",
+            "name": "2e étage",
+            "adresse": "571 Rue Laviolette, Saint-Jérôme",
+            "code-postal": "QC J7Y 2V4",
+            "room": "4",
+            "bathroom": "1",
+            "description": "Belle maison avec beaucoup de cachet, entièrement rénovée de A à Z fin 2022. Le 2e étage a été construit en 2024. Elle offre 4 chambres à coucher. Une belle terrasse à l'arrière et une cour privée avec accès direct à la rivière du Nord complètent cet ensemble. Elle est située à distance de marche du centre-ville de Saint-Jérôme. Toute la famille y trouvera son bonheur. À noter que cet appartement est chauffé, éclairé et dispose d'une connexion internet, tous inclus dans le prix de la location.",
+            "prix": "2 900$",
+            "images": [
+                "/assets/569_04-9d943d94.jpg"
+            ]
+        },
+        {
+            "id": 1,
+            "emplacement": "saintJe",
             "name": "Rez-de-chaussée",
             "adresse": "569 Rue Laviolette, Saint-Jérôme",
             "code-postal": "QC J7Y 2V4",
@@ -30,10 +44,10 @@
             ]
         },
         {
-            "id": 1,
+            "id": 2,
             "emplacement": "saintJe",
             "name": "Rez-de-jardin",
-            "adresse": "569 Rue Laviolette, Saint-Jérôme",
+            "adresse": "567 Rue Laviolette, Saint-Jérôme",
             "code-postal": "QC J7Y 2V4",
             "room": "4",
             "bathroom": "1",
@@ -49,7 +63,7 @@
             ]
         },
         {
-            "id": 2,
+            "id": 3,
             "emplacement": "saintJe",
             "name": "1001",
             "adresse": "1001 Rue Ruel, Saint-Jérôme",
@@ -66,7 +80,7 @@
             ]
         },
         {
-            "id": 3,
+            "id": 4,
             "emplacement": "saintJe",
             "name": "1003",
             "adresse": "1003 Rue Ruel, Saint-Jérôme",
