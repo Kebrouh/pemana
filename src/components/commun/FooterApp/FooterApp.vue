@@ -37,7 +37,7 @@
             <div class="contact">
                 <h3>Contact</h3>
                 <ul>
-                    <li>info@jeanfrancoisdube.ca</li>
+                    <li>info@lacliniquedarchitecture.ca</li>
                     <li>(514) 880-3770</li>
                     <li>164, rue de la Charente, Saint-Jérôme, Québec, Canada</li>
                 </ul>
