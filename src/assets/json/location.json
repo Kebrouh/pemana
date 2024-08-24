@@ -11,15 +11,15 @@
             "description": "Le logement est situé dans un secteur tranquille de saint-jérôme , à proximité du centre ville donc vous trouverez dans un très proche rayon tout ce dont vous avez besoin. un terrain intime avec la rivière du nord qui passe dans la cour. le logement est une construction  2024 , avec 4 chambres à coucher, une grande cuisine très pratique, bain autoportant, douche vitrée en céramique et avec ses grandes fenêtres un maximum de luminosité pénètre dans le logement. Cet appartement est loué en formule tout inclus ,c'est-à-dire ; meublé ,décoré et équipé à 100/100. internet et hydro aussi inclus.",
             "prix": "2 875$",
             "images": [
-                "stje_laviolette_03",
-                "stje_laviolette_01",
-                "stje_laviolette_02",
-                "stje_laviolette_06",
-                "stje_laviolette_08",
-                "stje_laviolette_07",
-                "stje_laviolette_09",
-                "571_balcon_02",
-                "571_balcon_04",
+                "stje_laviolette_03.jpg",
+                "stje_laviolette_01.jpg",
+                "stje_laviolette_02.jpg",
+                "stje_laviolette_06.jpg",
+                "stje_laviolette_08.jpg",
+                "stje_laviolette_07.jpg",
+                "stje_laviolette_09.jpg",
+                "571_balcon_02.jpg",
+                "571_balcon_04.jpg",
                 "stje_laviolette_05",
                 "/assets/569_04-9d943d94.jpg"
             ]
@@ -35,8 +35,8 @@
             "description": "Belle maison avec beaucoup de cachet, entièrement rénovée de A à Z fin 2022, comprenant un foyer au bois. Entièrement meublée, décorée et équipée, elle offre 2 chambres à coucher avec 4 lits. Une belle terrasse à l'arrière et une cour privée avec accès direct à la rivière du Nord complètent cet ensemble. Elle est située à une distance de marche du centre-ville de Saint-Jérôme. Toute la famille y trouvera son bonheur. À noter que cet appartement est chauffé, éclairé et dispose d'une connexion internet, tous inclus dans le prix de la location.",
             "prix": "1 950$",
             "images": [
-                "stje_laviolette_04",
-                "stje_laviolette_09",
+                "stje_laviolette_04.jpg",
+                "stje_laviolette_09.jpg",
                 
                 "/assets/569_03-2384cf23.jpg",
                 "/assets/569_04-9d943d94.jpg",
@@ -65,7 +65,7 @@
             "description": "Très grand appartement construit et rénové fin 2022, comprenant 4 chambres à coucher avec une très grande salle de bain. Il dispose de portes-fenêtres donnant directement sur la cour. Cet appartement est entièrement meublé, équipé et décoré. Avec ses 8 lits, toute la famille y trouvera son bonheur. Il est situé à une distance de marche du centre-ville de Saint-Jérôme, avec un accès direct à la rivière du Nord depuis la cour.",
             "prix": "2 400$",
             "images": [
-                "stje_laviolette_09",
+                "stje_laviolette_09.jpg",
                 "/assets/569_52-2668767b.jpg",
                 "/assets/569_53-b9bd98fd.jpg",
                 "/assets/569_54-6f857931.jpg",
