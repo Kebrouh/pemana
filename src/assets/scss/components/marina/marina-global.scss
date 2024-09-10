@@ -372,13 +372,8 @@
 
                 @include breakpoint-min(768){
                     max-width: 370px;
-                    top: -40px;
+                    top: 10px;
                     left: -80px;
-                }
-                @include breakpoint-min(992){
-                    width: 450px;
-                    top: -40px;
-                    left: -50px;
                 }
                 @include breakpoint-min(992){
                     width: 500px;
