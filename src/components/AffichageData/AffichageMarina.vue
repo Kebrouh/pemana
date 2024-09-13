@@ -29,11 +29,16 @@
 
         <div class="marina-logement">
             <div class="wrapImg">
-                <img src="@/assets/img/marina_3d_1000x.jpg" alt="">
+                <a href="https://creagine.ca/360/pointe/" target="_blank">
+                    <img src="@/assets/img/marina_3d_1000x.jpg" alt="">
+                </a>
             </div>
             <div class="wrapInfo">
                 <h3>Projet de construction près de la marina</h3>
                 <p>À venir : <br> <span>Condos à louer pour long terme</span> <br> 8 x <span>3 1/2</span> &amp; 8 x <span>4 1/2</span> <br><br> &amp; <span>Gîte pour location journalière</span></p>
+            </div>
+            <div class="visite">
+                <a href="https://creagine.ca/360/pointe/" target="_blank">Visite virtuel 3D <span class="material-symbols-outlined">visibility</span> </a>
             </div>
         </div>
 

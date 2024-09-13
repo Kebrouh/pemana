@@ -329,10 +329,18 @@
                 @include breakpoint-min(992){
                     width: 500px;
                 }
-
-                &>img{
+                &:hover{
+                    & img{
+                        transition-duration: 0.3s;
+                        transform: scale(1.1);
+                        border-radius: 1em;
+                    }
+                }
+                
+                & img{
                     width: 100%;
                     object-fit: contain;
+
                 }
 
                 &::after{
@@ -407,6 +415,45 @@
                         font-weight: 700;
                         color: var(--bleu-marina);
                     }
+                }
+            }
+            &>.visite{
+                position: absolute;
+                margin: 0 auto;
+                top: 6em;
+                
+                &>a{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    background-color: rgba(255, 255, 255, 0.5);
+                    color: black;
+                    padding: 1em;
+                    border-radius: 1em;
+                    z-index: 10;
+                    &>span{
+                        margin-left: 0.5em;
+                    }
+                    
+                    &:hover{
+                        background-color: var(--bleu-marina);
+                        color: white;
+                    }
+
+                    @include breakpoint-min(576){
+                        color: var(--bleu-marina);
+                        background-color: white;
+                    }
+                }
+                
+                @include breakpoint-min(576){
+                    top: auto;
+                    bottom: 40%;
+                    left: 10%;
+                }
+                @include breakpoint-min(768){
+                    bottom: 25%;
+                    left: 0;
                 }
             }
         }
