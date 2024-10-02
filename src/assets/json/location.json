@@ -112,7 +112,7 @@
 
     "lacSup": [
         {
-            "id": 1,
+            "id": 0,
             "emplacement": "lacSup",
             "name": "Rez-de-jardin",
             "adresse": "23 Chem. Brunette, Lac-Supérieur",
@@ -154,7 +154,7 @@
             ]
         },
         {
-            "id": 0,
+            "id": 1,
             "emplacement": "lacSup",
             "name": "Maison 2 étages",
             "adresse": "25 Chem. Brunette, Lac-Supérieur",
