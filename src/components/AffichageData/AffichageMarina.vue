@@ -19,11 +19,32 @@
                     <img src="@/assets/img/quai.jpg" alt="">
                 </div>
                 <div class="wrapImg">
-                    <img src="@/assets/img/bateau.jpg" alt="">
+                    <img src="@/assets/img/marina_3d_1000x.jpg" alt="">
                 </div>
                 <div class="wrapLogo">
                     <img src="@/assets/img/logo_marina.svg" alt="">
                 </div>
+            </div>
+        </div>
+
+        <div class="galerie-logement">
+            <div class="wrapImg">
+                <img src="Pointe Fortune - Salon.jpg" alt="">
+            </div>
+            <div class="wrapImg">
+                <img src="Pointe Fortune - Salle a manger.jpg" alt="">
+            </div>
+            <div class="wrapImg">
+                <img src="Pointe Fortune - Cuisine.jpg" alt="">
+            </div>
+            <div class="wrapImg">
+                <img src="Pointe Fortune - Chambre 1.jpg" alt="">
+            </div>
+            <div class="wrapImg">
+                <img src="Pointe Fortune - Chambre 2.jpg" alt="">
+            </div>
+            <div class="wrapImg">
+                <img src="Pointe Fortune - Salle de bain.jpg" alt="">
             </div>
         </div>
 
@@ -44,7 +65,7 @@
 
         <div class="marina-service">
             <div class="liste-service">
-                <h2>Services offerts</h2>
+                <h2>Services offerts - <span style="color: #89C5E4;">Gîte</span></h2>
                 <ul>
                     <li>Stationnement réservé à nos clients et leur entourage.</li>
                     <li>Membre saisonnier de la marina</li>

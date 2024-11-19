@@ -135,7 +135,7 @@
                 }
                 &>.wrapImg:nth-of-type(2){
                     position: absolute;
-                    width: 50%;
+                    width: 75%;
                     height: 50%;
                     bottom: -7%;
                     left: -7%;
@@ -162,6 +162,25 @@
                         width: 100%;
                         object-fit: contain;
                     }
+                }
+            }
+        }
+
+        &>.galerie-logement{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding-bottom: 2em;
+
+            &>.wrapImg{
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+                overflow: hidden;
+
+                &>img{
+                    width: 100%;
+                    height: auto;
                 }
             }
         }
