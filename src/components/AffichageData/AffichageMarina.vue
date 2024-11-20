@@ -29,22 +29,22 @@
 
         <div class="galerie-logement">
             <div class="wrapImg">
-                <img src="pf_06.jpg" alt="">
+                <img src="/pf_06.jpg" alt="">
             </div>
             <div class="wrapImg">
-                <img src="pf_04.jpg" alt="">
+                <img src="/pf_04.jpg" alt="">
             </div>
             <div class="wrapImg">
-                <img src="pf_03.jpg" alt="">
+                <img src="/pf_03.jpg" alt="">
             </div>
             <div class="wrapImg">
-                <img src="pf_01.jpg" alt="">
+                <img src="/pf_01.jpg" alt="">
             </div>
             <div class="wrapImg">
-                <img src="pf_02.jpg" alt="">
+                <img src="/pf_02.jpg" alt="">
             </div>
             <div class="wrapImg">
-                <img src="pf_05.jpg" alt="">
+                <img src="/pf_05.jpg" alt="">
             </div>
         </div>
 
