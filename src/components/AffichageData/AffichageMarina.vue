@@ -29,22 +29,22 @@
 
         <div class="galerie-logement">
             <div class="wrapImg">
-                <img src="Pointe Fortune - Salon.jpg" alt="">
+                <img src="pf_06.jpg" alt="">
             </div>
             <div class="wrapImg">
-                <img src="Pointe Fortune - Salle a manger.jpg" alt="">
+                <img src="pf_04.jpg" alt="">
             </div>
             <div class="wrapImg">
-                <img src="Pointe Fortune - Cuisine.jpg" alt="">
+                <img src="pf_03.jpg" alt="">
             </div>
             <div class="wrapImg">
-                <img src="Pointe Fortune - Chambre 1.jpg" alt="">
+                <img src="pf_01.jpg" alt="">
             </div>
             <div class="wrapImg">
-                <img src="Pointe Fortune - Chambre 2.jpg" alt="">
+                <img src="pf_02.jpg" alt="">
             </div>
             <div class="wrapImg">
-                <img src="Pointe Fortune - Salle de bain.jpg" alt="">
+                <img src="pf_05.jpg" alt="">
             </div>
         </div>
 
