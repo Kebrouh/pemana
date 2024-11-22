@@ -1,6 +1,6 @@
 <script setup>
   import VignetteCategorie from '@/components/AccueilSite/VignetteCategorie.vue';
-   
+
   import categorieData from '@/assets/json/categories.json'
 
   const imagePaths = import.meta.glob('@/assets/img/*.jpg', { eager: true, as: 'url' });
@@ -20,7 +20,7 @@
     <div class="accueil-site">
       <div class="accueil-top">
         <div class="wrapImg">
-          <img src="@/assets/img/69-71_00.jpg" alt="lac-sup-principal">
+          <img src="pemana_accueil_site.jpg" alt="img-accueil">
         </div>
         <div class="wrapInfo">
           <div class="info-container">

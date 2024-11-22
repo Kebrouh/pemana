@@ -19,7 +19,7 @@
                     <img src="@/assets/img/quai.jpg" alt="">
                 </div>
                 <div class="wrapImg">
-                    <img src="@/assets/img/marina_3d_1000x.jpg" alt="">
+                    <img src="marina_condo_3d_01.jpg" alt="">
                 </div>
                 <div class="wrapLogo">
                     <img src="@/assets/img/logo_marina.svg" alt="">
