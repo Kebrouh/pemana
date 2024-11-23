@@ -20,7 +20,7 @@
     <div class="accueil-site">
       <div class="accueil-top">
         <div class="wrapImg">
-          <img src="pemana_accueil_site.jpg" alt="img-accueil">
+          <img src="/pemana_accueil_site.jpg" alt="img-accueil">
         </div>
         <div class="wrapInfo">
           <div class="info-container">
