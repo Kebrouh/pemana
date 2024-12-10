@@ -51,7 +51,7 @@
         <div class="marina-logement">
             <div class="wrapImg">
                 <a href="https://creagine.ca/360/pointe/" target="_blank">
-                    <img src="@/assets/img/marina_3d_1000x.jpg" alt="">
+                    <img src="/marina_condo_3d_02.jpg" alt="">
                 </a>
             </div>
             <div class="wrapInfo">
