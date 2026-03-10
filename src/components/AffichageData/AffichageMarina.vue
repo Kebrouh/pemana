@@ -70,7 +70,7 @@
                     <li>Stationnement réservé à nos clients et leur entourage.</li>
                     <li>Membre saisonnier de la marina</li>
                     <li>Électricité 15 ampères</li>
-                    <li>Eau / Toilette</li>
+                    <li>Eau</li>
                     <li>Surveillance des lieux</li>
                     <li>Quais de service ou d'accostage temporaire</li>
                     <li>Activités à proximité</li>
@@ -79,7 +79,7 @@
             <div class="adresse">
                 <p>692 Chem. des Outaouais, Pointe-Fortune</p>
                 <p>QC J0P 1N0</p>
-                <p>(450) 430-3330</p>
+                <p>(514) 269-3770</p>
             </div>
             <div class="wrapMap">
                 <div class="wrapImg">

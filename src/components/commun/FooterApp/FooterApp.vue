@@ -37,7 +37,7 @@
             <div class="contact">
                 <h3>Contact</h3>
                 <ul>
-                    <li>info@lacliniquedarchitecture.ca</li>
+                    <li>pemana2014@gmail.com</li>
                     <li>(514) 880-3770</li>
                     <li>164, rue de la Charente, Saint-Jérôme, Québec, Canada</li>
                 </ul>
