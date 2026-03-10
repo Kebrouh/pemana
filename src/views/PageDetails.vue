@@ -9,7 +9,7 @@
     import location from '@/assets/json/location.json'    
 
     import { Swiper, SwiperSlide } from 'swiper/vue'
-    import { Navigation, Pagination, Virtual } from 'swiper'
+    import { Navigation, Pagination, Virtual } from 'swiper/modules'
     import 'swiper/css'
     import 'swiper/css/bundle'
 
