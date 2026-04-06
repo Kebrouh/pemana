@@ -107,6 +107,34 @@
                 "/assets/1001_53-68d86a40.jpg",
                 "/assets/1001_04-54b58bdc.jpg"
             ]
+        },
+        {
+            "id": 5,
+            "emplacement": "saintJe",
+            "name": "852",
+            "adresse": "852 Rue du Faubourg, Saint-Jérôme",
+            "code-postal": "QC J5L 1Z6",
+            "room": "TBD",
+            "bathroom": "TBD",
+            "description": "DESCRIPTION-TBD",
+            "prix": "PRICE-TBD",
+            "images": [
+                
+            ]
+        },
+        {
+            "id": 5,
+            "emplacement": "saintJe",
+            "name": "854",
+            "adresse": "854 Rue du Faubourg, Saint-Jérôme",
+            "code-postal": "QC J5L 1Z6",
+            "room": "TBD",
+            "bathroom": "TBD",
+            "description": "DESCRIPTION-TBD",
+            "prix": "PRICE-TBD",
+            "images": [
+                
+            ]
         }
     ],
 
