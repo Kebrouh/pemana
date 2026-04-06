@@ -513,6 +513,28 @@
                 "lac_sup_04.JPG",
                 "lac_sup_11.JPG"
             ]
+        },
+        {
+            "id": 8,
+            "emplacement": "lacSup",
+            "name": "NAME-TBD",
+            "adresse": "179 Chem. Brunette, Lac-Supérieur",
+            "code-postal": "QC J0T 1J0",
+            "room": "TBD",
+            "bathroom": "TBD",
+            "description": "DESCRIPTION-TBD",
+            "prix": "PRICE-TBD",
+            "images": [
+                "lacSup179_01.jpeg",
+                "lacSup179_02.jpeg",
+                "lacSup179_03.jpeg",
+                "lacSup179_04.jpeg",
+                "lacSup179_05.jpeg",
+                "lacSup179_06.jpeg",
+                "lacSup179_07.jpeg",
+                "lacSup179_08.jpeg",
+                "lacSup179_09.jpeg"
+            ]
         }
     ]
 }

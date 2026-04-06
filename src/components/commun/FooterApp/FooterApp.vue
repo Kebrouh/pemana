@@ -20,16 +20,7 @@
                         <img src="@/assets/img/icons8-facebook.svg" alt="icons-facebook">
                     </div>
                     <div class="wrapLogo">
-                        <img src="@/assets/img/icons8-twitter.svg" alt="icons-twitter">
-                    </div>
-                    <div class="wrapLogo">
-                        <img src="@/assets/img/icons8-tumblr.svg" alt="icons-tumblr">
-                    </div>
-                    <div class="wrapLogo">
                         <img src="@/assets/img/icons8-instagram.svg" alt="icons-instagram">
-                    </div>
-                    <div class="wrapLogo">
-                        <img src="@/assets/img/icons8-pinterest.svg" alt="icons-pinterest">
                     </div>
                 </div>
             </div>
