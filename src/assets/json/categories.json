@@ -11,14 +11,14 @@
     "name": "Logement Lac-Supérieur",
     "icon": "home",
     "link": "/lac-superieur",
-    "img": "/assets/69-71_00-503abac0.jpg"
+    "img": "rez de jardin brunette 2.jpg"
   },
   {
     "id": 2,
     "name": "Logement Saint-Jérôme",
     "icon": "home",
     "link": "/saint-jerome",
-    "img": "stje_laviolette_03.jpg"
+    "img": "stje_laviolette_02.jpg"
   },
   {
     "id": 3,
