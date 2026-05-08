@@ -146,10 +146,10 @@
             "name": "852",
             "adresse": "852 Rue du Faubourg, Saint-Jérôme",
             "code-postal": "QC J5L 1Z6",
-            "room": "TBD",
-            "bathroom": "TBD",
+            "room": "1",
+            "bathroom": "1",
             "description": "DESCRIPTION-TBD",
-            "prix": "PRICE-TBD",
+            "prix": "sur demande",
             "images": [
                 
             ]
@@ -160,10 +160,10 @@
             "name": "854",
             "adresse": "854 Rue du Faubourg, Saint-Jérôme",
             "code-postal": "QC J5L 1Z6",
-            "room": "TBD",
-            "bathroom": "TBD",
+            "room": "6",
+            "bathroom": "2",
             "description": "DESCRIPTION-TBD",
-            "prix": "PRICE-TBD",
+            "prix": "sur demande",
             "images": [
                 
             ]
@@ -577,13 +577,13 @@
         {
             "id": 8,
             "emplacement": "lacSup",
-            "name": "NAME-TBD",
+            "name": "179",
             "adresse": "179 Chem. Brunette, Lac-Supérieur",
             "code-postal": "QC J0T 1J0",
-            "room": "TBD",
-            "bathroom": "TBD",
+            "room": "2",
+            "bathroom": "1",
             "description": "DESCRIPTION-TBD",
-            "prix": "PRICE-TBD",
+            "prix": "sur demande",
             "images": [
                 "lacSup179_01.jpeg",
                 "lacSup179_02.jpeg",
