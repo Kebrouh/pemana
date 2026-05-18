@@ -26,10 +26,12 @@
 
         &>.titre{
             position: relative;
+            display: block;
             width: 100%;
             margin: 30px;
 
             @include breakpoint-min(768){
+                display: flex;
                 width: 30%;
             }
 
@@ -91,6 +93,43 @@
                 & img{
                     width: 100%;
                     object-fit: contain;
+                }
+            }
+
+            &>.wheater{
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                width: 100px;
+                color: white;
+                background-color: rgba(102, 153, 51, 0.9);
+                font-size: 0.8em;
+                font-weight: 600;
+                justify-content: left;
+                align-items: center;
+                padding: 1em;
+                border-radius: 20px;
+
+                &>p{
+                    margin: 0;
+                    padding-right: 0.5em;
+                }
+
+                &:hover{
+                    transition-duration: 0.3s;
+                    color: white;
+                    background-color: rgba(102, 153, 51, 0.9);
+                    border-radius: 20px;
+                }
+
+                @include breakpoint-min(768){
+                    width: auto;
+                    color: white;
+                    border-radius: 0px;
+                    background-color: black;
+                    padding: 1em;
+                    font-size: 1em;
                 }
             }
         }

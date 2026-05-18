@@ -16,7 +16,13 @@
             <div class="wrapImg">
                 <img src="@/assets/img/logo_pemana_light_plein.svg" alt="">
             </div>
+        
+            <a class="wheater" href="https://www.meteomedia.com/fr/ville/ca/quebec/saint-jerome/actuelle" target="blank">
+                <p>Météo</p>
+                <span class="material-symbols-outlined">cloud</span>
+            </a>
         </div>
+
 
         <div class="liste-vignette-logement" v-if="location">
             <VignetteLogement v-for="logement in location.saintJe" :key="logement.id"

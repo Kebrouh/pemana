@@ -17,7 +17,7 @@
     @media (min-width: #{$screen}px){
         @content;
     }
- }
+}
 
 @mixin resetBox{
     padding : 0;
