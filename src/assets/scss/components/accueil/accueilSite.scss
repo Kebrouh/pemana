@@ -194,7 +194,7 @@
             &>.wrapImg{
                 @include setFlex(column, center, center);
                 width: 100%;
-                max-height: 350px;
+                height: 100%;
                 overflow: hidden;
                 
                 
@@ -207,15 +207,9 @@
             
             &>.wrapInfo{
                 @include setFlex(column, center, center);
-                display: block;
                 position: absolute;
                 bottom: 0;
                 left: 0;
-                max-width: 150px;
-                margin-top: auto;
-                margin-bottom: auto;
-                margin-left: auto;
-                margin-right: auto;
                 z-index: 10;
                 color: white;
                 
@@ -240,7 +234,6 @@
                     font-size: 1em;
                     font-weight: 300;
                     padding: 10px;
-                    margin: 0 0 30px 0;
                     border-radius: 0 30px 0 0;
                     background-color: rgba(102, 153, 51, 0.9);
 
@@ -266,12 +259,23 @@
         }
         &>.vignetteCategorie:last-of-type{
             
+            &>.wheater{
+                display: none;
+            }
 
             @include breakpoint-min(768){
                 grid-column-start: 1;
                 grid-column-end: 4;
                 grid-row-start: 4;
                 grid-row-end: 5;
+            }
+        }
+        &>.vignetteCategorie:first-of-type{
+            &>.wrapImg{
+
+                & img{
+                    height: 110%;
+                }
             }
         }
     }

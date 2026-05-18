@@ -26,14 +26,16 @@
 
         & .titre{
             position: relative;
+            display: block;
             width: 100%;
-            margin: 30px 30px 225px 30px;
+            margin: 30px 30px 275px 30px;
 
             @include breakpoint-min(516){
                 margin-bottom: 300px;
             }
 
             @include breakpoint-min(768){
+                display: flex;
                 margin: 30px;
                 width: 30%;
             }
@@ -99,13 +101,46 @@
                 }
             }
 
+            &>.wheater{
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                color: white;
+                background-color: rgba(102, 153, 51, 0.9);
+                font-weight: 600;
+                justify-content: left;
+                align-items: center;
+                padding: 1em;
+                width: 80%;
+
+                &>p{
+                    margin: 0;
+                    padding-right: 0.5em;
+                }
+
+                &:hover{
+                    transition-duration: 0.3s;
+                    color: white;
+                    background-color: rgba(102, 153, 51, 0.9);
+                    border-radius: 20px;
+                }
+
+                @include breakpoint-min(768){
+                    color: white;
+                    background-color: black;
+                    width: auto;
+                }
+            }
+
             &>.video{
                 position: absolute;
                 margin: 1em auto;
                 width: 80%;
-                height: 200px;
+                height: 250px;
                 border-radius: 50px 0 0 0;
                 overflow: hidden;
+                object-fit: contain;
                 
                 @include breakpoint-min(516){
                     height: 250px;

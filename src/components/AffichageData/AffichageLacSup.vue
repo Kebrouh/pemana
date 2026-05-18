@@ -16,6 +16,12 @@
             <div class="wrapImg">
                 <img src="@/assets/img/logo_pemana_light_plein.svg" alt="">
             </div>
+
+            <a class="wheater" href="https://www.meteomedia.com/fr/chalet/ca/quebec/lac-superieur/actuelle" target="blank">
+                <p>Météo</p>
+                <span class="material-symbols-outlined">cloud</span>
+            </a>
+
             <div class="video">
                 <iframe 
                     class="vid"
