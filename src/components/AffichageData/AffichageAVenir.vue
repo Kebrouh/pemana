@@ -46,18 +46,31 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="et-plus">
-                <h3>Plus de projets</h3>
-                <h2>Prochainement</h2>
-                <div class="wrapImg">
-                    <img src="@/assets/img/logo_pemana_light_plein.svg" alt="">
+            <div class="saint-adele">
+                <div class="wrapTitre">
+                    <h3>Location court terme</h3>
+                    <h2>Saint-Adèle</h2>
                 </div>
-            </div> -->
-            <div class="goop">
+                <div class="wrapImg">
+                    <img src="/saintAdele_aVenir.jpg" alt="saint_adele">
+                </div>
+                <div class="wrapLogo">
+                    <img src="/logo_saint_adele.jpg" alt="logo_saint_adele">
+                </div>
+                <div class="goop3">
+                    <div class="wrapImg">
+                        <img src="@/assets/img/goop3.svg" alt="goop3">
+                    </div>
+                </div>
+                <div class="upcomming">
+                    <p>Pour cette automne</p>
+                </div>
+            </div>
+            <!-- <div class="goop">
                 <div class="wrapImg">
                     <img src="@/assets/img/goop.svg" alt="goop">
                 </div>
-            </div>
+            </div> -->
             
         </div>
 
