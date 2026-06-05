@@ -107,24 +107,6 @@
                         height: 700px;
                     }
 
-                    &::after{
-                        display: block;
-                        position: absolute;
-                        width: 150px;
-                        height: 25px;
-                        padding: 0;
-                        content: "";
-                        left: -25px;
-                        top: 25px;
-                        z-index: 10;
-                        border-radius: 10px 0 50px 0;
-                        background-color: var(--bleu-marina);
-
-                        @include breakpoint-min(768){
-                            width: 250px;
-                            height: 50px;
-                        }
-                    }
                     &>img{
                         object-fit: cover;
                         width: 100%;
@@ -144,7 +126,7 @@
                         bottom: 7%;
                         left: -30%;
                     }
-
+                    
                     &>img{
                         object-fit: cover;
                         width: 100%;
@@ -161,6 +143,30 @@
                     &>img{
                         width: 100%;
                         object-fit: contain;
+                    }
+                }
+                &>.wrapPrice{
+                    display: block;
+                    position: absolute;
+                    padding: 0.5em;
+                    left: -25px;
+                    top: 25px;
+                    z-index: 10;
+                    border-radius: 10px 0 10px 0;
+                    color: white;
+                    background-color: var(--bleu-marina);
+                    font-weight: bold;
+                    font-size: 0.75em;
+
+                    @include breakpoint-min(768){
+                        font-size: 0.9em;
+                    }
+                    @include breakpoint-min(992){
+                        font-size: 1em;
+                    }
+                    
+                    &>p{
+                        margin: 0;
                     }
                 }
             }
@@ -281,6 +287,44 @@
                 @include setFlex(column, center, center);
                 position: relative;
                 
+                &>.wheater{
+                    position: absolute;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: left;
+                    align-items: center;
+                    margin: 60px auto auto;
+                    width: 100px;
+                    color: white;
+                    background-color: var(--bleu-marina);
+                    font-size: 0.8em;
+                    font-weight: 600;
+                    text-decoration: none;
+                    padding: 1em;
+                    border-radius: 20px;
+
+                    &>p{
+                        margin: 0;
+                        padding-right: 0.5em;
+                    }
+
+                    &:hover{
+                        transition-duration: 0.3s;
+                        color: white;
+                        background-color: var(--bleu-marina);
+                        border-radius: 20px;
+                    }
+
+                    @include breakpoint-min(768){
+                        width: auto;
+                        color: white;
+                        border-radius: 0px;
+                        background-color: black;
+                        padding: 1em;
+                        font-size: 1em;
+                    }
+                }
+
                 &>.wrapImg{
                     width: 350px;
                     height: 350px;
@@ -474,6 +518,66 @@
                     bottom: 25%;
                     left: 0;
                 }
+            }
+
+            &>.logement-service{
+                @include setFlex(column, space-between, center);
+                width: 100%;
+                padding: 20px 10px;
+                
+                @include breakpoint-min(768){
+                    @include setFlex(row, space-between, center);
+                    padding: 5px 50px;
+                }
+                @include breakpoint-min(992){
+                    padding: 10px 70px;
+                }
+                @include breakpoint-min(1200){
+                    padding: 30px 80px;
+                }
+                @include breakpoint-min(1400){
+                    padding: 50px 100px;
+                }
+                
+                &>.liste-service{
+                    max-width: 500px;
+
+                    @include breakpoint-min(768){
+                        max-width: 300px;
+                    }
+                    @include breakpoint-min(992){
+                        max-width: 400px;
+                    }
+
+                    &>h2{
+                        font-size: 1.2em;
+
+                        @include breakpoint-min(768){
+                            font-size: 1.5em;
+                        }
+                        @include breakpoint-min(992){
+                            font-size: 2em;
+                        }
+                    }
+
+                    &>ul{
+                        list-style: circle;
+
+                        &>li{
+                            margin: 10px 0;
+                            font-size: 0.7em;
+
+                            @include breakpoint-min(768){
+                                font-size: 0.8em;
+                            }
+                            @include breakpoint-min(992){
+                                font-size: 1em;
+                            }
+                        }
+                    }
+                }
+
+                
             }
         }
     }
