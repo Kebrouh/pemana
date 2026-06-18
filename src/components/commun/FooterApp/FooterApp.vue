@@ -26,7 +26,8 @@
                 <h3>Contact</h3>
                 <ul>
                     <li>pemana2014@gmail.com</li>
-                    <li>(514) 880-3770</li>
+                    <li>(514) 269-3770 - <p>Alexandre Cagiotti, Directeur des ventes</p></li>
+                    <li>(514) 880-3770 - <p>Jean-François Dubé, Propriétaire</p></li>
                     <li>164, rue de la Charente, Saint-Jérôme, Québec, Canada</li>
                 </ul>
             </div>

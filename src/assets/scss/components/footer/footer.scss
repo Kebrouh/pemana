@@ -121,7 +121,7 @@
                 max-width: 350px;
             }
             @include breakpoint-min(1200){
-                max-width: 450px;
+                max-width: 550px;
             }
 
             &>h3{
@@ -139,6 +139,14 @@
                 & li{
                     margin: 6px;
                     font-size: 0.8em;
+
+                    & p{
+                        font-size: 0.6em;
+
+                        @include breakpoint-min(992){
+                        font-size: 0.8em;
+                    }
+                    }
 
                     @include breakpoint-min(992){
                         font-size: 1em;
