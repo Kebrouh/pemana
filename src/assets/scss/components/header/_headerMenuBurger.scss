@@ -39,7 +39,7 @@
     top: -10px;
     z-index: -1;
     border-radius: 100%;
-    background-color: rgb(230, 230, 230);
+    background-color: var(--vert-lime);
   }
 }
   .bm-burger-bars {
@@ -92,7 +92,7 @@
       top: -24px;
       z-index: -1;
       border-radius: 100%;
-      background-color: rgb(230, 230, 230);
+      background-color: var(--vert-lime);
     }
   }
   .bm-menu {

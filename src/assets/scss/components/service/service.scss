@@ -1,0 +1,180 @@
+/* Affichage Service layout: two columns on desktop, one column on mobile
+	 wrapIntroForm on the left, wrapForm on the right. Colors use CSS vars
+	 (defined in project variables file) with sensible fallbacks. */
+
+.affichageService {
+    position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	align-items: stretch;
+
+    & .wrapImg{
+        display: none;
+        z-index: -10;
+        position: absolute;
+        top: auto;
+        bottom: auto;
+        right: auto;
+        left: auto;
+        margin : 0 auto;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include breakpoint-min(768){
+            display: block;
+        }
+        
+        & img{
+            display: none;
+            width: 100%;
+            height: auto;
+            
+            @include breakpoint-min(768){
+                display: block;
+            }
+        }
+    }
+
+	.wrapIntroForm,
+	.wrapForm {
+        position: relative;
+		width: 100%;
+	}
+
+	/* wrapForm styling to look good */
+	.wrapForm {
+		padding: 2.5em 1.25em;
+		border-radius: 8px;
+		background: var(--card-bg, #ffffff);
+		box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+		color: var(--text-color, #222);
+		border: 1px solid rgba(0,0,0,0.05);
+
+		button {
+			background: var(--vert-lime);
+			color: white;
+			border: none;
+			padding: 0.6rem 1rem;
+			border-radius: 6px;
+			cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            span {
+                font-size: 1.2rem;
+                margin-left: 0.5rem;
+            }
+		}
+	}
+
+	/* Desktop: two columns */
+	@media (min-width: 768px) {
+		flex-direction: row;
+		align-items: flex-start;
+
+		/* give the whole layout some breathing room on desktop */
+		padding: 2.5rem;
+
+		.wrapIntroForm {
+			flex: 1 1 48%;
+			max-width: 48%;
+
+			/* center content vertically inside the intro column */
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+            margin: auto 0;
+
+            h2 {
+                font-weight: bold;
+                font-size: 4em;
+                line-height: 0.9em;
+                margin-bottom: 0.5em;
+                color: var(--vert-lime);
+            }
+            h3 {
+                font-weight: lighter;
+                font-size: 1.2em;
+            }
+		}
+
+		.wrapForm {
+			flex: 1 1 48%;
+			max-width: 48%;
+            background-color: rgb(243, 243, 243);
+
+            & div{
+                margin-bottom: 1rem;
+            }
+
+            & input, & textarea {
+                width: 100%;
+                padding: 0.5em;
+                margin: 0;
+                border:  none;
+                border-radius: 0.5em;
+            }
+            & p{
+                padding: 0;
+                margin: 0 0 0.25em;
+            }
+		}
+	}
+
+    /* Mobile: improve spacing and readable sizes */
+    @media (max-width: 767px) {
+        /* ensure stacked layout, comfortable padding */
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+
+        .wrapIntroForm {
+            width: 100%;
+            max-width: 100%;
+            padding: 0.5rem 0;
+
+            h2 {
+                font-size: 2rem;
+                line-height: 1.05;
+                margin-bottom: 0.5rem;
+            }
+            h3 { font-size: 1rem; }
+        }
+
+        .wrapForm {
+            width: 100%;
+            max-width: 100%;
+            padding: 1rem;
+            border-radius: 6px;
+            background-color: var(--card-bg, #fff);
+
+            & div{ margin-bottom: 0.75rem; }
+
+            & input, & textarea {
+                width: 100%;
+                padding: 0.75rem;
+                margin: 0;
+                border-radius: 0.5rem;
+            }
+
+            button {
+                width: 100%;
+                padding: 0.8rem;
+            }
+        }
+
+        /* make background image section not overlap content on small screens */
+        .wrapImg {
+            position: relative;
+            z-index: 0;
+            height: auto;
+            padding: 0.5rem 0;
+            img { width: 100%; height: auto; max-height: 240px; object-fit: cover; }
+        }
+    }
+}

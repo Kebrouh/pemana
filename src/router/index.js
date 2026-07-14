@@ -30,6 +30,11 @@ const router = createRouter({
       name: 'a-venir',
       component: () => import("@/views/PageAVenir.vue"),
     },   
+    {
+      path: '/service',
+      name: 'service',
+      component: () => import("@/views/PageService.vue"),
+    },   
     
     {
       path: '/details/:emplacement/:id',
