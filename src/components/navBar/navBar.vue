@@ -19,11 +19,11 @@
         <Slide width="500" :closeOnNavigation="true">
 
             <RouterLink class="item-list" to="/">Accueil</RouterLink>
+            <RouterLink class="item-list" to="/service">Demande de service</RouterLink>
             <RouterLink class="item-list" to="/marina">Quai Marina Zool</RouterLink>
             <RouterLink class="item-list" to="/lac-superieur">Logement Lac-Supérieur</RouterLink>
             <RouterLink class="item-list" to="/saint-jerome">Logement Saint-Jérôme</RouterLink>
             <RouterLink class="item-list" to="/a-venir">Projet à venir</RouterLink>
-            <RouterLink class="item-list" to="/service">Demande de service</RouterLink>
 
             <div class="wrapImg">
                 <img src="@/assets/img/logo_pemana.svg" alt="logo_pemana">
