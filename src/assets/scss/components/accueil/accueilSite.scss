@@ -214,8 +214,10 @@
                 
 
                 & img{
-                    object-fit: cover;
                     width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: block;
                 }
             }
             
@@ -284,13 +286,13 @@
                 grid-row-end: 5;
             }
         }
-        &>.vignetteCategorie:first-of-type{
-            &>.wrapImg{
+        // &>.vignetteCategorie:first-of-type{
+        //     &>.wrapImg{
 
-                & img{
-                    height: 110%;
-                }
-            }
-        }
+        //         & img{
+        //             height: 110%;
+        //         }
+        //     }
+        // }
     }
 }
