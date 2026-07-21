@@ -19,7 +19,7 @@
         <Slide width="500" :closeOnNavigation="true">
 
             <RouterLink class="item-list" to="/">Accueil</RouterLink>
-            <RouterLink class="item-list" to="/service">Demande de service</RouterLink>
+            <RouterLink class="item-list" to="/service">Appel de service</RouterLink>
             <RouterLink class="item-list" to="/marina">Quai Marina Zool</RouterLink>
             <RouterLink class="item-list" to="/lac-superieur">Logement Lac-Supérieur</RouterLink>
             <RouterLink class="item-list" to="/saint-jerome">Logement Saint-Jérôme</RouterLink>

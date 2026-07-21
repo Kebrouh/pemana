@@ -40,7 +40,7 @@
       </div>
   
       <div class="demandeService">
-        <RouterLink class="item-list" to="/service">Demande de service</RouterLink>
+        <RouterLink class="item-list" to="/service">Appel de service</RouterLink>
       </div>
 
       <div class="listeVignetteCat" v-if="categorieData">

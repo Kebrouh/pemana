@@ -1,6 +1,6 @@
 <script setup>
     import categorieData from '@/assets/json/categories.json'
-    import FooterNavItem from '@/components/commun/FooterApp/FooterNavItem.vue';
+    // import FooterNavItem from '@/components/commun/FooterApp/FooterNavItem.vue';
 </script>
 
 <template>
@@ -33,11 +33,14 @@
             </div>
 
             <div class="navFooter">
-                <h3>Location</h3>
+                <h3>Navigation</h3>
                 <div class="links" v-if="categorieData">  
-                    <FooterNavItem v-for="categorie in categorieData" :key="categorie.id"
-                        :objCat="categorie" 
-                    />
+                    <RouterLink class="item-list" to="/">Accueil</RouterLink>
+                    <RouterLink class="item-list" to="/service">Appel de service</RouterLink>
+                    <RouterLink class="item-list" to="/marina">Quai Marina Zool</RouterLink>
+                    <RouterLink class="item-list" to="/lac-superieur">Logement Lac-Supérieur</RouterLink>
+                    <RouterLink class="item-list" to="/saint-jerome">Logement Saint-Jérôme</RouterLink>
+                    <RouterLink class="item-list" to="/a-venir">Projet à venir</RouterLink>
                 </div>
             </div>
             
