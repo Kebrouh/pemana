@@ -21,6 +21,9 @@
                 <p>Météo</p>
                 <span class="material-symbols-outlined">cloud</span>
             </a>
+
+            <RouterLink class="appel-service" to="/service">Appel de service <span class="material-symbols-outlined">person</span></RouterLink>
+
         </div>
 
 

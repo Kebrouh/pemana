@@ -132,6 +132,40 @@
                     font-size: 1em;
                 }
             }
+            
+            &>.appel-service{
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                width: 100px;
+                color: white;
+                background-color: rgba(102, 153, 51, 0.9);
+                font-size: 0.8em;
+                font-weight: 600;
+                justify-content: left;
+                align-items: center;
+                padding: 1em;
+                margin: 1em 0 0 0;
+                border-radius: 20px;
+
+                &:hover{
+                    transition-duration: 0.3s;
+                    color: white;
+                    background-color: rgba(102, 153, 51, 0.9);
+                    border-radius: 20px;
+                }
+
+                @include breakpoint-min(768){
+                    width: auto;
+                    color: white;
+                    border-radius: 0px;
+                    background-color: black;
+                    padding: 1em;
+                    margin: 0 0 0 1em;
+                    font-size: 1em;
+                }
+            }
         }
 
         &>.liste-vignette-logement{
