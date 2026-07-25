@@ -132,8 +132,8 @@
             "description": "Un beau 4 1/2 rénové au goût du jour, accès à la cour, possibilité de louer un garage.",
             "prix": "2 350$",
             "images": [
-                "/assets/1001_01-232095d2.jpg",
-                "/assets/1001_00-a1c22bf2.jpg",
+                "stje_1001_1003_05.jpeg",
+                "stje_1001_1003_04.jpeg",
                 "/assets/1001_20-9afca8d6.jpg",
                 "/assets/1001_04-54b58bdc.jpg"
             ]
@@ -149,8 +149,8 @@
             "description": "Très grand appartement rénové au goût du jour avec 4 chambres à coucher, 1 salle de bain et 1 salle d'eau. Une superbe salle à manger avec beaucoup de fenestration offre un accès à la cour. Possibilité d'avoir un garage en supplément. Il est situé dans un secteur tranquille, à quelques minutes du centre-ville de Saint-Jérôme. Le prix de location inclut Internet et l'électricité.",
             "prix": "2 450$",
             "images": [
-                "/assets/1001_00-a1c22bf2.jpg",
-                "/assets/1001_02-f7fb841e.jpg",
+                "stje_1001_1003_03.jpeg",
+                "stje_1001_1003_02.jpeg",
                 "/assets/1001_50-8e564f80.jpg",
                 "/assets/1001_51-8b35e8d2.jpg",
                 "/assets/1001_52-aa9dcfa4.jpg",
@@ -169,11 +169,12 @@
             "description": "Ce logement 3½ indépendant offre un espace de vie pratique et accueillant dans un secteur tranquille de Saint-Jérôme. Comprenant une chambre à coucher, une salle de bain complète ainsi qu'une cuisine fonctionnelle, il convient parfaitement à une personne seule, un couple ou un professionnel. Profitez d'un environnement paisible à proximité des services essentiels, des commerces, des parcs et des principaux axes routiers, pour un quotidien simple et confortable.",
             "prix": "sur demande",
             "images": [
-                "stje_852_854_04.jpg"
+                "stje_852_854_01.jpeg",
+                "stje_852_854_04.jpeg"
             ]
         },
         {
-            "id": 5,
+            "id": 6,
             "emplacement": "saintJe",
             "name": "854",
             "adresse": "854 Rue du Faubourg, Saint-Jérôme",
@@ -183,7 +184,9 @@
             "description": "Situé dans un secteur paisible et recherché de Saint-Jérôme, ce vaste logement offre tout l'espace nécessaire pour les grandes familles ou les personnes recherchant un milieu de vie confortable et polyvalent. Avec ses 6 chambres à coucher, ses 3 salles de bain complètes et ses pièces lumineuses, il combine fonctionnalité et confort au quotidien. À proximité des écoles, commerces, parcs et principaux axes routiers, ce logement bénéficie d'un emplacement de choix tout en offrant un environnement calme et agréable.",
             "prix": "sur demande",
             "images": [
-                "stje_852_854_04.jpg"
+                "stje_852_854 (2).jpeg",
+                "stje_852_854 (3).jpeg",
+                "stje_852_854 (8).jpeg"
             ]
         }
     ],
