@@ -1,12 +1,12 @@
 <script setup>
 
     import { useRoute } from 'vue-router'
-    import { reactive, computed, onBeforeMount } from 'vue'
+    import { computed, watch, onBeforeMount } from 'vue'
 
     import AffichageDetailsImages from '@/components/AffichageData/AffichageDetailsImages.vue'
     import FooterApp from '@/components/commun/FooterApp/FooterApp.vue'
 
-    import location from '@/assets/json/location.json'    
+    import location from '@/assets/json/location.json'
 
     import { Swiper, SwiperSlide } from 'swiper/vue'
     import { Navigation, Pagination, Virtual } from 'swiper/modules'
@@ -14,18 +14,15 @@
     import 'swiper/css/bundle'
 
     const route = useRoute();
-    const routeEmplacement = computed(()=> route.params.emplacement)
-    const routeId = computed(()=> route.params.id)
 
-    const data = reactive ({    //structure de récupération
-        id: null,
-        emplacement: null,
-    });    
+    //logement demandé par l'adresse, undefined si l'emplacement ou l'id n'existe pas
+    const logement = computed(() => location[route.params.emplacement]?.[route.params.id])
 
     onBeforeMount(() => {
-        data.id = routeId.value;
-        data.emplacement = routeEmplacement.value;
-        
+        window.scrollTo({top:0});
+    })
+
+    watch(() => route.fullPath, () => {
         window.scrollTo({top:0});
     })
 
@@ -33,16 +30,16 @@
 </script>
 
 <template>
-    
+
     <div class="details">
 
-        <div class="affichage-details">
+        <div class="affichage-details" v-if="logement">
 
             <div class="fiche-image">
 
                 <Swiper :slidesPerView="1" :spaceBetween="50" :modules="[Navigation, Pagination, Virtual]" navigation :pagination="{ clickable: true, dynamicBullets: true}" grab-cursor virtual>
-                    <SwiperSlide v-for="image in location[data.emplacement][data.id].images" :key="image.id">
-                        <AffichageDetailsImages 
+                    <SwiperSlide v-for="image in logement.images" :key="image.id">
+                        <AffichageDetailsImages
                             :objImage="image"
                         />
                     </SwiperSlide>
@@ -50,23 +47,23 @@
             </div>
 
             <div class="wrapInfo">
-                <h1 v-text="location[data.emplacement][data.id].name"></h1>
-                <h3 v-text="location[data.emplacement][data.id].adresse"></h3>
+                <h1 v-text="logement.name"></h1>
+                <h3 v-text="logement.adresse"></h3>
                 <div class="type">
                     <span class="material-symbols-outlined">bed</span>
-                    <p v-text="location[data.emplacement][data.id].room"></p>
+                    <p v-text="logement.room"></p>
                     <span class="material-symbols-outlined">bathtub</span>
-                    <p v-text="location[data.emplacement][data.id].bathroom"></p>
+                    <p v-text="logement.bathroom"></p>
                 </div>
-                <p v-text="location[data.emplacement][data.id].description"></p>
+                <p v-text="logement.description"></p>
                 <div class="interesse">
                     <h2>Intéressé ?</h2>
-                    
+
                     <h2><span class="material-symbols-outlined">call</span>(514) 880-3770</h2>
                 </div>
-                
+
                 <div class="wrapPrix">
-                    <h1 v-text="location[data.emplacement][data.id].prix"></h1>
+                    <h1 v-text="logement.prix"></h1>
                     <h2>par mois</h2>
                 </div>
             </div>
@@ -74,13 +71,29 @@
 
         </div>
 
+        <div class="logement-introuvable" v-else>
+            <h2>Ce logement n'est plus disponible</h2>
+            <RouterLink to="/">Retour à l'accueil</RouterLink>
+        </div>
+
         <FooterApp />
-        
+
     </div>
 
 
 </template>
 
 <style scoped>
+
+.logement-introuvable {
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 4rem 1rem;
+    text-align: center;
+}
 
 </style>

@@ -62,9 +62,6 @@
                         <img src="@/assets/img/goop3.svg" alt="goop3">
                     </div>
                 </div>
-                <div class="upcomming">
-                    <p>Pour cette automne</p>
-                </div>
             </div>
             <!-- <div class="goop">
                 <div class="wrapImg">

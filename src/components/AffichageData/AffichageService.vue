@@ -36,7 +36,7 @@
         } 
         catch (error) {
             console.error("Email failed to send:", error);
-            alert("Échec de l'envoi, veuillez-réessayer", error);
+            alert("Échec de l'envoi, veuillez réessayer", error);
         }
     };
 </script>
