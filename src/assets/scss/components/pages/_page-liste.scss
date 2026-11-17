@@ -1,0 +1,159 @@
+// = = = = = = = = = = = = = = = = = = = = = = = = =
+//  Auteur : Olivier Daigneault
+// = = = = = = = = = = = = = = = = = = = = = = = = =
+
+// Listes de logements (Lac-Supérieur, Saint-Jérôme) et cartes de logement,
+// réutilisées aussi en bas de la fiche d'un logement.
+
+.page-liste__complement{
+    margin-bottom: var(--espace-4);
+}
+
+.video-cadre{
+    width: 100%;
+    max-width: 640px;
+    aspect-ratio: 16 / 9;
+    border-radius: var(--rayon-signature);
+    overflow: hidden;
+    box-shadow: var(--ombre-forte);
+    background-color: var(--gris-fonce);
+
+    & iframe{
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+}
+
+.carte-logement{
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--rayon);
+    background-color: white;
+    box-shadow: var(--ombre);
+    overflow: hidden;
+    color: var(--texte);
+    text-decoration: none;
+    transition: box-shadow 200ms, transform 200ms;
+
+    &:hover{
+        box-shadow: var(--ombre-forte);
+        color: var(--texte);
+        transform: translateY(-3px);
+    }
+    &:focus-visible{
+        outline: 3px solid var(--bleu-marina);
+        outline-offset: 3px;
+    }
+
+    &__photo{
+        position: relative;
+        aspect-ratio: 3 / 2;
+        border-top-left-radius: 50px;
+        overflow: hidden;
+        background-color: var(--fond-doux);
+
+        & img{
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 400ms;
+        }
+    }
+    &:hover &__photo img{
+        transform: scale(1.05);
+    }
+
+    &__prix{
+        position: absolute;
+        right: 0.75rem;
+        bottom: 0.75rem;
+        display: flex;
+        align-items: baseline;
+        gap: 0.4rem;
+        margin: 0;
+        padding: 0.4rem 0.8rem;
+        border-radius: var(--rayon-petit);
+        background-color: var(--gris-fonce);
+        color: white;
+        line-height: 1.2;
+
+        & strong{
+            font-size: 1.25rem;
+            font-weight: 800;
+        }
+        & span{
+            font-size: 0.8rem;
+            opacity: 0.85;
+        }
+
+        &--demande{
+            font-size: 0.95rem;
+            font-weight: 700;
+        }
+    }
+
+    &__corps{
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        gap: 0.6rem;
+        padding: var(--espace-3);
+
+        & h2{
+            margin: 0;
+            font-size: 1.4rem;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+    }
+
+    &__adresse{
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+        margin: 0;
+        color: var(--texte-doux);
+        font-size: 0.95rem;
+
+        & .material-symbols-outlined{
+            font-size: 1.2em;
+        }
+    }
+
+    &__accroche{
+        margin: 0;
+        color: var(--vert-foret);
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+
+    &__description{
+        display: -webkit-box;
+        margin: 0;
+        overflow: hidden;
+        color: var(--texte-doux);
+        font-size: 0.95rem;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+
+    &__lien{
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        margin-top: auto;
+        padding-top: 0.4rem;
+        color: var(--vert-foret);
+        font-weight: 700;
+
+        & .material-symbols-outlined{
+            transition: transform 200ms;
+        }
+    }
+    &:hover &__lien .material-symbols-outlined{
+        transform: translateX(4px);
+    }
+}

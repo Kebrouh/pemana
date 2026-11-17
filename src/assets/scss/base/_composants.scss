@@ -1,0 +1,229 @@
+// = = = = = = = = = = = = = = = = = = = = = = = = =
+//  Auteur : Olivier Daigneault
+// = = = = = = = = = = = = = = = = = = = = = = = = =
+
+// Composants partagés par toutes les pages : même espacement, mêmes boutons, mêmes cartes.
+// Aucun ::before / ::after de décor ici, la mise en page passe par grid et flex.
+
+.page-contenu{
+    width: 100%;
+    max-width: var(--largeur-contenu);
+    margin: 0 auto;
+    padding: var(--espace-4) clamp(1rem, 4vw, 3rem);
+    color: var(--texte);
+    line-height: 1.6;
+}
+
+.entete-page{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: var(--espace-3);
+    margin-bottom: var(--espace-4);
+    padding-bottom: var(--espace-3);
+    border-bottom: 1px solid var(--bordure);
+
+    &__titres{
+        min-width: 0;
+    }
+    &__surtitre{
+        margin: 0 0 0.25rem;
+        font-size: clamp(1rem, 2.2vw, 1.4rem);
+        font-weight: 300;
+        color: var(--texte-doux);
+    }
+    &__titre{
+        margin: 0;
+        font-size: clamp(2.2rem, 5.5vw, 3.75rem);
+        font-weight: 900;
+        line-height: 1.05;
+        color: var(--vert-lime);
+    }
+    &__actions{
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--espace-1);
+    }
+}
+
+.titre-section{
+    margin: 0 0 var(--espace-2);
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 700;
+    line-height: 1.2;
+
+    & span{
+        color: var(--bleu-texte);
+    }
+}
+
+.bouton{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 44px;
+    padding: 0.7rem 1.25rem;
+    border: 2px solid var(--gris-fonce);
+    border-radius: var(--rayon-petit);
+    background-color: var(--gris-fonce);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.2;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 150ms, border-color 150ms, color 150ms, transform 150ms;
+
+    &:hover{
+        border-color: black;
+        background-color: black;
+        color: white;
+        transform: translateY(-1px);
+    }
+    &:focus-visible{
+        outline: 3px solid var(--bleu-marina);
+        outline-offset: 3px;
+    }
+    & .material-symbols-outlined{
+        font-size: 1.25em;
+    }
+
+    &--vert{
+        border-color: var(--vert-foret);
+        background-color: var(--vert-foret);
+
+        &:hover{
+            border-color: #244d24;
+            background-color: #244d24;
+        }
+    }
+    &--contour{
+        background-color: transparent;
+        color: var(--gris-fonce);
+    }
+    &--large{
+        width: 100%;
+        min-height: 52px;
+        font-size: 1.1rem;
+    }
+}
+
+// normalize.scss impose `a:link { color: inherit }` : on le surpasse pour les boutons et le lien de retour
+a.bouton:link,
+a.bouton:visited{
+    color: white;
+
+    &:hover{
+        color: white;
+    }
+}
+a.bouton--contour:link,
+a.bouton--contour:visited{
+    color: var(--gris-fonce);
+
+    &:hover{
+        color: white;
+    }
+}
+a.lien-retour:link,
+a.lien-retour:visited{
+    color: var(--gris-fonce);
+
+    &:hover{
+        color: var(--vert-foret);
+    }
+}
+
+.etiquette{
+    display: inline-block;
+    padding: 0.25rem 0.7rem;
+    border-radius: 999px;
+    background-color: rgba(102, 153, 51, 0.15);
+    color: var(--vert-foret);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+
+    &--bleu{
+        background-color: #dceef8;
+        color: #1d5a7a;
+    }
+    &--noire{
+        background-color: var(--gris-fonce);
+        color: white;
+    }
+}
+
+.carte{
+    padding: var(--espace-3);
+    border-radius: var(--rayon);
+    background-color: white;
+    box-shadow: var(--ombre);
+}
+
+.liste-coches{
+    margin: 0;
+    padding-left: 1.5rem;
+
+    & li{
+        padding: 0.2rem 0 0.2rem 0.35rem;
+    }
+    & li::marker{
+        content: "✓  ";
+        font-weight: 700;
+        color: var(--vert-lime);
+    }
+}
+
+.specs{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    & li{
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+    }
+    & .material-symbols-outlined{
+        color: var(--vert-lime);
+    }
+}
+
+.lien-retour{
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: var(--espace-3);
+    color: var(--gris-fonce);
+    font-weight: 600;
+    text-decoration: none;
+
+    &:hover{
+        color: var(--vert-foret);
+    }
+}
+
+.grille-logements{
+    display: grid;
+    gap: var(--espace-3);
+    grid-template-columns: minmax(0, 1fr);
+
+    @include breakpoint-min(900){
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (prefers-reduced-motion: reduce){
+    .bouton,
+    .carte-logement,
+    .carte-logement__photo img{
+        transition: none !important;
+        transform: none !important;
+    }
+}

@@ -7,6 +7,28 @@
     --vert-foret: #336633;
 
     --bleu-marina: #89C5E4;
+    --bleu-texte: #2b7a9e;      //le bleu marina est trop pâle pour du texte sur fond blanc
 
     --gris-fonce: #333333;
+
+    --texte: #222222;
+    --texte-doux: #5c5c5c;
+    --fond-doux: #f5f5f3;
+    --bordure: rgba(0, 0, 0, 0.08);
+
+    //espacements : toujours piger ici plutôt que d'écrire des px dans les pages
+    --espace-1: 0.5rem;
+    --espace-2: 1rem;
+    --espace-3: 1.5rem;
+    --espace-4: 2.5rem;
+    --espace-5: 4rem;
+
+    --rayon: 20px;
+    --rayon-petit: 8px;
+    --rayon-signature: 50px 0 0 0;      //le coin en haut à gauche, signature des photos Pemana
+
+    --ombre: 0 6px 18px rgba(0, 0, 0, 0.08);
+    --ombre-forte: 0 12px 30px rgba(0, 0, 0, 0.14);
+
+    --largeur-contenu: 1200px;
 }

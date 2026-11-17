@@ -1,37 +1,15 @@
 <script setup>
-    import VignetteLogement from '@/components/AffichageData/VignetteLogement.vue'
-    
-    import location from '@/assets/json/location.json'
+    import ListeLogements from '@/components/AffichageData/ListeLogements.vue'
 </script>
 
 <template>
-    
-    <div class="affichage-saintJe">
 
-        <div class="titre">
-            <h2>Logements à</h2>
-            <h1>Saint-Jérôme</h1>
-            <div class="wrapImg">
-                <img src="@/assets/img/logo_pemana_light_plein.svg" alt="">
-            </div>
-        
-            <a class="wheater" href="https://www.meteomedia.com/fr/ville/ca/quebec/saint-jerome/actuelle" target="_blank" rel="noopener noreferrer">
-                <p>Météo</p>
-                <span class="material-symbols-outlined">cloud</span>
-            </a>
-
-            <RouterLink class="appel-service" to="/service">Appel de service <span class="material-symbols-outlined">person</span></RouterLink>
-
-        </div>
-
-
-        <div class="liste-vignette-logement" v-if="location">
-            <VignetteLogement v-for="logement in location.saintJe" :key="logement.id"
-                :objLogement="logement"
-            />
-        </div>
-
-    </div>
+    <ListeLogements
+        emplacement="saintJe"
+        surtitre="Logements à"
+        titre="Saint-Jérôme"
+        meteoUrl="https://www.meteomedia.com/fr/ville/ca/quebec/saint-jerome/actuelle"
+    />
 
 </template>
 

@@ -3,20 +3,27 @@
     import { useRoute } from 'vue-router'
     import { computed, watch, onBeforeMount } from 'vue'
 
-    import AffichageDetailsImages from '@/components/AffichageData/AffichageDetailsImages.vue'
+    import GalerieLogement from '@/components/AffichageData/GalerieLogement.vue'
+    import VignetteLogement from '@/components/AffichageData/VignetteLogement.vue'
     import FooterApp from '@/components/commun/FooterApp/FooterApp.vue'
 
     import location from '@/assets/json/location.json'
-
-    import { Swiper, SwiperSlide } from 'swiper/vue'
-    import { Navigation, Pagination, Virtual } from 'swiper/modules'
-    import 'swiper/css'
-    import 'swiper/css/bundle'
+    import { contacts, lienTel } from '@/data/contact.js'
+    import { LIEUX, prixNumerique, formaterPrix, libelleChambres, libelleSdb, decouperDescription } from '@/lib/logement.js'
 
     const route = useRoute();
 
     //logement demandé par l'adresse, undefined si l'emplacement ou l'id n'existe pas
     const logement = computed(() => location[route.params.emplacement]?.[route.params.id])
+    const lieu = computed(() => LIEUX[route.params.emplacement])
+    const description = computed(() => decouperDescription(logement.value?.description))
+
+    //les autres logements du même endroit, pour continuer la visite
+    const autres = computed(() => {
+        const liste = location[route.params.emplacement] || []
+        const i = liste.findIndex((l) => l.id === logement.value?.id)
+        return [1, 2, 3].map((pas) => liste[(i + pas) % liste.length]).filter((l, k, tab) => l && l.id !== logement.value?.id && tab.indexOf(l) === k)
+    })
 
     onBeforeMount(() => {
         window.scrollTo({top:0});
@@ -26,55 +33,81 @@
         window.scrollTo({top:0});
     })
 
-
 </script>
 
 <template>
 
     <div class="details">
 
-        <div class="affichage-details" v-if="logement">
+        <div class="page-contenu page-logement" v-if="logement">
 
-            <div class="fiche-image">
+            <RouterLink class="lien-retour" :to="lieu.route">
+                <span class="material-symbols-outlined">arrow_back</span>
+                Tous les logements, {{ lieu.nom }}
+            </RouterLink>
 
-                <Swiper :slidesPerView="1" :spaceBetween="50" :modules="[Navigation, Pagination, Virtual]" navigation :pagination="{ clickable: true, dynamicBullets: true}" grab-cursor virtual>
-                    <SwiperSlide v-for="image in logement.images" :key="image.id">
-                        <AffichageDetailsImages
-                            :objImage="image"
-                            :alt="`${logement.name}, ${logement.adresse}`"
-                        />
-                    </SwiperSlide>
-                </Swiper>
+            <div class="logement">
+
+                <GalerieLogement class="logement__galerie"
+                    :images="logement.images"
+                    :alt="`${logement.name}, ${logement.adresse}`"
+                />
+
+                <aside class="logement__resume carte">
+                    <span class="etiquette etiquette--bleu" v-text="lieu.nom"></span>
+                    <h1 v-text="logement.name"></h1>
+                    <p class="logement__adresse">
+                        <span class="material-symbols-outlined">location_on</span>
+                        <span>{{ logement.adresse }}</span>
+                    </p>
+
+                    <ul class="specs">
+                        <li><span class="material-symbols-outlined">bed</span>{{ libelleChambres(logement.room) }}</li>
+                        <li><span class="material-symbols-outlined">bathtub</span>{{ libelleSdb(logement.bathroom) }}</li>
+                    </ul>
+
+                    <p class="logement__prix" v-if="prixNumerique(logement.prix)">
+                        <strong v-text="formaterPrix(logement.prix)"></strong>
+                        <span>par mois</span>
+                    </p>
+                    <p class="logement__prix logement__prix--demande" v-else>
+                        <strong>Prix sur demande</strong>
+                    </p>
+
+                    <div class="logement__actions">
+                        <a class="bouton bouton--vert bouton--large" :href="lienTel(contacts.proprietaire.tel)">
+                            <span class="material-symbols-outlined">call</span>
+                            {{ contacts.proprietaire.tel }}
+                        </a>
+                        <RouterLink class="bouton bouton--contour bouton--large" to="/service">
+                            Appel de service
+                            <span class="material-symbols-outlined">person</span>
+                        </RouterLink>
+                    </div>
+                </aside>
+
+                <section class="logement__description">
+                    <h2 class="titre-section">À propos de ce <span>logement</span></h2>
+                    <p class="logement__accroche" v-if="description.accroche" v-text="description.accroche"></p>
+                    <p v-text="description.corps"></p>
+                </section>
+
             </div>
 
-            <div class="wrapInfo">
-                <h1 v-text="logement.name"></h1>
-                <h3 v-text="logement.adresse"></h3>
-                <div class="type">
-                    <span class="material-symbols-outlined">bed</span>
-                    <p v-text="logement.room"></p>
-                    <span class="material-symbols-outlined">bathtub</span>
-                    <p v-text="logement.bathroom"></p>
+            <section class="logement__autres" v-if="autres.length">
+                <h2 class="titre-section">Autres logements, <span>{{ lieu.nom }}</span></h2>
+                <div class="grille-logements">
+                    <VignetteLogement v-for="autre in autres" :key="autre.emplacement + autre.id"
+                        :objLogement="autre"
+                    />
                 </div>
-                <p v-text="logement.description"></p>
-                <div class="interesse">
-                    <h2>Intéressé ?</h2>
-
-                    <h2><span class="material-symbols-outlined">call</span>(514) 880-3770</h2>
-                </div>
-
-                <div class="wrapPrix">
-                    <h1 v-text="logement.prix"></h1>
-                    <h2>par mois</h2>
-                </div>
-            </div>
-
+            </section>
 
         </div>
 
-        <div class="logement-introuvable" v-else>
-            <h2>Ce logement n'est plus disponible</h2>
-            <RouterLink to="/">Retour à l'accueil</RouterLink>
+        <div class="page-contenu logement-introuvable" v-else>
+            <h2 class="titre-section">Ce logement n'est plus disponible</h2>
+            <RouterLink class="bouton bouton--vert" to="/">Retour à l'accueil</RouterLink>
         </div>
 
         <FooterApp />
@@ -85,16 +118,5 @@
 </template>
 
 <style scoped>
-
-.logement-introuvable {
-    min-height: 50vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    padding: 4rem 1rem;
-    text-align: center;
-}
 
 </style>

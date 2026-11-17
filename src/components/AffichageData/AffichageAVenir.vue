@@ -1,75 +1,54 @@
 <script setup>
 
+    import EntetePage from '@/components/commun/EntetePage/EntetePage.vue'
+    import { contacts, lienTel } from '@/data/contact.js'
+
+    import imgLacLilly from '@/assets/img/lac_lilly.jpg'
+    import logoChertsey from '@/assets/img/logo_chertsey.svg'
+    import imgLacSimon from '@/assets/img/lac_simon.jpg'
+    import logoLacSimon from '@/assets/img/logo_lac_simon.jpg'
+
+    const projets = [
+        { nom: 'Lac Lilly', type: 'Location court terme', photo: imgLacLilly, logo: logoChertsey, logoAlt: 'Logo Chertsey' },
+        { nom: 'Lac Simon', type: 'Location long terme', photo: imgLacSimon, logo: logoLacSimon, logoAlt: 'Logo Lac Simon' },
+        { nom: 'Saint-Adèle', type: 'Location court terme', photo: '/saintAdele_aVenir.jpg', logo: '/logo_saint_adele.jpg', logoAlt: 'Logo Saint-Adèle' },
+    ]
+
 </script>
 
 <template>
 
-    <div class="affichage-a-venir">
+    <div class="page-contenu page-a-venir">
 
-        <div class="grid-a-venir">
-            <div class="titre">
-                <div class="wrapImg">
-                    <img src="@/assets/img/a_venir.svg" alt="Projets à venir">
+        <EntetePage surtitre="Nos prochains" titre="Projets à venir" />
+
+        <div class="grille-projets">
+            <article class="projet" v-for="projet in projets" :key="projet.nom">
+                <div class="projet__photo">
+                    <img :src="projet.photo" :alt="projet.nom" loading="lazy" decoding="async">
+                    <img class="projet__logo" :src="projet.logo" :alt="projet.logoAlt">
                 </div>
-            </div>
-            <div class="lac-lilly">
-                <div class="wrapTitre">
-                    <h3>Location court terme</h3>
-                    <h2>Lac Lilly</h2>
+                <div class="projet__corps">
+                    <span class="etiquette" v-text="projet.type"></span>
+                    <h2 v-text="projet.nom"></h2>
                 </div>
-                <div class="wrapLogo">
-                    <img src="@/assets/img/logo_chertsey.svg" alt="Logo Chertsey">
-                </div>
-                <div class="wrapImg">
-                    <img src="@/assets/img/lac_lilly.jpg" alt="Lac Lilly">
-                </div>
-                <div class="goop2">
-                    <div class="wrapImg">
-                        <img src="@/assets/img/goop2.svg" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="lac-simon">
-                <div class="wrapTitre">
-                    <h3>Location long terme</h3>
-                    <h2>Lac Simon</h2>
-                </div>
-                <div class="wrapImg">
-                    <img src="@/assets/img/lac_simon.jpg" alt="Lac Simon">
-                </div>
-                <div class="wrapLogo">
-                    <img src="@/assets/img/logo_lac_simon.jpg" alt="Logo Lac Simon">
-                </div>
-                <div class="goop3">
-                    <div class="wrapImg">
-                        <img src="@/assets/img/goop3.svg" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="saint-adele">
-                <div class="wrapTitre">
-                    <h3>Location court terme</h3>
-                    <h2>Saint-Adèle</h2>
-                </div>
-                <div class="wrapImg">
-                    <img src="/saintAdele_aVenir.jpg" alt="Saint-Adèle">
-                </div>
-                <div class="wrapLogo">
-                    <img src="/logo_saint_adele.jpg" alt="Logo Saint-Adèle">
-                </div>
-                <div class="goop3">
-                    <div class="wrapImg">
-                        <img src="@/assets/img/goop3.svg" alt="">
-                    </div>
-                </div>
-            </div>
-            <!-- <div class="goop">
-                <div class="wrapImg">
-                    <img src="@/assets/img/goop.svg" alt="">
-                </div>
-            </div> -->
-            
+            </article>
         </div>
+
+        <section class="a-venir-contact carte">
+            <h2 class="titre-section">Un projet vous <span>intéresse ?</span></h2>
+            <p>Contactez-nous, nous serons heureux de vous en parler.</p>
+            <div class="a-venir-contact__boutons">
+                <a class="bouton bouton--vert" :href="lienTel(contacts.ventes.tel)">
+                    <span class="material-symbols-outlined">call</span>
+                    {{ contacts.ventes.tel }}
+                </a>
+                <a class="bouton bouton--contour" :href="`mailto:${contacts.courriel}`">
+                    <span class="material-symbols-outlined">mail</span>
+                    {{ contacts.courriel }}
+                </a>
+            </div>
+        </section>
 
     </div>
 

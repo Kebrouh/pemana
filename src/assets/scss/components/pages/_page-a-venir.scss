@@ -1,0 +1,92 @@
+// = = = = = = = = = = = = = = = = = = = = = = = = =
+//  Auteur : Olivier Daigneault
+// = = = = = = = = = = = = = = = = = = = = = = = = =
+
+.page-a-venir{
+
+    & .grille-projets{
+        display: grid;
+        gap: var(--espace-3);
+        grid-template-columns: minmax(0, 1fr);
+
+        @include breakpoint-min(768){
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        @include breakpoint-min(1200){
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+    }
+
+    & .projet{
+        display: flex;
+        flex-direction: column;
+        border-radius: var(--rayon);
+        background-color: white;
+        box-shadow: var(--ombre);
+        overflow: hidden;
+    }
+
+    & .projet__photo{
+        position: relative;
+        aspect-ratio: 4 / 3;
+        border-top-left-radius: 50px;
+        overflow: hidden;
+        background-color: var(--fond-doux);
+
+        & img{
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        // les logos des municipalités flottent dans un coin, sur fond blanc
+        & .projet__logo{
+            position: absolute;
+            top: var(--espace-2);
+            right: var(--espace-2);
+            width: 110px;
+            height: 56px;
+            padding: 0.4rem 0.7rem;
+            border-radius: var(--rayon-petit);
+            background-color: white;
+            box-shadow: var(--ombre);
+            object-fit: contain;
+        }
+    }
+
+    & .projet__corps{
+        display: grid;
+        gap: 0.5rem;
+        justify-items: start;
+        padding: var(--espace-3);
+
+        & h2{
+            margin: 0;
+            font-size: 1.75rem;
+            font-weight: 800;
+            line-height: 1.15;
+            color: var(--vert-foret);
+        }
+    }
+
+    & .a-venir-contact{
+        display: grid;
+        gap: var(--espace-1);
+        justify-items: start;
+        margin-top: var(--espace-5);
+
+        & p{
+            margin: 0 0 var(--espace-1);
+        }
+        & .titre-section{
+            margin-bottom: 0;
+        }
+    }
+
+    & .a-venir-contact__boutons{
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--espace-1);
+    }
+}

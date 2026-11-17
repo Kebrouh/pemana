@@ -1,39 +1,43 @@
 <script setup>
 
+    import EntetePage from '@/components/commun/EntetePage/EntetePage.vue'
+    import { contacts, lienTel } from '@/data/contact.js'
+
+    const photosProjet = ['06', '04', '03', '01', '02', '05']
+
 </script>
 
 <template>
 
-    <div class="affichage-marina">
+    <div class="page-contenu page-marina">
 
-        <div class="marina-top">
-            <div class="titre">
-                <h1>Marina</h1>
-                <h2>Zool bar gîte riverain</h2>
-                <div class="wrapImg">
-                    <img src="@/assets/img/logo_pemana_light_plein.svg" alt="">
-                </div>
-            </div>
-            <div class="galerie">   
-                <div class="wrapImg">
-                    <img src="@/assets/img/quai.jpg" alt="Quai de la marina">
-                </div>
-                <div class="wrapImg">
-                    <img src="/marina_condo_3d_01.jpg" alt="Rendu 3D du projet de condos près de la marina">
-                </div>
-                <div class="wrapLogo">
+        <EntetePage surtitre="Zool bar gîte riverain" titre="Marina">
+            <template #actions>
+                <a class="bouton" href="https://www.meteomedia.com/fr/ville/ca/quebec/carillon/actuelle" target="_blank" rel="noopener noreferrer">
+                    Météo <span class="material-symbols-outlined">cloud</span>
+                </a>
+            </template>
+        </EntetePage>
+
+        <section class="marina-hero">
+            <figure class="marina-hero__principale">
+                <img src="@/assets/img/quai.jpg" alt="Quai de la marina">
+                <figcaption class="etiquette etiquette--bleu">Quai saisonnier à partir de 35 $ / pied</figcaption>
+            </figure>
+
+            <div class="marina-hero__cote">
+                <div class="carte marina-hero__logo">
                     <img src="@/assets/img/logo_marina.svg" alt="Logo Marina Zool">
                 </div>
-                <div class="wrapPrice">
-                    <p>Quai saisonnier à partir de 35$ / pieds</p>
-                </div>
+                <img class="marina-hero__condos" src="/marina_condo_3d_01.jpg" alt="Rendu 3D du projet de condos près de la marina">
             </div>
-        </div>
+        </section>
 
-        <div class="marina-service">
-            <div class="liste-service">
-                <h2>Services offerts - <span style="color: #89C5E4;">Marina</span></h2>
-                <ul>
+        <section class="marina-infos">
+
+            <div class="carte">
+                <h2 class="titre-section">Services offerts, <span>Marina</span></h2>
+                <ul class="liste-coches">
                     <li>Stationnement réservé à nos clients et leur entourage.</li>
                     <li>Membre saisonnier de la marina</li>
                     <li>Électricité 15 ampères</li>
@@ -43,71 +47,57 @@
                     <li>Activités à proximité</li>
                 </ul>
             </div>
-            <div class="adresse">
-                <p>692 Chem. des Outaouais, Pointe-Fortune</p>
-                <p>QC J0P 1N0</p>
-                <p>(514) 269-3770</p>
-            </div>
-            <div class="wrapMap">
-                <a class="wheater" href="https://www.meteomedia.com/fr/ville/ca/quebec/carillon/actuelle" target="_blank" rel="noopener noreferrer">
-                    <p>Météo</p>
-                    <span class="material-symbols-outlined">cloud</span>
-                </a>
-                <div class="wrapImg">
-                    <img src="@/assets/img/map_zoom_v2.svg" alt="Carte de la marina">
+
+            <div class="carte marina-carte">
+                <img src="@/assets/img/map_zoom_v2.svg" alt="Carte de la marina">
+                <div class="marina-carte__corps">
+                    <address>
+                        692 Chem. des Outaouais, Pointe-Fortune<br>
+                        QC J0P 1N0<br>
+                        <a :href="lienTel(contacts.ventes.tel)" v-text="contacts.ventes.tel"></a>
+                    </address>
+                    <div class="marina-carte__boutons">
+                        <a class="bouton bouton--vert" target="_blank" rel="noopener noreferrer"
+                            href="https://www.google.com/maps/place/692+Chem.+des+Outaouais,+Pointe-Fortune,+QC+J0P+1N0/@45.5615963,-74.3823692,17z/data=!3m1!4b1!4m6!3m5!1s0x4ccec4fbaea2a129:0xde46e275c0255d68!8m2!3d45.5615926!4d-74.3797889!16s%2Fg%2F11cph362pk?entry=ttu">
+                            <span class="material-symbols-outlined">directions</span> Directions
+                        </a>
+                    </div>
                 </div>
-                <a href="https://www.google.com/maps/place/692+Chem.+des+Outaouais,+Pointe-Fortune,+QC+J0P+1N0/@45.5615963,-74.3823692,17z/data=!3m1!4b1!4m6!3m5!1s0x4ccec4fbaea2a129:0xde46e275c0255d68!8m2!3d45.5615926!4d-74.3797889!16s%2Fg%2F11cph362pk?entry=ttu" target="_blank" rel="noopener noreferrer">Directions</a>
             </div>
-        </div>
 
-        <div class="marina-logement">
-            <div class="wrapImg">
-                <a href="https://creagine.ca/360/pointe/" target="_blank" rel="noopener noreferrer">
-                    <img src="/marina_condo_3d_02.jpg" alt="Rendu 3D du projet de condos, visite virtuelle">
-                </a>
-            </div>
-            <div class="wrapInfo">
-                <h3>Projet de construction près de la marina</h3>
-                <p>À venir : <br> <span>Condos à louer pour long terme</span> <br> 8 x <span>3 1/2</span> &amp; 8 x <span>4 1/2</span> <br><br> &amp; <span>Gîte pour location journalière</span></p>
-            </div>
-            <div class="visite">
-                <a href="https://creagine.ca/360/pointe/" target="_blank" rel="noopener noreferrer">Visite virtuelle 3D <span class="material-symbols-outlined">visibility</span> </a>
-            </div>
-        </div>
+        </section>
 
-        <div class="logement-service">
-            <div class="liste-service">
-                <h2>Services offerts - <span style="color: #89C5E4;">Logement</span></h2>
-                <ul>
+        <section class="marina-projet">
+
+            <a class="marina-projet__photo" href="https://creagine.ca/360/pointe/" target="_blank" rel="noopener noreferrer">
+                <img src="/marina_condo_3d_02.jpg" alt="Rendu 3D du projet de condos, visite virtuelle">
+            </a>
+
+            <div class="carte marina-projet__texte">
+                <h2 class="titre-section">Projet de construction <span>près de la marina</span></h2>
+                <p>À venir :</p>
+                <ul class="liste-coches">
+                    <li><strong>Condos à louer pour long terme</strong> : 8 x <strong>3 ½</strong> &amp; 8 x <strong>4 ½</strong></li>
+                    <li><strong>Gîte pour location journalière</strong></li>
+                </ul>
+
+                <h3 class="marina-projet__sous-titre">Services offerts, <span>Logement</span></h3>
+                <ul class="liste-coches">
                     <li>16 logements (3 ½ &amp; 4 ½)</li>
                     <li>Stationnement pour chaque unité.</li>
                     <li>2 bornes de recharge de niveau 2 pour véhicules électriques.</li>
                 </ul>
-            </div>
-        </div>
 
-        <div class="galerie-logement">
-            <div class="wrapImg">
-                <img src="/pf_06.jpg" alt="Projet de la marina, photo 6">
+                <a class="bouton" href="https://creagine.ca/360/pointe/" target="_blank" rel="noopener noreferrer">
+                    Visite virtuelle 3D <span class="material-symbols-outlined">visibility</span>
+                </a>
             </div>
-            <div class="wrapImg">
-                <img src="/pf_04.jpg" alt="Projet de la marina, photo 4">
-            </div>
-            <div class="wrapImg">
-                <img src="/pf_03.jpg" alt="Projet de la marina, photo 3">
-            </div>
-            <div class="wrapImg">
-                <img src="/pf_01.jpg" alt="Projet de la marina, photo 1">
-            </div>
-            <div class="wrapImg">
-                <img src="/pf_02.jpg" alt="Projet de la marina, photo 2">
-            </div>
-            <div class="wrapImg">
-                <img src="/pf_05.jpg" alt="Projet de la marina, photo 5">
-            </div>
-        </div>
 
+        </section>
 
+        <section class="marina-galerie">
+            <img v-for="(n, i) in photosProjet" :key="n" :src="`/pf_${n}.jpg`" :alt="`Projet de la marina, photo ${i + 1}`" loading="lazy" decoding="async">
+        </section>
 
     </div>
 

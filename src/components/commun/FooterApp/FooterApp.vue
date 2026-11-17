@@ -1,54 +1,57 @@
 <script setup>
-    import categorieData from '@/assets/json/categories.json'
-    // import FooterNavItem from '@/components/commun/FooterApp/FooterNavItem.vue';
+    import { contacts, lienTel } from '@/data/contact.js'
+
+    const annee = new Date().getFullYear()
 </script>
 
 <template>
-    <div class="footer">
+    <footer class="pied">
 
-        <div class="wrapInfo">
+        <div class="pied__contenu">
 
-            <div class="entreprise">
-
-                <RouterLink class="wrapLogo" to="/">
+            <div class="pied__marque">
+                <RouterLink class="pied__logo" to="/">
                     <img src="@/assets/img/logo_pemana.svg" alt="Logo Pemana Inc.">
                 </RouterLink>
-                
-                <div class="reseauxSociaux">
-                    <!-- <a target="_blank" href="https://icons8.com/icon/01GWmP9aUoPj/twitterx">Twitter</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> -->
-                    <div class="wrapLogo">
-                        <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/people/Pemana-Inc/61561865790005/"><img src="@/assets/img/icons8-facebook.svg" alt="Facebook"></a>
-                    </div>
-                </div>
+
+                <a class="pied__facebook" :href="contacts.facebook" target="_blank" rel="noopener noreferrer">
+                    <img src="@/assets/img/icons8-facebook.svg" alt="Facebook">
+                </a>
             </div>
 
-            <div class="contact">
+            <div class="pied__colonne">
                 <h3>Contact</h3>
                 <ul>
-                    <li>pemana2014@gmail.com</li>
-                    <li>(514) 269-3770 - <p>Alexandre Cagiotti, Directeur des ventes</p></li>
-                    <li>(514) 880-3770 - <p>Jean-François Dubé, Propriétaire</p></li>
-                    <li>164, rue de la Charente, Saint-Jérôme, Québec, Canada</li>
+                    <li><a :href="`mailto:${contacts.courriel}`" v-text="contacts.courriel"></a></li>
+                    <li>
+                        <a :href="lienTel(contacts.ventes.tel)" v-text="contacts.ventes.tel"></a>
+                        <span>{{ contacts.ventes.nom }}, {{ contacts.ventes.titre }}</span>
+                    </li>
+                    <li>
+                        <a :href="lienTel(contacts.proprietaire.tel)" v-text="contacts.proprietaire.tel"></a>
+                        <span>{{ contacts.proprietaire.nom }}, {{ contacts.proprietaire.titre }}</span>
+                    </li>
+                    <li v-text="contacts.adresse"></li>
                 </ul>
             </div>
 
-            <div class="navFooter">
+            <nav class="pied__colonne" aria-label="Navigation du pied de page">
                 <h3>Navigation</h3>
-                <div class="links" v-if="categorieData">  
-                    <RouterLink class="item-list" to="/">Accueil</RouterLink>
-                    <RouterLink class="item-list" to="/service">Appel de service</RouterLink>
-                    <RouterLink class="item-list" to="/marina">Quai Marina Zool</RouterLink>
-                    <RouterLink class="item-list" to="/lac-superieur">Logement Lac-Supérieur</RouterLink>
-                    <RouterLink class="item-list" to="/saint-jerome">Logement Saint-Jérôme</RouterLink>
-                    <RouterLink class="item-list" to="/a-venir">Projet à venir</RouterLink>
-                </div>
-            </div>
-            
+                <ul>
+                    <li><RouterLink to="/">Accueil</RouterLink></li>
+                    <li><RouterLink to="/service">Appel de service</RouterLink></li>
+                    <li><RouterLink to="/marina">Quai Marina Zool</RouterLink></li>
+                    <li><RouterLink to="/lac-superieur">Logement Lac-Supérieur</RouterLink></li>
+                    <li><RouterLink to="/saint-jerome">Logement Saint-Jérôme</RouterLink></li>
+                    <li><RouterLink to="/a-venir">Projet à venir</RouterLink></li>
+                </ul>
+            </nav>
 
         </div>
 
-    </div>
+        <p class="pied__droits">© {{ annee }} Pemana Inc.</p>
 
+    </footer>
 </template>
 
 <style scoped>
