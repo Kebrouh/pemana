@@ -22,16 +22,28 @@
             <div class="pied__colonne">
                 <h3>Contact</h3>
                 <ul>
-                    <li><a :href="`mailto:${contacts.courriel}`" v-text="contacts.courriel"></a></li>
-                    <li>
-                        <a :href="lienTel(contacts.ventes.tel)" v-text="contacts.ventes.tel"></a>
-                        <span>{{ contacts.ventes.nom }}, {{ contacts.ventes.titre }}</span>
+                    <li class="pied__ligne">
+                        <span class="pied__icone material-symbols-outlined" aria-hidden="true">mail</span>
+                        <div><a :href="`mailto:${contacts.courriel}`" v-text="contacts.courriel"></a></div>
                     </li>
-                    <li>
-                        <a :href="lienTel(contacts.proprietaire.tel)" v-text="contacts.proprietaire.tel"></a>
-                        <span>{{ contacts.proprietaire.nom }}, {{ contacts.proprietaire.titre }}</span>
+                    <li class="pied__ligne">
+                        <span class="pied__icone material-symbols-outlined" aria-hidden="true">call</span>
+                        <div>
+                            <a :href="lienTel(contacts.ventes.tel)" v-text="contacts.ventes.tel"></a>
+                            <span class="pied__nom">{{ contacts.ventes.nom }}, {{ contacts.ventes.titre }}</span>
+                        </div>
                     </li>
-                    <li v-text="contacts.adresse"></li>
+                    <li class="pied__ligne">
+                        <span class="pied__icone material-symbols-outlined" aria-hidden="true">call</span>
+                        <div>
+                            <a :href="lienTel(contacts.proprietaire.tel)" v-text="contacts.proprietaire.tel"></a>
+                            <span class="pied__nom">{{ contacts.proprietaire.nom }}, {{ contacts.proprietaire.titre }}</span>
+                        </div>
+                    </li>
+                    <li class="pied__ligne">
+                        <span class="pied__icone material-symbols-outlined" aria-hidden="true">location_on</span>
+                        <div v-text="contacts.adresse"></div>
+                    </li>
                 </ul>
             </div>
 

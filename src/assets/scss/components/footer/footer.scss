@@ -88,17 +88,48 @@
             list-style: none;
         }
         & li{
-            display: grid;
             line-height: 1.4;
-        }
-        & li span{
-            font-size: 0.85rem;
         }
         & a{
             display: inline-block;
             padding: 0.1rem 0;
             transition: transform 175ms;
         }
+    }
+
+    // Contact : chaque ligne a son icône dans une pastille, avec de l'air entre les lignes
+    &__colonne:has(.pied__ligne) ul{
+        gap: var(--espace-2);
+    }
+
+    &__ligne{
+        display: grid;
+        grid-template-columns: 2.25rem minmax(0, 1fr);
+        gap: 0.75rem;
+        align-items: start;
+
+        & > div{
+            display: grid;
+            gap: 0.1rem;
+            align-self: center;
+            min-height: 2.25rem;
+            align-content: center;
+        }
+    }
+
+    &__icone{
+        display: grid;
+        place-items: center;
+        width: 2.25rem;
+        height: 2.25rem;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.18);
+        font-size: 1.25rem;
+    }
+
+    &__nom{
+        font-size: 0.85rem;
+        opacity: 0.9;
     }
 
     &__droits{
