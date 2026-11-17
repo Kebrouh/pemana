@@ -2,6 +2,7 @@
 
     import IconeSvg from '@/components/commun/IconeSvg/IconeSvg.vue'
     import { contacts, lienTel } from '@/data/contact.js'
+    import { rouvrirChoix } from '@/lib/consentement.js'
 
     const annee = new Date().getFullYear()
 </script>
@@ -63,7 +64,13 @@
 
         </div>
 
-        <p class="pied__droits">© {{ annee }} Pemana Inc.</p>
+        <div class="pied__droits">
+            <p>© {{ annee }} Pemana Inc.</p>
+            <ul>
+                <li><RouterLink to="/confidentialite">Politique de confidentialité</RouterLink></li>
+                <li><button class="pied__lien" type="button" @click="rouvrirChoix">Gérer les témoins</button></li>
+            </ul>
+        </div>
 
     </footer>
 </template>

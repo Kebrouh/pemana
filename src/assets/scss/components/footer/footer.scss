@@ -133,10 +133,46 @@
     }
 
     &__droits{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--espace-1) var(--espace-3);
         max-width: var(--largeur-contenu);
         margin: var(--espace-4) auto 0;
         padding-top: var(--espace-2);
         border-top: 1px solid rgba(255, 255, 255, 0.25);
         font-size: 0.85rem;
+
+        & p{
+            margin: 0;
+        }
+        & ul{
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--espace-1) var(--espace-3);
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+    }
+
+    // « Gérer les témoins » est un bouton qui a l'allure d'un lien du pied de page
+    &__lien{
+        padding: 0.1rem 0;
+        border: 0;
+        background: none;
+        color: white;
+        font: inherit;
+        text-decoration: none;
+        cursor: pointer;
+
+        &:hover{
+            text-decoration: underline;
+        }
+        &:focus-visible{
+            outline: 3px solid white;
+            outline-offset: 3px;
+        }
     }
 }

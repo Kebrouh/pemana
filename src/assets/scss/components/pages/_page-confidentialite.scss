@@ -1,0 +1,34 @@
+// = = = = = = = = = = = = = = = = = = = = = = = = =
+//  Auteur : Olivier Daigneault
+// = = = = = = = = = = = = = = = = = = = = = = = = =
+
+// Politique de confidentialité : du texte à lire, une colonne de 70 caractères, de l'air entre les sections.
+
+.page-confidentialite{
+
+    & .texte-long{
+        display: grid;
+        gap: var(--espace-4);
+        max-width: 70ch;
+
+        & section{
+            display: grid;
+            gap: var(--espace-1);
+            justify-items: start;
+        }
+        & .titre-section{
+            margin-bottom: 0;
+            font-size: clamp(1.25rem, 2.5vw, 1.6rem);
+        }
+        & p{
+            margin: 0;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+    }
+
+    & .texte-long__date{
+        color: var(--texte-doux);
+        font-size: 0.95rem;
+    }
+}

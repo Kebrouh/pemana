@@ -51,6 +51,12 @@ const router = createRouter({
     },
 
     {
+      path: '/confidentialite',
+      name: 'confidentialite',
+      component: () => import("@/views/PageConfidentialite.vue"),
+    },
+
+    {
       path: '/:pathMatch(.*)*',
       redirect: '/',
     }

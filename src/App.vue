@@ -2,6 +2,7 @@
   import { ref } from 'vue'
   import { RouterView } from 'vue-router'
   import HeaderApp from '@/components/commun/HeaderApp/HeaderApp.vue'
+  import BandeauConsentement from '@/components/commun/Consentement/BandeauConsentement.vue'
 
   const contenu = ref(null)
 
@@ -15,6 +16,8 @@
     <a class="lien-evitement" href="#contenu" @click.prevent="allerAuContenu">Aller au contenu</a>
 
     <HeaderApp />
+
+    <BandeauConsentement />
 
     <main id="contenu" class="zone-contenu" ref="contenu" tabindex="-1">
       <RouterView class="contenu"/>
