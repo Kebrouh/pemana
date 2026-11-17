@@ -10,9 +10,10 @@
 
     --gris-fonce: #333333;
 
-    //Le vert lime est la couleur principale, le vert forêt sert d'accent (survols, petits textes).
-    //La page Marina redéfinit ces trois variables en bleu : le bleu reste réservé à la Marina.
+    //Le vert forêt porte les boutons, titres de section et le pied de page, le lime est l'accent vif.
+    //La page Marina (et seulement elle) redéfinit ces variables en bleu : le bleu lui est réservé.
     --vert-pale: rgba(102, 153, 51, 0.15);
+    --vert-survol: #244d24;
 
     --texte: #222222;
     --texte-doux: #5c5c5c;

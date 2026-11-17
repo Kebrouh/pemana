@@ -54,7 +54,7 @@
     line-height: 1.2;
 
     & span{
-        color: var(--vert-lime);
+        color: var(--vert-foret);
     }
 }
 
@@ -91,12 +91,12 @@
     }
 
     &--vert{
-        border-color: var(--vert-lime);
-        background-color: var(--vert-lime);
+        border-color: var(--vert-foret);
+        background-color: var(--vert-foret);
 
         &:hover{
-            border-color: var(--vert-foret);
-            background-color: var(--vert-foret);
+            border-color: var(--vert-survol);
+            background-color: var(--vert-survol);
         }
     }
     &--contour{

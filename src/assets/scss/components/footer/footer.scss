@@ -2,14 +2,15 @@
 //  Auteur : Olivier Daigneault
 // = = = = = = = = = = = = = = = = = = = = = = = = =
 
-// Pied de page : un bandeau vert lime, trois colonnes en grid, rien de positionné à la main.
+// Pied de page : un bandeau vert forêt (même couleur sur toutes les pages, Marina comprise),
+// trois colonnes en grid, rien de positionné à la main.
 
 .pied{
     width: 100%;
     margin-top: var(--espace-5);
     padding: var(--espace-4) clamp(1rem, 4vw, 3rem) var(--espace-3);
     border-top-left-radius: 50px;
-    background-color: var(--vert-lime);
+    background-color: var(--vert-foret);
     color: white;
 
     & a{

@@ -4,17 +4,14 @@
 
 // Page Marina : une section après l'autre, chacune en grid, rien ne se superpose.
 
-// La Marina a sa propre identité : on redéfinit les variables vertes en bleu pour toute la page
-// (titres, boutons, coches, étiquettes) et son pied de page. Le menu, lui, reste celui de Pemana.
-.marina{
+// La Marina a sa propre identité : on redéfinit les variables vertes en bleu pour le contenu de la page
+// (titres, boutons, coches, étiquettes). Le menu et le pied de page restent ceux de Pemana, en vert.
+.page-marina{
     --vert-lime: #2f8cb8;
     --vert-foret: #1d5a7a;
+    --vert-survol: #134257;
     --vert-pale: rgba(47, 140, 184, 0.15);
 
-    // l'icône Facebook est verte dans son fichier : on la tourne vers le bleu
-    & .pied__facebook img{
-        filter: hue-rotate(105deg);
-    }
 }
 
 .page-marina{
@@ -179,7 +176,7 @@
         font-weight: 700;
 
         & span{
-            color: var(--vert-lime);
+            color: var(--vert-foret);
         }
     }
 
