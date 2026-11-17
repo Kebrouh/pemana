@@ -1,37 +1,46 @@
-# pemana
+# Pemana Inc.
 
-This template should help get you started developing with Vue 3 in Vite.
+Site web de Pemana Inc. : logements à louer à Saint-Jérôme et au Lac-Supérieur, quais saisonniers à la marina de Pointe-Fortune, projets à venir.
+Vue 3 + Vite, mis en ligne par GitHub Pages à chaque envoi sur la branche `main`.
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+## Démarrer
 
 ```sh
 npm install
+npm run dev        # serveur local
+npm run build      # construit le site dans dist/
+npm run lint       # vérifie le code (corrige ce qui peut l'être)
 ```
 
-### Compile and Hot-Reload for Development
+## Où modifier quoi
 
-```sh
-npm run dev
-```
+| Je veux changer… | Fichier |
+|---|---|
+| Un logement (prix, description, chambres, photos) | `src/assets/json/location.json` |
+| Les cartes de l'accueil | `src/assets/json/categories.json` |
+| Téléphones, courriel, adresse, Facebook | `src/data/contact.js` |
+| Couleurs, espacements, arrondis | `src/assets/scss/base/_variables.scss` |
+| Boutons, cartes, étiquettes partagés | `src/assets/scss/base/_composants.scss` |
+| Une page | `src/views/` (la page) et `src/components/AffichageData/` (son contenu) |
+| Le style d'une page | `src/assets/scss/components/pages/` |
 
-### Compile and Minify for Production
+Les couleurs : le vert forêt porte les boutons et le pied de page, le vert lime est l'accent. Le bleu est réservé à la page Marina,
+qui redéfinit les variables vertes en bleu dans `_page-marina.scss`.
 
-```sh
-npm run build
-```
+## Ajouter ou changer des photos de logement
 
-### Lint with [ESLint](https://eslint.org/)
+1. Dépose les photos dans `public/` (garde les originaux ailleurs).
+2. Ajoute leur nom de fichier dans la liste `images` du logement, dans `location.json` (la première est celle de la carte).
+3. Lance `npm run photos` : les photos trop lourdes sont réduites à 2000 px et les miniatures de 640 px sont créées dans `public/min/`.
+4. Vérifie avec `npm run dev`, puis envoie sur `main`.
 
-```sh
-npm run lint
-```
-# pemana.inc
-Site web pour la compagnie Pemana.inc
+Si la commande signale une photo introuvable, le nom dans `location.json` ne correspond pas au fichier de `public/`.
+
+## Mise en ligne
+
+Un envoi sur `main` lance le déploiement GitHub Pages (`.github/workflows/vue.yml`). Il dure environ deux minutes.
+
+## Formulaire d'appel de service
+
+Le formulaire envoie un courriel avec EmailJS (identifiants dans `src/components/AffichageData/AffichageService.vue`).
+La clé publique y est visible, c'est normal pour EmailJS ; le quota d'envois se règle dans le compte EmailJS.

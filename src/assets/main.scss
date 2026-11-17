@@ -2,13 +2,19 @@
 //  Auteur : Olivier Daigneault
 // = = = = = = = = = = = = = = = = = = = = = = = = =
 
-@import './scss/base/base.scss';
 @import './scss/base/mixins';
 @import './scss/base/normalize.scss';
-@import './scss/base/typo';
 @import './scss/base/variables';
 @import './scss/base/composants';
 
 @import './scss/components/components.scss';
 
-@import './node_modules/bootstrap/scss/bootstrap.scss';
+// Bootstrap : seulement la remise à zéro (reboot). Le site n'utilise aucune de ses classes,
+// la grille, les boutons et les utilitaires ajoutaient environ 200 Ko de CSS pour rien.
+@import './node_modules/bootstrap/scss/functions';
+@import './node_modules/bootstrap/scss/variables';
+@import './node_modules/bootstrap/scss/variables-dark';
+@import './node_modules/bootstrap/scss/maps';
+@import './node_modules/bootstrap/scss/mixins';
+@import './node_modules/bootstrap/scss/root';
+@import './node_modules/bootstrap/scss/reboot';

@@ -6,11 +6,11 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "photos": "node scripts/photos.mjs"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
-    "animate.css": "^4.1.1",
     "bootstrap": "^5.3.0",
     "vue": "^3.3.2",
     "vue-router": "^4.2.0"
@@ -19,8 +19,8 @@
     "@vitejs/plugin-vue": "^4.2.3",
     "eslint": "^8.39.0",
     "eslint-plugin-vue": "^9.11.0",
-    "gh-pages": "^5.0.0",
     "sass": "^1.62.1",
+    "sharp": "^0.33.5",
     "vite": "^4.3.5"
   }
 }
