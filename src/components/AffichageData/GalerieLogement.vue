@@ -1,5 +1,7 @@
 <script setup>
 
+    import IconeSvg from '@/components/commun/IconeSvg/IconeSvg.vue'
+
     import { ref, computed, watch, nextTick, onBeforeUnmount } from 'vue'
     import { urlComplete, urlMiniature } from '@/lib/logement.js'
 
@@ -119,14 +121,14 @@
             </button>
 
             <button class="galerie__nav galerie__nav--prec" type="button" aria-label="Photo précédente" v-if="plusieurs" @click.stop="precedente">
-                <span class="material-symbols-outlined" aria-hidden="true">chevron_left</span>
+                <IconeSvg nom="chevron_left" />
             </button>
             <button class="galerie__nav galerie__nav--suiv" type="button" aria-label="Photo suivante" v-if="plusieurs" @click.stop="suivante">
-                <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+                <IconeSvg nom="chevron_right" />
             </button>
 
             <p class="galerie__compteur" v-if="plusieurs">{{ index + 1 }} / {{ total }}</p>
-            <span class="galerie__agrandir material-symbols-outlined" aria-hidden="true">zoom_out_map</span>
+            <IconeSvg class="galerie__agrandir" nom="zoom_out_map" />
         </div>
 
         <div class="galerie__miniatures" ref="miniatures" v-if="plusieurs">
@@ -143,17 +145,17 @@
             <div class="lightbox" v-if="ouvert" role="dialog" aria-modal="true" aria-label="Galerie photo en plein écran" @click.self="fermer">
 
                 <button class="lightbox__bouton lightbox__fermer" ref="boutonFermer" type="button" aria-label="Fermer" @click="fermer">
-                    <span class="material-symbols-outlined" aria-hidden="true">close</span>
+                    <IconeSvg nom="close" />
                 </button>
 
                 <button class="lightbox__bouton lightbox__nav lightbox__nav--prec" type="button" aria-label="Photo précédente" v-if="plusieurs" @click="precedente">
-                    <span class="material-symbols-outlined" aria-hidden="true">chevron_left</span>
+                    <IconeSvg nom="chevron_left" />
                 </button>
 
                 <img class="lightbox__image" :src="urlComplete(images[index])" :alt="texteAlt(index)" @click.self="fermer">
 
                 <button class="lightbox__bouton lightbox__nav lightbox__nav--suiv" type="button" aria-label="Photo suivante" v-if="plusieurs" @click="suivante">
-                    <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+                    <IconeSvg nom="chevron_right" />
                 </button>
 
                 <p class="lightbox__compteur" v-if="plusieurs">{{ index + 1 }} / {{ total }}</p>

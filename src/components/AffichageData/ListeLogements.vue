@@ -1,5 +1,7 @@
 <script setup>
 
+    import IconeSvg from '@/components/commun/IconeSvg/IconeSvg.vue'
+
     import VignetteLogement from '@/components/AffichageData/VignetteLogement.vue'
     import EntetePage from '@/components/commun/EntetePage/EntetePage.vue'
 
@@ -21,10 +23,10 @@
         <EntetePage :surtitre="surtitre" :titre="titre">
             <template #actions>
                 <a class="bouton" :href="meteoUrl" target="_blank" rel="noopener noreferrer">
-                    Météo <span class="material-symbols-outlined" aria-hidden="true">cloud</span>
+                    Météo <IconeSvg nom="cloud" />
                 </a>
                 <RouterLink class="bouton" to="/service">
-                    Appel de service <span class="material-symbols-outlined" aria-hidden="true">person</span>
+                    Appel de service <IconeSvg nom="person" />
                 </RouterLink>
             </template>
         </EntetePage>

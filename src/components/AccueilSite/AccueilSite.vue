@@ -1,5 +1,7 @@
 <script setup>
 
+    import IconeSvg from '@/components/commun/IconeSvg/IconeSvg.vue'
+
   import { ref } from 'vue'
 
   import categorieData from '@/assets/json/categories.json'
@@ -38,10 +40,10 @@
           <div class="hero__actions">
             <button class="bouton bouton--vert" type="button" @click="versLocations">
               Explorer nos locations
-              <span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span>
+              <IconeSvg nom="arrow_downward" />
             </button>
             <a class="bouton bouton--clair" :href="lienTel(contacts.principal.tel)">
-              <span class="material-symbols-outlined" aria-hidden="true">call</span>
+              <IconeSvg nom="call" />
               {{ contacts.principal.tel }}
             </a>
           </div>
@@ -59,12 +61,12 @@
               <img :src="categorie.img" :alt="categorie.name" loading="lazy" decoding="async">
             </div>
             <div class="carte-lieu__corps">
-              <span class="material-symbols-outlined carte-lieu__icone" v-text="categorie.icon" aria-hidden="true"></span>
+              <IconeSvg class="carte-lieu__icone" :nom="categorie.icon" />
               <div>
                 <h3 v-text="categorie.name"></h3>
                 <p v-text="detail[categorie.link]?.()"></p>
               </div>
-              <span class="material-symbols-outlined carte-lieu__fleche" aria-hidden="true">arrow_forward</span>
+              <IconeSvg class="carte-lieu__fleche" nom="arrow_forward" />
             </div>
           </RouterLink>
         </div>
@@ -76,7 +78,7 @@
           </div>
           <RouterLink class="bouton bouton--vert" to="/service">
             Appel de service
-            <span class="material-symbols-outlined" aria-hidden="true">person</span>
+            <IconeSvg nom="person" />
           </RouterLink>
         </div>
       </section>

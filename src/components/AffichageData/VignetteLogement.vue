@@ -1,5 +1,7 @@
 <script setup>
 
+    import IconeSvg from '@/components/commun/IconeSvg/IconeSvg.vue'
+
     import { computed } from 'vue'
     import { urlMiniature, prixNumerique, formaterPrix, libelleChambres, libelleSdb, decouperDescription } from '@/lib/logement.js'
 
@@ -30,13 +32,13 @@
         <div class="carte-logement__corps">
             <h2>{{ props.objLogement.name }}<span class="visuellement-cache">, {{ props.objLogement.adresse }}</span></h2>
             <p class="carte-logement__adresse">
-                <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+                <IconeSvg nom="location_on" />
                 <span v-text="props.objLogement.adresse"></span>
             </p>
 
             <ul class="specs">
-                <li><span class="material-symbols-outlined" aria-hidden="true">bed</span>{{ libelleChambres(props.objLogement.room) }}</li>
-                <li><span class="material-symbols-outlined" aria-hidden="true">bathtub</span>{{ libelleSdb(props.objLogement.bathroom) }}</li>
+                <li><IconeSvg nom="bed" />{{ libelleChambres(props.objLogement.room) }}</li>
+                <li><IconeSvg nom="bathtub" />{{ libelleSdb(props.objLogement.bathroom) }}</li>
             </ul>
 
             <p class="carte-logement__accroche" v-if="description.accroche" v-text="description.accroche"></p>
@@ -44,7 +46,7 @@
 
             <span class="carte-logement__lien">
                 Voir le logement
-                <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+                <IconeSvg nom="arrow_forward" />
             </span>
         </div>
 

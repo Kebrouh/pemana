@@ -1,5 +1,7 @@
 <script setup>
 
+    import IconeSvg from '@/components/commun/IconeSvg/IconeSvg.vue'
+
     import EntetePage from '@/components/commun/EntetePage/EntetePage.vue'
     import { contacts, lienTel } from '@/data/contact.js'
 
@@ -40,11 +42,11 @@
             <p>Contactez-nous, nous serons heureux de vous en parler.</p>
             <div class="a-venir-contact__boutons">
                 <a class="bouton bouton--vert" :href="lienTel(contacts.ventes.tel)">
-                    <span class="material-symbols-outlined" aria-hidden="true">call</span>
+                    <IconeSvg nom="call" />
                     {{ contacts.ventes.tel }}
                 </a>
                 <a class="bouton bouton--contour" :href="`mailto:${contacts.courriel}`">
-                    <span class="material-symbols-outlined" aria-hidden="true">mail</span>
+                    <IconeSvg nom="mail" />
                     {{ contacts.courriel }}
                 </a>
             </div>

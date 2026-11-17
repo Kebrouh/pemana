@@ -1,5 +1,7 @@
 <script setup>
 
+    import IconeSvg from '@/components/commun/IconeSvg/IconeSvg.vue'
+
     import { ref, reactive, watch, nextTick } from 'vue'
     import emailjs from '@emailjs/browser'
 
@@ -83,7 +85,7 @@
             <p class="service-intro">N'hésitez pas à nous contacter pour toute question, problème ou demande concernant votre logement. Notre équipe est là pour vous aider.</p>
 
             <div class="carte service-merci" v-if="etat === 'ok'">
-                <span class="material-symbols-outlined service-merci__icone" aria-hidden="true">check_circle</span>
+                <IconeSvg class="service-merci__icone" nom="check_circle" />
                 <h2 class="titre-section" ref="titreMerci" tabindex="-1">Merci, votre demande est <span>envoyée</span></h2>
                 <p>Notre équipe vous répondra par courriel dès que possible.</p>
                 <button class="bouton bouton--contour" type="button" @click="nouvelleDemande">Envoyer une autre demande</button>
@@ -132,7 +134,7 @@
                 <div class="service-actions">
                     <button class="bouton bouton--vert" type="submit" :disabled="etat === 'envoi'">
                         <span v-text="etat === 'envoi' ? 'Envoi en cours…' : 'Envoyer'"></span>
-                        <span class="material-symbols-outlined" aria-hidden="true">{{ etat === 'envoi' ? 'hourglass_top' : 'arrow_forward' }}</span>
+                        <IconeSvg :nom="etat === 'envoi' ? 'hourglass_top' : 'arrow_forward'" />
                     </button>
                 </div>
 

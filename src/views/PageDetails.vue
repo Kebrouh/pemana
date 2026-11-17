@@ -1,5 +1,7 @@
 <script setup>
 
+    import IconeSvg from '@/components/commun/IconeSvg/IconeSvg.vue'
+
     import { useRoute } from 'vue-router'
     import { computed } from 'vue'
 
@@ -34,7 +36,7 @@
         <div class="page-contenu page-logement" v-if="logement">
 
             <RouterLink class="lien-retour" :to="lieu.route">
-                <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
+                <IconeSvg nom="arrow_back" />
                 Tous les logements, {{ lieu.nom }}
             </RouterLink>
 
@@ -49,13 +51,13 @@
                     <span class="etiquette" v-text="lieu.nom"></span>
                     <h1 v-text="logement.name"></h1>
                     <p class="logement__adresse">
-                        <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+                        <IconeSvg nom="location_on" />
                         <span>{{ logement.adresse }}</span>
                     </p>
 
                     <ul class="specs">
-                        <li><span class="material-symbols-outlined" aria-hidden="true">bed</span>{{ libelleChambres(logement.room) }}</li>
-                        <li><span class="material-symbols-outlined" aria-hidden="true">bathtub</span>{{ libelleSdb(logement.bathroom) }}</li>
+                        <li><IconeSvg nom="bed" />{{ libelleChambres(logement.room) }}</li>
+                        <li><IconeSvg nom="bathtub" />{{ libelleSdb(logement.bathroom) }}</li>
                     </ul>
 
                     <p class="logement__prix" v-if="prixNumerique(logement.prix)">
@@ -68,12 +70,12 @@
 
                     <div class="logement__actions">
                         <a class="bouton bouton--vert bouton--large" :href="lienTel(contacts.principal.tel)">
-                            <span class="material-symbols-outlined" aria-hidden="true">call</span>
+                            <IconeSvg nom="call" />
                             {{ contacts.principal.tel }}
                         </a>
                         <RouterLink class="bouton bouton--contour bouton--large" to="/service">
                             Appel de service
-                            <span class="material-symbols-outlined" aria-hidden="true">person</span>
+                            <IconeSvg nom="person" />
                         </RouterLink>
                     </div>
                 </aside>
@@ -105,7 +107,7 @@
         <!-- sur téléphone, l'appel reste à portée du pouce pendant tout le défilement -->
         <div class="barre-appel" v-if="logement">
             <a class="bouton bouton--vert bouton--large" :href="lienTel(contacts.principal.tel)">
-                <span class="material-symbols-outlined" aria-hidden="true">call</span>
+                <IconeSvg nom="call" />
                 Appeler le {{ contacts.principal.tel }}
             </a>
         </div>

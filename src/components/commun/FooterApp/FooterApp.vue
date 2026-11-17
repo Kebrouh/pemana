@@ -1,4 +1,6 @@
 <script setup>
+
+    import IconeSvg from '@/components/commun/IconeSvg/IconeSvg.vue'
     import { contacts, lienTel } from '@/data/contact.js'
 
     const annee = new Date().getFullYear()
@@ -23,25 +25,25 @@
                 <h2>Contact</h2>
                 <ul>
                     <li class="pied__ligne">
-                        <span class="pied__icone material-symbols-outlined" aria-hidden="true">mail</span>
+                        <IconeSvg class="pied__icone" nom="mail" />
                         <div><a :href="`mailto:${contacts.courriel}`" v-text="contacts.courriel"></a></div>
                     </li>
                     <li class="pied__ligne">
-                        <span class="pied__icone material-symbols-outlined" aria-hidden="true">call</span>
+                        <IconeSvg class="pied__icone" nom="call" />
                         <div>
                             <a :href="lienTel(contacts.ventes.tel)" v-text="contacts.ventes.tel"></a>
                             <span class="pied__nom">{{ contacts.ventes.nom }}, {{ contacts.ventes.titre }}</span>
                         </div>
                     </li>
                     <li class="pied__ligne">
-                        <span class="pied__icone material-symbols-outlined" aria-hidden="true">call</span>
+                        <IconeSvg class="pied__icone" nom="call" />
                         <div>
                             <a :href="lienTel(contacts.proprietaire.tel)" v-text="contacts.proprietaire.tel"></a>
                             <span class="pied__nom">{{ contacts.proprietaire.nom }}, {{ contacts.proprietaire.titre }}</span>
                         </div>
                     </li>
                     <li class="pied__ligne">
-                        <span class="pied__icone material-symbols-outlined" aria-hidden="true">location_on</span>
+                        <IconeSvg class="pied__icone" nom="location_on" />
                         <div v-text="contacts.adresse"></div>
                     </li>
                 </ul>

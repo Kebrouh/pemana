@@ -244,6 +244,26 @@ a.lien-evitement:visited{
     color: var(--gris-fonce);
 }
 
+// Icônes : le <span> garde le nom de classe de l'ancienne police Google, ce qui laisse toutes les règles de taille,
+// de couleur et de pastille des pages intactes. Le SVG à l'intérieur mesure 1em et prend la couleur du texte.
+.material-symbols-outlined{
+    display: inline-grid;
+    flex: none;
+    place-items: center;
+    width: 1em;
+    height: 1em;
+    font-size: 24px;
+    line-height: 1;
+    vertical-align: middle;
+
+    & svg{
+        display: block;
+        width: 1em;
+        height: 1em;
+        fill: currentColor;
+    }
+}
+
 // lu par les lecteurs d'écran, absent de l'écran
 .visuellement-cache{
     position: absolute;
