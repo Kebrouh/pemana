@@ -1,7 +1,7 @@
 <script setup>
 
     import { useRoute } from 'vue-router'
-    import { computed, watch, onBeforeMount } from 'vue'
+    import { computed } from 'vue'
 
     import GalerieLogement from '@/components/AffichageData/GalerieLogement.vue'
     import VignetteLogement from '@/components/AffichageData/VignetteLogement.vue'
@@ -23,14 +23,6 @@
         const liste = location[route.params.emplacement] || []
         const i = liste.findIndex((l) => l.id === logement.value?.id)
         return [1, 2, 3].map((pas) => liste[(i + pas) % liste.length]).filter((l, k, tab) => l && l.id !== logement.value?.id && tab.indexOf(l) === k)
-    })
-
-    onBeforeMount(() => {
-        window.scrollTo({top:0});
-    })
-
-    watch(() => route.fullPath, () => {
-        window.scrollTo({top:0});
     })
 
 </script>
