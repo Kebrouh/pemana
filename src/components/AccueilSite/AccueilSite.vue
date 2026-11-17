@@ -17,7 +17,6 @@
   //une phrase tirée des données pour chaque endroit, rien d'écrit à la main qui pourrait vieillir
   const nombre = (cle) => location[cle]?.length ?? 0
   const detail = {
-    '/marina': () => 'Quai saisonnier à partir de 35 $ / pied',
     '/lac-superieur': () => `${nombre('lacSup')} logements`,
     '/saint-jerome': () => `${nombre('saintJe')} logements`,
     '/a-venir': () => 'Lac Lilly, Lac Simon et Saint-Adèle',
@@ -64,7 +63,7 @@
               <IconeSvg class="carte-lieu__icone" :nom="categorie.icon" />
               <div>
                 <h3 v-text="categorie.name"></h3>
-                <p v-text="detail[categorie.link]?.()"></p>
+                <p v-if="detail[categorie.link]" v-text="detail[categorie.link]()"></p>
               </div>
               <IconeSvg class="carte-lieu__fleche" nom="arrow_forward" />
             </div>
