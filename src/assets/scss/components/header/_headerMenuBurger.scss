@@ -2,191 +2,156 @@
 //  Auteur : Olivier Daigneault
 // = = = = = = = = = = = = = = = = = = = = = = = = =
 
-//tout est rempli de !important pour over-write le style invisible du mystère absolu ¯\_(ツ)_/¯
+// Menu burger : le bouton reste toujours au même endroit dans l'entête,
+// il devient un X à l'ouverture. Le panneau glisse par-dessus l'entête.
 
-.bm-burger-button {
+$menu-largeur : 500px;
+$menu-entete-hauteur : 220px;
+$menu-duree : 350ms;
+$menu-courbe : cubic-bezier(0.22, 1, 0.36, 1);
 
-  //my add-on
-  position: relative !important;
-  top: 35px !important;
-  left: -140px !important;
-  z-index: 10 !important;
-  width: 30px !important;
-  height: 30px !important;
+.navBar{
 
-  @include breakpoint-min(410){
-    left: -170px !important;
-  }
-  @include breakpoint-min(460){
-    left: -200px !important;
-  }
-  @include breakpoint-min(600){
-    left: -250px !important;
-  }
-  @include breakpoint-min(768){
-    top: 50px !important;
-    left: -2px !important;
-  }
+    // - - - - - bouton burger / X - - - - -
+    & .menu-bouton{
+        position: absolute;
+        top: 25px;
+        left: 23px;
+        z-index: 3;
+        width: 50px;
+        height: 50px;
+        padding: 0;
+        border: 0;
+        border-radius: 50%;
+        background-color: var(--vert-lime);
+        cursor: pointer;
+        transition: background-color 150ms;
 
-  &::after{
-    display: block;
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    padding: 0;
-    content: "";
-    right: -10px;
-    top: -10px;
-    z-index: -1;
-    border-radius: 100%;
-    background-color: var(--vert-lime);
-  }
+        @include breakpoint-min(768){
+            top: 40px;
+            left: 32px;
+        }
+
+        &:hover{
+            background-color: var(--vert-foret);
+        }
+
+        &:focus-visible{
+            outline: 3px solid var(--bleu-marina);
+            outline-offset: 3px;
+        }
+    }
+
+    & .barre{
+        position: absolute;
+        left: 11px;
+        width: 28px;
+        height: 4px;
+        border-radius: 10px;
+        background-color: white;
+        transition: transform $menu-duree $menu-courbe, opacity 150ms;
+
+        &:nth-child(1){ top: 15px; }
+        &:nth-child(2){ top: 23px; }
+        &:nth-child(3){ top: 31px; }
+    }
+
+    &.ouvert .barre{
+        &:nth-child(1){ transform: translateY(8px) rotate(45deg); }
+        &:nth-child(2){ opacity: 0; }
+        &:nth-child(3){ transform: translateY(-8px) rotate(-45deg); }
+    }
+
+    // - - - - - fond sombre - - - - -
+    & .menu-fond{
+        position: fixed;
+        inset: 0;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity $menu-duree, visibility 0s $menu-duree;
+    }
+
+    &.ouvert .menu-fond{
+        opacity: 1;
+        visibility: visible;
+        transition: opacity $menu-duree;
+    }
+
+    // - - - - - panneau - - - - -
+    // visibility : fermé, les liens sortent de l'ordre de tabulation
+    & .menu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        width: min(#{$menu-largeur}, 100vw);
+        height: 100%;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        background-color: var(--gris-fonce);
+        box-shadow: 10px 0 10px rgba(0, 0, 0, 0.3);
+        transform: translateX(-100%);
+        visibility: hidden;
+        transition: transform $menu-duree $menu-courbe, visibility 0s $menu-duree;
+    }
+
+    &.ouvert .menu{
+        transform: translateX(0);
+        visibility: visible;
+        transition: transform $menu-duree $menu-courbe;
+    }
+
+    & .menu-entete{
+        @include setFlex(row, center, center);
+        height: $menu-entete-hauteur;
+        padding-left: 70px;
+        background-color: white;
+
+        & img{
+            width: min(250px, 100%);
+            object-fit: contain;
+        }
+    }
+
+    & .menu-liste{
+        @include resetBox;
+        padding-top: 15px;
+        list-style: none;
+    }
+
+    & .menu-lien{
+        display: block;
+        padding: 15px 15px 15px 40px;
+        border-left: 5px solid transparent;
+        color: white;
+        font-size: 20px;
+        text-decoration: none;
+        transition: padding-left 175ms, background-color 175ms;
+
+        &:hover,
+        &:focus-visible{
+            padding-left: 50px;
+            background-color: rgb(80, 80, 80);
+            font-weight: bold;
+            outline: none;
+        }
+
+        // page en cours
+        &.router-link-exact-active{
+            border-left-color: var(--vert-lime);
+            font-weight: bold;
+        }
+    }
+
 }
-  .bm-burger-bars {
-    width: 30px !important;
-    height: 5px !important;
-    border-radius: 10px;
 
-    background: white !important;
-  }
-  .line-style {
-    position: absolute;
-    height: 20%;
-    left: 0;
-    right: 0;
-  }
-  .cross-style {
-    position: absolute;
-    top: 12px;
-    right: 2px;
-    cursor: pointer;
-  }
-  .bm-cross {
-    position: absolute !important;
-    left: 2px;
-    width: 40px !important;
-    height: 5px !important;
-    border-radius: 10px;
-
-    background: white !important;
-  }
-  .bm-cross-button {
-    position: relative !important;
-    top: -510px !important;
-    left: 35px !important;
-    z-index: 10 !important;
-    width: 30px !important;
-    height: 30px !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    z-index: 20 !important;
-
-    &::after{
-      display: block;
-      position: absolute;
-      width: 50px;
-      height: 50px;
-      padding: 0;
-      content: "";
-      right: -47px;
-      top: -24px;
-      z-index: -1;
-      border-radius: 100%;
-      background-color: var(--vert-lime);
+@media (prefers-reduced-motion: reduce){
+    .navBar .menu,
+    .navBar .menu-fond,
+    .navBar .barre,
+    .navBar .menu-lien{
+        transition-duration: 0.01ms !important;
     }
-  }
-  .bm-menu {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed, relative !important; /* Stay in place */
-    z-index: 1000; /* Stay on top */
-    top: 0;
-    left: 0;
-    background-color: var(--gris-fonce) !important; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /*0.5 second transition effect to slide in the sidenav*/
-    box-shadow: 10px 0 10px rgba(0, 0, 0, 0.3);
-
-    &::before{
-      display: block;
-      position: absolute;
-      width: 500px;
-      height: 275px;
-      padding: 0;
-      content: "";
-      left: 0;
-      top: 0;
-      z-index: -2;
-      background-color:white;
-    }
-  }
-
-  .bm-overlay {
-    // background: rgba(0, 0, 0, 0.5) !important;
-
-    //my own overlay, goes over what i want
-    &::after{
-      display: block;
-      position: fixed;
-      padding: 0;
-      content: "";
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      z-index: 9998;
-      background-color: rgba(0, 0, 0, 0.3);
-    }
-  }
-  .bm-item-list {
-    position: relative;
-    color: white !important;
-    margin-top: 215px;
-    margin-left: 0 !important;
-    font-size: 20px;
-
-    & .item-list{
-      display: flex;
-      text-decoration: none;
-      padding: 15px 15px 15px 40px!important;
-
-      &:hover{
-        transition: 175ms;
-        
-        padding-left: 50px !important;
-        font-weight: bold;
-        background-color: rgb(80, 80, 80);
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-      }
-    }
-
-    & .wrapImg{
-      position: absolute;
-      top: -175px;
-      left: 100px;
-      width: 200px;
-      padding: 0;
-
-      @include breakpoint-min(400){
-        top: -180px;
-        left: 125px;
-        width: 250px;
-      }
-      @include breakpoint-min(576){
-        top: -200px;
-        left: 100px;
-        width: 300px;
-      }
-
-      & img{
-        width: 100%;
-        object-fit: contain;
-      }
-    }
-  }
-  .bm-item-list > * > span {
-    margin-left: 10px;
-    font-weight: 700;
-    color: white;
-  }
+}
