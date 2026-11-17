@@ -7,9 +7,30 @@
 
   const explorer = ref(null)
 
+  //Le défilement du site se fait dans <body> (html et body ont overflow-x: hidden) :
+  //scrollIntoView ne le trouvait pas et le bouton ne faisait rien. On cherche l'élément qui défile vraiment.
+  const ancetreDefilant = (el) => {
+    for (let e = el.parentElement; e; e = e.parentElement) {
+      const ov = getComputedStyle(e).overflowY
+      if ((ov === 'auto' || ov === 'scroll') && e.scrollHeight > e.clientHeight + 1) return e
+    }
+    return document.scrollingElement
+  }
+
   const versLocations = () => {
+    //on vise le titre « Explorer nos locations » et non le haut de la section, qui a un grand espace au-dessus
+    const cible = explorer.value?.querySelector('.titre-section')
+    if (!cible) return
+
+    const defilant = ancetreDefilant(cible)
     const reduit = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    explorer.value?.scrollIntoView({ behavior: reduit ? 'auto' : 'smooth', block: 'start' })
+    const enteteFixe = window.matchMedia('(max-width: 767px)').matches ? 100 : 0    //l'entête mobile est collée en haut
+    const base = defilant === document.scrollingElement ? 0 : defilant.getBoundingClientRect().top
+
+    defilant.scrollTo({
+      top: cible.getBoundingClientRect().top - base + defilant.scrollTop - enteteFixe - 24,
+      behavior: reduit ? 'auto' : 'smooth',
+    })
   }
 
   //une phrase tirée des données pour chaque endroit, rien d'écrit à la main qui pourrait vieillir
