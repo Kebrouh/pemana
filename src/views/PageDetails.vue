@@ -54,7 +54,7 @@
                 />
 
                 <aside class="logement__resume carte">
-                    <span class="etiquette etiquette--bleu" v-text="lieu.nom"></span>
+                    <span class="etiquette" v-text="lieu.nom"></span>
                     <h1 v-text="logement.name"></h1>
                     <p class="logement__adresse">
                         <span class="material-symbols-outlined">location_on</span>

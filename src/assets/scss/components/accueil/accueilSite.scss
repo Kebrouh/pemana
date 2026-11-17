@@ -100,7 +100,7 @@
             transform: translateY(-3px);
         }
         &:focus-visible{
-            outline: 3px solid var(--bleu-marina);
+            outline: 3px solid var(--vert-foret);
             outline-offset: 3px;
         }
 
@@ -205,8 +205,8 @@
     color: var(--gris-fonce);
 
     &:hover{
-        border-color: var(--bleu-marina);
-        background-color: var(--bleu-marina);
+        border-color: #e8f1dc;
+        background-color: #e8f1dc;
         color: var(--gris-fonce);
     }
 }

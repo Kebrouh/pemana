@@ -28,7 +28,7 @@
             font-size: clamp(1.8rem, 3.5vw, 2.5rem);
             font-weight: 900;
             line-height: 1.1;
-            color: var(--vert-foret);
+            color: var(--vert-lime);
         }
     }
 
@@ -134,7 +134,7 @@
             object-fit: cover;
         }
         &:focus-visible{
-            outline: 3px solid var(--bleu-marina);
+            outline: 3px solid var(--vert-foret);
             outline-offset: -6px;
         }
     }
@@ -160,7 +160,7 @@
             background-color: white;
         }
         &:focus-visible{
-            outline: 3px solid var(--bleu-marina);
+            outline: 3px solid var(--vert-foret);
             outline-offset: 2px;
         }
         &--prec{ left: var(--espace-2); }
@@ -222,7 +222,7 @@
             opacity: 1;
         }
         &:focus-visible{
-            outline: 3px solid var(--bleu-marina);
+            outline: 3px solid var(--vert-foret);
             outline-offset: 2px;
         }
         &[aria-current="true"]{
@@ -265,7 +265,7 @@
             background-color: rgba(255, 255, 255, 0.3);
         }
         &:focus-visible{
-            outline: 3px solid var(--bleu-marina);
+            outline: 3px solid white;
             outline-offset: 2px;
         }
     }

@@ -9,7 +9,6 @@
 .marina{
     --vert-lime: #2f8cb8;
     --vert-foret: #1d5a7a;
-    --vert-survol: #134257;
     --vert-pale: rgba(47, 140, 184, 0.15);
 
     // l'icône Facebook est verte dans son fichier : on la tourne vers le bleu
@@ -180,7 +179,7 @@
         font-weight: 700;
 
         & span{
-            color: var(--bleu-texte);
+            color: var(--vert-lime);
         }
     }
 

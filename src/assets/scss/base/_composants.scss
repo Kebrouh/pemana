@@ -54,7 +54,7 @@
     line-height: 1.2;
 
     & span{
-        color: var(--bleu-texte);
+        color: var(--vert-lime);
     }
 }
 
@@ -83,7 +83,7 @@
         transform: translateY(-1px);
     }
     &:focus-visible{
-        outline: 3px solid var(--bleu-marina);
+        outline: 3px solid var(--vert-foret);
         outline-offset: 3px;
     }
     & .material-symbols-outlined{
@@ -91,12 +91,12 @@
     }
 
     &--vert{
-        border-color: var(--vert-foret);
-        background-color: var(--vert-foret);
+        border-color: var(--vert-lime);
+        background-color: var(--vert-lime);
 
         &:hover{
-            border-color: var(--vert-survol);
-            background-color: var(--vert-survol);
+            border-color: var(--vert-foret);
+            background-color: var(--vert-foret);
         }
     }
     &--contour{

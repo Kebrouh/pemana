@@ -7,13 +7,12 @@
     --vert-foret: #336633;
 
     --bleu-marina: #89C5E4;
-    --bleu-texte: #2b7a9e;      //le bleu marina est trop pâle pour du texte sur fond blanc
 
     --gris-fonce: #333333;
 
-    //teintes dérivées du vert, redéfinies par la page Marina qui a sa propre couleur (le bleu)
+    //Le vert lime est la couleur principale, le vert forêt sert d'accent (survols, petits textes).
+    //La page Marina redéfinit ces trois variables en bleu : le bleu reste réservé à la Marina.
     --vert-pale: rgba(102, 153, 51, 0.15);
-    --vert-survol: #244d24;
 
     --texte: #222222;
     --texte-doux: #5c5c5c;

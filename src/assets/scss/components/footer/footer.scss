@@ -2,15 +2,14 @@
 //  Auteur : Olivier Daigneault
 // = = = = = = = = = = = = = = = = = = = = = = = = =
 
-// Pied de page : un bandeau vert forêt (le blanc sur vert lime manquait de contraste),
-// trois colonnes en grid, rien de positionné à la main.
+// Pied de page : un bandeau vert lime, trois colonnes en grid, rien de positionné à la main.
 
 .pied{
     width: 100%;
     margin-top: var(--espace-5);
     padding: var(--espace-4) clamp(1rem, 4vw, 3rem) var(--espace-3);
     border-top-left-radius: 50px;
-    background-color: var(--vert-foret);
+    background-color: var(--vert-lime);
     color: white;
 
     & a{
@@ -22,7 +21,7 @@
             text-decoration: underline;
         }
         &:focus-visible{
-            outline: 3px solid var(--bleu-marina);
+            outline: 3px solid white;
             outline-offset: 3px;
         }
     }
@@ -93,7 +92,6 @@
         }
         & li span{
             font-size: 0.85rem;
-            opacity: 0.85;
         }
         & a{
             display: inline-block;
@@ -108,6 +106,5 @@
         padding-top: var(--espace-2);
         border-top: 1px solid rgba(255, 255, 255, 0.25);
         font-size: 0.85rem;
-        opacity: 0.85;
     }
 }
