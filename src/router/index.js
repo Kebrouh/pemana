@@ -40,6 +40,11 @@ const router = createRouter({
       path: '/details/:emplacement/:id',
       name: 'details',
       component: () => import("@/views/PageDetails.vue"),
+    },
+
+    {
+      path: '/:pathMatch(.*)*',
+      redirect: '/',
     }
   ]
 })

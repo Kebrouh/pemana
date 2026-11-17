@@ -17,7 +17,7 @@
                 <img src="@/assets/img/logo_pemana_light_plein.svg" alt="">
             </div>
 
-            <a class="wheater" href="https://www.meteomedia.com/fr/chalet/ca/quebec/lac-superieur/actuelle" target="blank">
+            <a class="wheater" href="https://www.meteomedia.com/fr/chalet/ca/quebec/lac-superieur/actuelle" target="_blank" rel="noopener noreferrer">
                 <p>Météo</p>
                 <span class="material-symbols-outlined">cloud</span>
             </a>
@@ -27,6 +27,7 @@
             <div class="video">
                 <iframe 
                     class="vid"
+                    title="Vidéo de présentation des logements au Lac-Supérieur"
                     src="https://drive.google.com/file/d/160SYng5KIrqu0jjVuswfTNgzy-v_0qob/preview" 
                     muted="1"
                     autoplay="1">

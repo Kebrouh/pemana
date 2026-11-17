@@ -4,8 +4,6 @@
         objCat : null
     })
 
-    console.log(props.objCat)
-
 </script>
 
 <template>

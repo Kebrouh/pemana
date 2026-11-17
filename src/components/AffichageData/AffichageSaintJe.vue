@@ -2,8 +2,6 @@
     import VignetteLogement from '@/components/AffichageData/VignetteLogement.vue'
     
     import location from '@/assets/json/location.json'
-
-    console.log(location)
 </script>
 
 <template>
@@ -17,7 +15,7 @@
                 <img src="@/assets/img/logo_pemana_light_plein.svg" alt="">
             </div>
         
-            <a class="wheater" href="https://www.meteomedia.com/fr/ville/ca/quebec/saint-jerome/actuelle" target="blank">
+            <a class="wheater" href="https://www.meteomedia.com/fr/ville/ca/quebec/saint-jerome/actuelle" target="_blank" rel="noopener noreferrer">
                 <p>Météo</p>
                 <span class="material-symbols-outlined">cloud</span>
             </a>

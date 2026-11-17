@@ -9,7 +9,7 @@
         <div class="grid-a-venir">
             <div class="titre">
                 <div class="wrapImg">
-                    <img src="@/assets/img/a_venir.svg" alt="">
+                    <img src="@/assets/img/a_venir.svg" alt="Projets à venir">
                 </div>
             </div>
             <div class="lac-lilly">
@@ -18,14 +18,14 @@
                     <h2>Lac Lilly</h2>
                 </div>
                 <div class="wrapLogo">
-                    <img src="@/assets/img/logo_chertsey.svg" alt="logo_chertsey">
+                    <img src="@/assets/img/logo_chertsey.svg" alt="Logo Chertsey">
                 </div>
                 <div class="wrapImg">
-                    <img src="@/assets/img/lac_lilly.jpg" alt="lac_lilly">
+                    <img src="@/assets/img/lac_lilly.jpg" alt="Lac Lilly">
                 </div>
                 <div class="goop2">
                     <div class="wrapImg">
-                        <img src="@/assets/img/goop2.svg" alt="goop2">
+                        <img src="@/assets/img/goop2.svg" alt="">
                     </div>
                 </div>
             </div>
@@ -35,14 +35,14 @@
                     <h2>Lac Simon</h2>
                 </div>
                 <div class="wrapImg">
-                    <img src="@/assets/img/lac_simon.jpg" alt="lac_simon">
+                    <img src="@/assets/img/lac_simon.jpg" alt="Lac Simon">
                 </div>
                 <div class="wrapLogo">
-                    <img src="@/assets/img/logo_lac_simon.jpg" alt="logo_lac_simon">
+                    <img src="@/assets/img/logo_lac_simon.jpg" alt="Logo Lac Simon">
                 </div>
                 <div class="goop3">
                     <div class="wrapImg">
-                        <img src="@/assets/img/goop3.svg" alt="goop3">
+                        <img src="@/assets/img/goop3.svg" alt="">
                     </div>
                 </div>
             </div>
@@ -52,20 +52,20 @@
                     <h2>Saint-Adèle</h2>
                 </div>
                 <div class="wrapImg">
-                    <img src="/saintAdele_aVenir.jpg" alt="saint_adele">
+                    <img src="/saintAdele_aVenir.jpg" alt="Saint-Adèle">
                 </div>
                 <div class="wrapLogo">
-                    <img src="/logo_saint_adele.jpg" alt="logo_saint_adele">
+                    <img src="/logo_saint_adele.jpg" alt="Logo Saint-Adèle">
                 </div>
                 <div class="goop3">
                     <div class="wrapImg">
-                        <img src="@/assets/img/goop3.svg" alt="goop3">
+                        <img src="@/assets/img/goop3.svg" alt="">
                     </div>
                 </div>
             </div>
             <!-- <div class="goop">
                 <div class="wrapImg">
-                    <img src="@/assets/img/goop.svg" alt="goop">
+                    <img src="@/assets/img/goop.svg" alt="">
                 </div>
             </div> -->
             

@@ -2,6 +2,7 @@
 
     const props = defineProps({
         objImage : null,
+        alt : { type: String, default: "" },
     })
 
 </script>
@@ -10,7 +11,7 @@
     
     <div class="wrapImg">
 
-        <img :src="props.objImage" alt="img-carousel" unselectable="on">
+        <img :src="props.objImage" :alt="props.alt" unselectable="on">
 
     </div>
 

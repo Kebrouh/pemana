@@ -26,7 +26,7 @@
             <RouterLink class="item-list" to="/a-venir">Projet à venir</RouterLink>
 
             <div class="wrapImg">
-                <img src="@/assets/img/logo_pemana.svg" alt="logo_pemana">
+                <img src="@/assets/img/logo_pemana.svg" alt="Logo Pemana Inc.">
             </div>
         
         </Slide>

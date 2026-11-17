@@ -15,7 +15,7 @@
 
     const sendEmail = async () => {
         try {
-            const response = await emailjs.send("service_898nfxs", "template_olyrc4g", {
+            await emailjs.send("service_898nfxs", "template_olyrc4g", {
                 from_name: fullName.value,
                 email_id: email.value,
                 sujet: sujet.value,
@@ -23,7 +23,6 @@
                 prob2: prob2.value,
                 prob3: prob3.value,
             });
-            console.log("Email sent:", response);
             
             // Optionally, you can reset the form inputs
             fullName.value = "";

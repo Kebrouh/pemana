@@ -1,5 +1,5 @@
 <script setup>
-    import NavBar from '@/components/NavBar/NavBar.vue'
+    import NavBar from '@/components/navBar/navBar.vue'
 </script>
 
 <template>
@@ -9,7 +9,7 @@
         <NavBar />
         
         <RouterLink class="wrapLogo" to="/">
-            <img src="@/assets/img/logo_pemana_no_name.svg" alt="logo-pemana-sans-nom">
+            <img src="@/assets/img/logo_pemana_no_name.svg" alt="Pemana Inc., accueil">
         </RouterLink>
 
     </div>

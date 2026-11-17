@@ -41,6 +41,7 @@
                     <SwiperSlide v-for="image in logement.images" :key="image.id">
                         <AffichageDetailsImages
                             :objImage="image"
+                            :alt="`${logement.name}, ${logement.adresse}`"
                         />
                     </SwiperSlide>
                 </Swiper>

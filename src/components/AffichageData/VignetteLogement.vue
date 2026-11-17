@@ -11,7 +11,7 @@
     <RouterLink class="vignette-logement" :to="{name:'details', params: {emplacement: props.objLogement.emplacement, id: props.objLogement.id}}">
         
         <div class="wrapImg">
-            <img :src="props.objLogement.images[0]" alt="img-principale">
+            <img :src="props.objLogement.images[0]" :alt="`${props.objLogement.name}, ${props.objLogement.adresse}`">
         </div>
 
         <div class="wrapInfo">

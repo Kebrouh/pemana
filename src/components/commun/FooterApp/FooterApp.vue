@@ -11,13 +11,13 @@
             <div class="entreprise">
 
                 <RouterLink class="wrapLogo" to="/">
-                    <img src="@/assets/img/logo_pemana.svg" alt="logo-pemana">
+                    <img src="@/assets/img/logo_pemana.svg" alt="Logo Pemana Inc.">
                 </RouterLink>
                 
                 <div class="reseauxSociaux">
                     <!-- <a target="_blank" href="https://icons8.com/icon/01GWmP9aUoPj/twitterx">Twitter</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> -->
                     <div class="wrapLogo">
-                        <a target="_blank" href="https://www.facebook.com/people/Pemana-Inc/61561865790005/"><img src="@/assets/img/icons8-facebook.svg" alt="icons-facebook"></a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/people/Pemana-Inc/61561865790005/"><img src="@/assets/img/icons8-facebook.svg" alt="Facebook"></a>
                     </div>
                 </div>
             </div>

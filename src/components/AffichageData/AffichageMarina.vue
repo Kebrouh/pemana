@@ -16,13 +16,13 @@
             </div>
             <div class="galerie">   
                 <div class="wrapImg">
-                    <img src="@/assets/img/quai.jpg" alt="">
+                    <img src="@/assets/img/quai.jpg" alt="Quai de la marina">
                 </div>
                 <div class="wrapImg">
-                    <img src="/marina_condo_3d_01.jpg" alt="">
+                    <img src="/marina_condo_3d_01.jpg" alt="Rendu 3D du projet de condos près de la marina">
                 </div>
                 <div class="wrapLogo">
-                    <img src="@/assets/img/logo_marina.svg" alt="">
+                    <img src="@/assets/img/logo_marina.svg" alt="Logo Marina Zool">
                 </div>
                 <div class="wrapPrice">
                     <p>Quai saisonnier à partir de 35$ / pieds</p>
@@ -49,21 +49,21 @@
                 <p>(514) 269-3770</p>
             </div>
             <div class="wrapMap">
-                <a class="wheater" href="https://www.meteomedia.com/fr/ville/ca/quebec/carillon/actuelle" target="blank">
+                <a class="wheater" href="https://www.meteomedia.com/fr/ville/ca/quebec/carillon/actuelle" target="_blank" rel="noopener noreferrer">
                     <p>Météo</p>
                     <span class="material-symbols-outlined">cloud</span>
                 </a>
                 <div class="wrapImg">
-                    <img src="@/assets/img/map_zoom_v2.svg" alt="">
+                    <img src="@/assets/img/map_zoom_v2.svg" alt="Carte de la marina">
                 </div>
-                <a href="https://www.google.com/maps/place/692+Chem.+des+Outaouais,+Pointe-Fortune,+QC+J0P+1N0/@45.5615963,-74.3823692,17z/data=!3m1!4b1!4m6!3m5!1s0x4ccec4fbaea2a129:0xde46e275c0255d68!8m2!3d45.5615926!4d-74.3797889!16s%2Fg%2F11cph362pk?entry=ttu" target="_blank">Directions</a>
+                <a href="https://www.google.com/maps/place/692+Chem.+des+Outaouais,+Pointe-Fortune,+QC+J0P+1N0/@45.5615963,-74.3823692,17z/data=!3m1!4b1!4m6!3m5!1s0x4ccec4fbaea2a129:0xde46e275c0255d68!8m2!3d45.5615926!4d-74.3797889!16s%2Fg%2F11cph362pk?entry=ttu" target="_blank" rel="noopener noreferrer">Directions</a>
             </div>
         </div>
 
         <div class="marina-logement">
             <div class="wrapImg">
-                <a href="https://creagine.ca/360/pointe/" target="_blank">
-                    <img src="/marina_condo_3d_02.jpg" alt="">
+                <a href="https://creagine.ca/360/pointe/" target="_blank" rel="noopener noreferrer">
+                    <img src="/marina_condo_3d_02.jpg" alt="Rendu 3D du projet de condos, visite virtuelle">
                 </a>
             </div>
             <div class="wrapInfo">
@@ -71,7 +71,7 @@
                 <p>À venir : <br> <span>Condos à louer pour long terme</span> <br> 8 x <span>3 1/2</span> &amp; 8 x <span>4 1/2</span> <br><br> &amp; <span>Gîte pour location journalière</span></p>
             </div>
             <div class="visite">
-                <a href="https://creagine.ca/360/pointe/" target="_blank">Visite virtuelle 3D <span class="material-symbols-outlined">visibility</span> </a>
+                <a href="https://creagine.ca/360/pointe/" target="_blank" rel="noopener noreferrer">Visite virtuelle 3D <span class="material-symbols-outlined">visibility</span> </a>
             </div>
         </div>
 
@@ -88,22 +88,22 @@
 
         <div class="galerie-logement">
             <div class="wrapImg">
-                <img src="/pf_06.jpg" alt="">
+                <img src="/pf_06.jpg" alt="Projet de la marina, photo 6">
             </div>
             <div class="wrapImg">
-                <img src="/pf_04.jpg" alt="">
+                <img src="/pf_04.jpg" alt="Projet de la marina, photo 4">
             </div>
             <div class="wrapImg">
-                <img src="/pf_03.jpg" alt="">
+                <img src="/pf_03.jpg" alt="Projet de la marina, photo 3">
             </div>
             <div class="wrapImg">
-                <img src="/pf_01.jpg" alt="">
+                <img src="/pf_01.jpg" alt="Projet de la marina, photo 1">
             </div>
             <div class="wrapImg">
-                <img src="/pf_02.jpg" alt="">
+                <img src="/pf_02.jpg" alt="Projet de la marina, photo 2">
             </div>
             <div class="wrapImg">
-                <img src="/pf_05.jpg" alt="">
+                <img src="/pf_05.jpg" alt="Projet de la marina, photo 5">
             </div>
         </div>
 
