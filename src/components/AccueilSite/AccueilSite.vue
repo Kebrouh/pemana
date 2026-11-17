@@ -17,6 +17,7 @@
   //une phrase tirée des données pour chaque endroit, rien d'écrit à la main qui pourrait vieillir
   const nombre = (cle) => location[cle]?.length ?? 0
   const detail = {
+    '/marina': () => 'Quai saisonnier',
     '/lac-superieur': () => `${nombre('lacSup')} logements`,
     '/saint-jerome': () => `${nombre('saintJe')} logements`,
     '/a-venir': () => 'Lac Lilly, Lac Simon et Saint-Adèle',
