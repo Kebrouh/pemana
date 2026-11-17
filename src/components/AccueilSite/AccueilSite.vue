@@ -42,9 +42,9 @@
               Explorer nos locations
               <IconeSvg nom="arrow_downward" />
             </button>
-            <a class="bouton bouton--clair" :href="lienTel(contacts.principal.tel)">
+            <a class="bouton bouton--clair" :href="lienTel(contacts.ventes.tel)">
               <IconeSvg nom="call" />
-              {{ contacts.principal.tel }}
+              {{ contacts.ventes.tel }}
             </a>
           </div>
         </div>
