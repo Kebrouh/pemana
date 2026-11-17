@@ -1,50 +1,88 @@
 <script setup>
-  import VignetteCategorie from '@/components/AccueilSite/VignetteCategorie.vue';
+
+  import { ref } from 'vue'
 
   import categorieData from '@/assets/json/categories.json'
+  import location from '@/assets/json/location.json'
 
-  // for (const categorie of categorieData) {
-  //   categorie.img = imagePaths['.' + categorie.img];
-  //   console.log(categorie.img)
-  // } //img gets undefined
-  
+  const explorer = ref(null)
+
+  const versLocations = () => {
+    const reduit = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    explorer.value?.scrollIntoView({ behavior: reduit ? 'auto' : 'smooth', block: 'start' })
+  }
+
+  //une phrase tirée des données pour chaque endroit, rien d'écrit à la main qui pourrait vieillir
+  const nombre = (cle) => location[cle]?.length ?? 0
+  const detail = {
+    '/marina': () => 'Quai saisonnier à partir de 35 $ / pied',
+    '/lac-superieur': () => `${nombre('lacSup')} logements`,
+    '/saint-jerome': () => `${nombre('saintJe')} logements`,
+    '/a-venir': () => 'Lac Lilly, Lac Simon et Saint-Adèle',
+  }
 
 </script>
 
 
 <template>
     <div class="accueil-site">
-      <div class="accueil-top">
-        <div class="wrapImg">
-          <img src="/pemana_accueil_site.jpg" alt="Pemana Inc., location de logement et de quai">
-        </div>
-        <div class="wrapInfo">
-          <div class="info-container">
-            <h1>Pemana Inc.</h1>
-            <h3>Location de logement et de quai</h3>
-            <div class="wrapImg">
-              <img src="@/assets/img/logo_pemana_light.svg" alt="Logo Pemana Inc.">
-            </div>
+
+      <section class="hero">
+        <img class="hero__photo" src="/pemana_accueil_site.jpg" alt="Logements Pemana Inc.">
+        <div class="hero__voile"></div>
+
+        <div class="hero__contenu">
+          <h1>Pemana Inc.</h1>
+          <p>Location de logement et de quai</p>
+
+          <div class="hero__actions">
+            <button class="bouton bouton--vert" type="button" @click="versLocations">
+              Explorer nos locations
+              <span class="material-symbols-outlined">arrow_downward</span>
+            </button>
+            <RouterLink class="bouton bouton--clair" to="/service">
+              Appel de service
+              <span class="material-symbols-outlined">person</span>
+            </RouterLink>
           </div>
         </div>
-        <div class="wrapGoop1">
-          <img src="@/assets/img/goop4.svg" alt="">
-        </div>
-        <div class="wrapGoop2">
-          <img src="@/assets/img/goop4.svg" alt="">
-        </div>
-      </div>
-  
-      <div class="demandeService">
-        <RouterLink class="item-list" to="/service">Appel de service<span class="material-symbols-outlined">person</span></RouterLink>
-      </div>
+      </section>
 
-      <div class="listeVignetteCat" v-if="categorieData">
-        <h2>Explorer nos locations</h2>
-        <VignetteCategorie v-for="categorie in categorieData" :key="categorie.id" :objCat="categorie"/>
-      </div>
+      <section class="page-contenu explorer" ref="explorer">
+        <h2 class="titre-section">Explorer nos <span>locations</span></h2>
+
+        <div class="explorer__grille">
+          <RouterLink v-for="categorie in categorieData" :key="categorie.id"
+            class="carte-lieu" :class="{ 'carte-lieu--marina': categorie.link === '/marina' }" :to="categorie.link"
+          >
+            <div class="carte-lieu__photo">
+              <img :src="categorie.img" :alt="categorie.name" loading="lazy" decoding="async">
+            </div>
+            <div class="carte-lieu__corps">
+              <span class="material-symbols-outlined carte-lieu__icone" v-text="categorie.icon"></span>
+              <div>
+                <h3 v-text="categorie.name"></h3>
+                <p v-text="detail[categorie.link]?.()"></p>
+              </div>
+              <span class="material-symbols-outlined carte-lieu__fleche">arrow_forward</span>
+            </div>
+          </RouterLink>
+        </div>
+
+        <div class="assistance carte">
+          <div>
+            <h2 class="titre-section">Besoin d'assistance <span>durant votre séjour ?</span></h2>
+            <p>N'hésitez pas à nous contacter pour toute question, problème ou demande concernant votre logement. Notre équipe est là pour vous aider.</p>
+          </div>
+          <RouterLink class="bouton bouton--vert" to="/service">
+            Appel de service
+            <span class="material-symbols-outlined">person</span>
+          </RouterLink>
+        </div>
+      </section>
+
     </div>
-  </template>
+</template>
 
 <style scoped>
 

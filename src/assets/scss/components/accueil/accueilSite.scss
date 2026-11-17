@@ -2,306 +2,228 @@
 //  Auteur : Olivier Daigneault
 // = = = = = = = = = = = = = = = = = = = = = = = = =
 
+// Accueil : une grande photo avec le nom de Pemana, les endroits en cartes, puis l'appel de service.
+// Le voile sombre est un vrai élément, plus de ::before / ::after pour faire le décor.
+
 .accueil-site{
-    @include setFlex(column, start, center);
     width: 100%;
-    min-height: 100vh;
-    margin: 0 0 50px 0;
 
-    & .accueil-top{
+    // - - - - - haut de page - - - - -
+    & .hero{
         position: relative;
-        width: 100%;
-
-        &::after{
-            display: block;
-            position: absolute;
-            content: "";
-            height: 50px;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            z-index: 1;
-            background: rgb(255,255,255);
-            background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
-            opacity: 50%;
-        }
-
-        &>.wrapImg{
-            position: relative;
-            width: 100%;
-            max-height: 100vh;
-            overflow: hidden;
-
-            &::after{
-                display: block;
-                position: absolute;
-                padding: 0;
-                content: "";
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                z-index: 1;
-                background-color: rgba(0, 0, 0, 0.45);
-            }
-            
-            & img{
-                width: 100%;
-                object-fit: cover;
-            }
-        }
-        & .wrapInfo{
-            @include setFlex(column, center, center);
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin-top: auto;
-            margin-bottom: auto;
-            margin-left: auto;
-            margin-right: auto;
-
-            z-index: 10;
-
-            &>.info-container{
-                position: relative;
-                text-align: center;
-
-                &>h1{
-                    font-family: 'Permanent Marker', cursive;
-                    font-size: 3em;
-                    color: white;
-
-                    @include breakpoint-min(992){
-                        font-weight: 5em;
-                    }
-                }
-                &>h3{
-                    font-size: 1em;
-                    font-weight: 300;
-                    color: white;
-
-                    @include breakpoint-min(992){
-                        font-weight: 1.7em;
-                    }
-                }
-
-                &>.wrapImg{
-                    @include setFlex(column, center, center);
-                    position: absolute;
-                    top: 0;
-                    bottom: 0;
-                    left: 0;
-                    right: 0;
-                    margin-top: auto;
-                    margin-bottom: auto;
-                    margin-left: auto;
-                    margin-right: auto;
-                    z-index: -1;
-                    opacity: 35%;
-                }
-            }
-        }
-        &>.wrapGoop1{
-            position: absolute;
-            width: 100px;
-            top: -50px;
-            right: -50px;
-            z-index: 10;
-            opacity: 90%;
-
-            @include breakpoint-min(992){
-                width: 400px;
-                top: -160px;
-                right: -160px;
-            }
-        }
-        &>.wrapGoop2{
-            position: absolute;
-            width: 100px;
-            bottom: -50px;
-            left: -50px;
-            z-index: 10;
-            opacity: 90%;
-
-            @include breakpoint-min(992){
-                width: 400px;
-                bottom: -160px;
-                left: -160px;
-            }
-        }
-    }
-
-    & .demandeService{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        background-color: black;
-        padding: 1em 1em;
-        margin-top: 2em;
-        font-weight: bold;
-        color: white;
-
-        & span{
-            margin: 0;
-            padding-left: 0.5em;
-        }
-        
-        &:hover{
-            transition-duration: 0.3s;
-            background-color: var(--vert-lime);
-            border-radius: 1em;
-        }
-    }
-
-    & .listeVignetteCat{
         display: grid;
-        width: 80%;
-        margin: 50px 0;
-        grid-template-columns: 1fr;
-        grid-template-rows: 50px 200px 200px 200px 100px;
-        gap: 10px;
+        place-items: center;
+        min-height: clamp(420px, 72vh, 680px);
+        overflow: hidden;
+        background-color: var(--gris-fonce);
+        color: white;
+        text-align: center;
+    }
 
-        @include breakpoint-min(480){
-            grid-template-rows: 50px 250px 250px 250px 125px;
+    & .hero__photo{
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    & .hero__voile{
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.6));
+    }
+
+    & .hero__contenu{
+        position: relative;
+        display: grid;
+        gap: var(--espace-2);
+        justify-items: center;
+        padding: var(--espace-5) var(--espace-3);
+
+        & h1{
+            margin: 0;
+            font-family: 'Permanent Marker', cursive;
+            font-size: clamp(3rem, 9vw, 6rem);
+            font-weight: 400;
+            line-height: 1;
+            text-shadow: 0 3px 14px rgba(0, 0, 0, 0.5);
         }
-        @include breakpoint-min(576){
-            grid-template-rows: 50px 350px 350px 350px 175px;
+        & p{
+            margin: 0;
+            font-size: clamp(1.1rem, 2.4vw, 1.6rem);
+            font-weight: 300;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
         }
+    }
+
+    & .hero__actions{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--espace-1);
+        margin-top: var(--espace-2);
+    }
+
+    // - - - - - les endroits - - - - -
+    & .explorer{
+        padding-top: var(--espace-5);
+    }
+
+    & .explorer__grille{
+        display: grid;
+        gap: var(--espace-3);
+        grid-template-columns: minmax(0, 1fr);
+
+        @include breakpoint-min(600){
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        @include breakpoint-min(1400){
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+    }
+
+    & .carte-lieu{
+        display: flex;
+        flex-direction: column;
+        border-radius: var(--rayon);
+        background-color: white;
+        box-shadow: var(--ombre);
+        overflow: hidden;
+        color: var(--texte);
+        text-decoration: none;
+        transition: box-shadow 200ms, transform 200ms;
+
+        &:hover{
+            box-shadow: var(--ombre-forte);
+            color: var(--texte);
+            transform: translateY(-3px);
+        }
+        &:focus-visible{
+            outline: 3px solid var(--bleu-marina);
+            outline-offset: 3px;
+        }
+
+        // la Marina garde son bleu, même sur l'accueil
+        &--marina{
+            --vert-lime: #2f8cb8;
+            --vert-foret: #1d5a7a;
+        }
+    }
+
+    & .carte-lieu__photo{
+        aspect-ratio: 4 / 3;
+        border-top-left-radius: 50px;
+        overflow: hidden;
+        background-color: var(--fond-doux);
+
+        & img{
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 400ms;
+        }
+    }
+    & .carte-lieu:hover .carte-lieu__photo img{
+        transform: scale(1.05);
+    }
+
+    & .carte-lieu__corps{
+        display: flex;
+        align-items: center;
+        gap: var(--espace-2);
+        padding: var(--espace-3);
+
+        & > div{
+            flex: 1;
+            min-width: 0;
+        }
+        & h3{
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: 800;
+            line-height: 1.25;
+        }
+        & p{
+            margin: 0.15rem 0 0;
+            color: var(--texte-doux);
+            font-size: 0.9rem;
+        }
+    }
+
+    & .carte-lieu__icone{
+        display: grid;
+        place-items: center;
+        flex: 0 0 auto;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background-color: var(--vert-pale);
+        color: var(--vert-foret);
+    }
+    & .carte-lieu--marina .carte-lieu__icone{
+        background-color: rgba(47, 140, 184, 0.15);
+    }
+
+    & .carte-lieu__fleche{
+        flex: 0 0 auto;
+        color: var(--vert-foret);
+        transition: transform 200ms;
+    }
+    & .carte-lieu:hover .carte-lieu__fleche{
+        transform: translateX(4px);
+    }
+
+    // - - - - - appel de service - - - - -
+    & .assistance{
+        display: grid;
+        gap: var(--espace-3);
+        align-items: center;
+        justify-items: start;
+        margin-top: var(--espace-5);
+
         @include breakpoint-min(768){
-            margin: 50px 0;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 70px 150px 10px 120px;
-            gap: 0;
-        }
-        @include breakpoint-min(992){
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 70px 200px 10px 180px;
-        }
-        @include breakpoint-min(1200){
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 70px 1fr 10px 1fr;
-        }
-        
-        &>h2{
-            text-align: center;
-            font-weight: 200;
-            text-decoration: underline;
-            text-decoration-thickness: 1px;
-
-            @include breakpoint-min(768){
-                grid-column-start: 1;
-                grid-column-end: 4;
-            }
+            grid-template-columns: minmax(0, 1fr) auto;
+            padding: var(--espace-4);
         }
 
-        & .vignetteCategorie{
-            position: relative;
-            @include setFlex(column, start, center);
-            
-            &::after{
-                display: none;
-                position: absolute;
-                padding: 0;
-                content: "";
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                z-index: 1;
-                background-color: rgba(102, 153, 51, 0.9);
-            }
-            
-            &>.wrapImg{
-                @include setFlex(column, center, center);
-                width: 100%;
-                height: 100%;
-                overflow: hidden;
-                
-                
-
-                & img{
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    display: block;
-                }
-            }
-            
-            &>.wrapInfo{
-                @include setFlex(column, center, center);
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                z-index: 10;
-                color: white;
-                
-                @include breakpoint-min(768){
-                    display: none;
-                    top: 0;
-                    bottom: 0;
-                    left: 0;
-                    right: 0;
-                }
-
-                &>span{
-                    display: none;
-                    
-                    @include breakpoint-min(768){
-                        display: block;
-                    }
-                }
-                
-                &>p{
-                    text-align: center;
-                    font-size: 1em;
-                    font-weight: 300;
-                    padding: 10px;
-                    border-radius: 0 30px 0 0;
-                    background-color: rgba(102, 153, 51, 0.9);
-
-                    @include breakpoint-min(768){
-                        font-size: 2em;
-                        border-radius: 0;
-                        background-color: rgba(102, 153, 51, 0);
-                    }
-                }
-            }
-
-            &:hover{
-                // cursor: url(../images/cursor-oeil.svg) 52 52,auto!important;
-                cursor: url('@/assets/img/cursor_dots.svg') 15 15, auto;
-
-                &::after{
-                    display: block;
-                }
-                &>.wrapInfo{
-                    @include setFlex(column, center, center);
-                }
-            }
+        & .titre-section{
+            margin-bottom: var(--espace-1);
         }
-        &>.vignetteCategorie:last-of-type{
-            
-            &>.wheater{
-                display: none;
-            }
-
-            @include breakpoint-min(768){
-                grid-column-start: 1;
-                grid-column-end: 4;
-                grid-row-start: 4;
-                grid-row-end: 5;
-            }
+        & p{
+            max-width: 60ch;
+            margin: 0;
         }
-        // &>.vignetteCategorie:first-of-type{
-        //     &>.wrapImg{
+    }
+}
 
-        //         & img{
-        //             height: 110%;
-        //         }
-        //     }
-        // }
+// bouton clair, pour se détacher d'une photo
+.bouton--clair{
+    border-color: white;
+    background-color: white;
+    color: var(--gris-fonce);
+
+    &:hover{
+        border-color: var(--bleu-marina);
+        background-color: var(--bleu-marina);
+        color: var(--gris-fonce);
+    }
+}
+a.bouton--clair:link,
+a.bouton--clair:visited{
+    color: var(--gris-fonce);
+
+    &:hover{
+        color: var(--gris-fonce);
+    }
+}
+
+@media (prefers-reduced-motion: reduce){
+    .accueil-site .carte-lieu,
+    .accueil-site .carte-lieu__photo img,
+    .accueil-site .carte-lieu__fleche{
+        transition: none !important;
+        transform: none !important;
     }
 }
