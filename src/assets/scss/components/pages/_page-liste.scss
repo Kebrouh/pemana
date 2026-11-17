@@ -26,21 +26,34 @@
     }
 }
 
+// La carte et son bouton d'appel (frère de la carte, car un lien ne peut pas en contenir un autre) se soulèvent ensemble.
+.carte-logement-bloc{
+    position: relative;
+    display: flex;
+    transition: transform 200ms;
+
+    &:hover,
+    &:focus-within{
+        transform: translateY(-3px);
+    }
+}
+
 .carte-logement{
     display: flex;
+    flex: 1;
     flex-direction: column;
+    min-width: 0;
     border-radius: var(--rayon);
     background-color: white;
     box-shadow: var(--ombre);
     overflow: hidden;
     color: var(--texte);
     text-decoration: none;
-    transition: box-shadow 200ms, transform 200ms;
+    transition: box-shadow 200ms;
 
     &:hover{
         box-shadow: var(--ombre-forte);
         color: var(--texte);
-        transform: translateY(-3px);
     }
     &:focus-visible{
         outline: 3px solid var(--vert-foret);
@@ -155,5 +168,40 @@
     }
     &:hover &__lien .material-symbols-outlined{
         transform: translateX(4px);
+    }
+
+    // appeler directement depuis la liste : un rond de 48 px dans le coin de la photo, à portée du pouce
+    &__appel{
+        position: absolute;
+        top: 0.75rem;
+        right: 0.75rem;
+        z-index: 2;
+        display: grid;
+        place-items: center;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background-color: white;
+        box-shadow: var(--ombre);
+        color: var(--vert-foret);
+        text-decoration: none;
+        transition: background-color 150ms, color 150ms;
+
+        &:hover{
+            background-color: var(--vert-foret);
+            color: white;
+        }
+        &:focus-visible{
+            outline: 3px solid var(--vert-foret);
+            outline-offset: 3px;
+        }
+    }
+}
+a.carte-logement__appel:link,
+a.carte-logement__appel:visited{
+    color: var(--vert-foret);
+
+    &:hover{
+        color: white;
     }
 }

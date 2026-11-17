@@ -34,7 +34,7 @@
         <div class="page-contenu page-logement" v-if="logement">
 
             <RouterLink class="lien-retour" :to="lieu.route">
-                <span class="material-symbols-outlined">arrow_back</span>
+                <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
                 Tous les logements, {{ lieu.nom }}
             </RouterLink>
 
@@ -49,13 +49,13 @@
                     <span class="etiquette" v-text="lieu.nom"></span>
                     <h1 v-text="logement.name"></h1>
                     <p class="logement__adresse">
-                        <span class="material-symbols-outlined">location_on</span>
+                        <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
                         <span>{{ logement.adresse }}</span>
                     </p>
 
                     <ul class="specs">
-                        <li><span class="material-symbols-outlined">bed</span>{{ libelleChambres(logement.room) }}</li>
-                        <li><span class="material-symbols-outlined">bathtub</span>{{ libelleSdb(logement.bathroom) }}</li>
+                        <li><span class="material-symbols-outlined" aria-hidden="true">bed</span>{{ libelleChambres(logement.room) }}</li>
+                        <li><span class="material-symbols-outlined" aria-hidden="true">bathtub</span>{{ libelleSdb(logement.bathroom) }}</li>
                     </ul>
 
                     <p class="logement__prix" v-if="prixNumerique(logement.prix)">
@@ -67,13 +67,13 @@
                     </p>
 
                     <div class="logement__actions">
-                        <a class="bouton bouton--vert bouton--large" :href="lienTel(contacts.proprietaire.tel)">
-                            <span class="material-symbols-outlined">call</span>
-                            {{ contacts.proprietaire.tel }}
+                        <a class="bouton bouton--vert bouton--large" :href="lienTel(contacts.principal.tel)">
+                            <span class="material-symbols-outlined" aria-hidden="true">call</span>
+                            {{ contacts.principal.tel }}
                         </a>
                         <RouterLink class="bouton bouton--contour bouton--large" to="/service">
                             Appel de service
-                            <span class="material-symbols-outlined">person</span>
+                            <span class="material-symbols-outlined" aria-hidden="true">person</span>
                         </RouterLink>
                     </div>
                 </aside>
@@ -100,6 +100,14 @@
         <div class="page-contenu logement-introuvable" v-else>
             <h2 class="titre-section">Ce logement n'est plus disponible</h2>
             <RouterLink class="bouton bouton--vert" to="/">Retour à l'accueil</RouterLink>
+        </div>
+
+        <!-- sur téléphone, l'appel reste à portée du pouce pendant tout le défilement -->
+        <div class="barre-appel" v-if="logement">
+            <a class="bouton bouton--vert bouton--large" :href="lienTel(contacts.principal.tel)">
+                <span class="material-symbols-outlined" aria-hidden="true">call</span>
+                Appeler le {{ contacts.principal.tel }}
+            </a>
         </div>
 
         <FooterApp />

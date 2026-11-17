@@ -4,7 +4,7 @@
 
 <template>
     
-    <div class="header">
+    <header class="header">
 
         <NavBar />
         
@@ -12,7 +12,7 @@
             <img src="@/assets/img/logo_pemana_no_name.svg" alt="Pemana Inc., accueil">
         </RouterLink>
 
-    </div>
+    </header>
 
 </template>
 

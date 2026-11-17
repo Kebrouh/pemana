@@ -40,11 +40,11 @@
             <p>Contactez-nous, nous serons heureux de vous en parler.</p>
             <div class="a-venir-contact__boutons">
                 <a class="bouton bouton--vert" :href="lienTel(contacts.ventes.tel)">
-                    <span class="material-symbols-outlined">call</span>
+                    <span class="material-symbols-outlined" aria-hidden="true">call</span>
                     {{ contacts.ventes.tel }}
                 </a>
                 <a class="bouton bouton--contour" :href="`mailto:${contacts.courriel}`">
-                    <span class="material-symbols-outlined">mail</span>
+                    <span class="material-symbols-outlined" aria-hidden="true">mail</span>
                     {{ contacts.courriel }}
                 </a>
             </div>

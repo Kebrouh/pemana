@@ -35,15 +35,34 @@
     })
 
     // - - - - - plein écran - - - - -
+    //le reste du site est rendu inerte pendant le plein écran : le clavier et le lecteur d'écran n'en sortent pas
+    const appInerte = (inerte) => {
+        const app = document.getElementById('app')
+        if (!app) return
+        inerte ? app.setAttribute('inert', '') : app.removeAttribute('inert')
+    }
+
+    //Tab tourne dans la boîte de dialogue au lieu de s'échapper
+    const piegerTab = (e) => {
+        const focalisables = [...document.querySelectorAll('.lightbox button')]
+        if (!focalisables.length) return
+        const premier = focalisables[0]
+        const dernier = focalisables[focalisables.length - 1]
+        if (e.shiftKey && document.activeElement === premier) { e.preventDefault(); dernier.focus() }
+        else if (!e.shiftKey && document.activeElement === dernier) { e.preventDefault(); premier.focus() }
+    }
+
     const surClavier = (e) => {
         if (e.key === 'Escape') fermer()
         else if (e.key === 'ArrowLeft') precedente()
         else if (e.key === 'ArrowRight') suivante()
+        else if (e.key === 'Tab') piegerTab(e)
     }
 
     const ouvrir = async () => {
         ouvert.value = true
         document.body.style.overflow = 'hidden'
+        appInerte(true)
         document.addEventListener('keydown', surClavier)
         await nextTick()
         boutonFermer.value?.focus()
@@ -53,12 +72,14 @@
         if (!ouvert.value) return
         ouvert.value = false
         document.body.style.overflow = ''
+        appInerte(false)
         document.removeEventListener('keydown', surClavier)
         boutonAgrandir.value?.focus()
     }
 
     onBeforeUnmount(() => {
         document.body.style.overflow = ''
+        appInerte(false)
         document.removeEventListener('keydown', surClavier)
     })
 
@@ -98,10 +119,10 @@
             </button>
 
             <button class="galerie__nav galerie__nav--prec" type="button" aria-label="Photo précédente" v-if="plusieurs" @click.stop="precedente">
-                <span class="material-symbols-outlined">chevron_left</span>
+                <span class="material-symbols-outlined" aria-hidden="true">chevron_left</span>
             </button>
             <button class="galerie__nav galerie__nav--suiv" type="button" aria-label="Photo suivante" v-if="plusieurs" @click.stop="suivante">
-                <span class="material-symbols-outlined">chevron_right</span>
+                <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
             </button>
 
             <p class="galerie__compteur" v-if="plusieurs">{{ index + 1 }} / {{ total }}</p>
@@ -122,17 +143,17 @@
             <div class="lightbox" v-if="ouvert" role="dialog" aria-modal="true" aria-label="Galerie photo en plein écran" @click.self="fermer">
 
                 <button class="lightbox__bouton lightbox__fermer" ref="boutonFermer" type="button" aria-label="Fermer" @click="fermer">
-                    <span class="material-symbols-outlined">close</span>
+                    <span class="material-symbols-outlined" aria-hidden="true">close</span>
                 </button>
 
                 <button class="lightbox__bouton lightbox__nav lightbox__nav--prec" type="button" aria-label="Photo précédente" v-if="plusieurs" @click="precedente">
-                    <span class="material-symbols-outlined">chevron_left</span>
+                    <span class="material-symbols-outlined" aria-hidden="true">chevron_left</span>
                 </button>
 
                 <img class="lightbox__image" :src="urlComplete(images[index])" :alt="texteAlt(index)" @click.self="fermer">
 
                 <button class="lightbox__bouton lightbox__nav lightbox__nav--suiv" type="button" aria-label="Photo suivante" v-if="plusieurs" @click="suivante">
-                    <span class="material-symbols-outlined">chevron_right</span>
+                    <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
                 </button>
 
                 <p class="lightbox__compteur" v-if="plusieurs">{{ index + 1 }} / {{ total }}</p>

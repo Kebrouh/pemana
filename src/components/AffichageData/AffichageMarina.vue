@@ -14,7 +14,7 @@
         <EntetePage surtitre="Zool bar gîte riverain" titre="Marina">
             <template #actions>
                 <a class="bouton" href="https://www.meteomedia.com/fr/ville/ca/quebec/carillon/actuelle" target="_blank" rel="noopener noreferrer">
-                    Météo <span class="material-symbols-outlined">cloud</span>
+                    Météo <span class="material-symbols-outlined" aria-hidden="true">cloud</span>
                 </a>
             </template>
         </EntetePage>
@@ -59,7 +59,7 @@
                     <div class="marina-carte__boutons">
                         <a class="bouton bouton--vert" target="_blank" rel="noopener noreferrer"
                             href="https://www.google.com/maps/place/692+Chem.+des+Outaouais,+Pointe-Fortune,+QC+J0P+1N0/@45.5615963,-74.3823692,17z/data=!3m1!4b1!4m6!3m5!1s0x4ccec4fbaea2a129:0xde46e275c0255d68!8m2!3d45.5615926!4d-74.3797889!16s%2Fg%2F11cph362pk?entry=ttu">
-                            <span class="material-symbols-outlined">directions</span> Directions
+                            <span class="material-symbols-outlined" aria-hidden="true">directions</span> Directions
                         </a>
                     </div>
                 </div>
@@ -89,7 +89,7 @@
                 </ul>
 
                 <a class="bouton" href="https://creagine.ca/360/pointe/" target="_blank" rel="noopener noreferrer">
-                    Visite virtuelle 3D <span class="material-symbols-outlined">visibility</span>
+                    Visite virtuelle 3D <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
                 </a>
             </div>
 

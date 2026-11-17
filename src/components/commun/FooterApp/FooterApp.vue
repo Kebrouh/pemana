@@ -20,7 +20,7 @@
             </div>
 
             <div class="pied__colonne">
-                <h3>Contact</h3>
+                <h2>Contact</h2>
                 <ul>
                     <li class="pied__ligne">
                         <span class="pied__icone material-symbols-outlined" aria-hidden="true">mail</span>
@@ -48,7 +48,7 @@
             </div>
 
             <nav class="pied__colonne" aria-label="Navigation du pied de page">
-                <h3>Navigation</h3>
+                <h2>Navigation</h2>
                 <ul>
                     <li><RouterLink to="/">Accueil</RouterLink></li>
                     <li><RouterLink to="/service">Appel de service</RouterLink></li>

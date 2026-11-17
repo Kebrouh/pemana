@@ -102,6 +102,31 @@
     align-content: center;
 }
 
+// Barre d'appel : collée en bas sur téléphone et tablette, sous l'en-tête et le plein écran
+.barre-appel{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 900;
+    padding: 0.75rem clamp(1rem, 4vw, 3rem) calc(0.75rem + env(safe-area-inset-bottom, 0px));
+    background-color: white;
+    box-shadow: 0 -4px 14px rgba(0, 0, 0, 0.12);
+
+    @include breakpoint-min(992){
+        display: none;
+    }
+}
+
+// la barre ne doit pas cacher la fin du pied de page : le vert se prolonge dessous
+.details:has(.barre-appel) .pied{
+    padding-bottom: calc(var(--espace-3) + 4.5rem);
+
+    @include breakpoint-min(992){
+        padding-bottom: var(--espace-3);
+    }
+}
+
 // - - - - - galerie - - - - -
 .galerie{
     display: grid;

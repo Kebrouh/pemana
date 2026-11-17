@@ -58,7 +58,7 @@
 
         <div class="menu-fond" @click="fermer"></div>
 
-        <nav id="menu-principal" class="menu" ref="menu" aria-label="Navigation principale">
+        <nav id="menu-principal" class="menu" ref="menu" aria-label="Navigation principale" :inert="ouvert ? null : ''">
 
             <div class="menu-entete">
                 <img src="@/assets/img/logo_pemana.svg" alt="Logo Pemana Inc.">

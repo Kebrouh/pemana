@@ -4,6 +4,7 @@
 
   import categorieData from '@/assets/json/categories.json'
   import location from '@/assets/json/location.json'
+  import { contacts, lienTel } from '@/data/contact.js'
   import { defilerVers } from '@/lib/defilement.js'
 
   const explorer = ref(null)
@@ -37,12 +38,12 @@
           <div class="hero__actions">
             <button class="bouton bouton--vert" type="button" @click="versLocations">
               Explorer nos locations
-              <span class="material-symbols-outlined">arrow_downward</span>
+              <span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span>
             </button>
-            <RouterLink class="bouton bouton--clair" to="/service">
-              Appel de service
-              <span class="material-symbols-outlined">person</span>
-            </RouterLink>
+            <a class="bouton bouton--clair" :href="lienTel(contacts.principal.tel)">
+              <span class="material-symbols-outlined" aria-hidden="true">call</span>
+              {{ contacts.principal.tel }}
+            </a>
           </div>
         </div>
       </section>
@@ -58,12 +59,12 @@
               <img :src="categorie.img" :alt="categorie.name" loading="lazy" decoding="async">
             </div>
             <div class="carte-lieu__corps">
-              <span class="material-symbols-outlined carte-lieu__icone" v-text="categorie.icon"></span>
+              <span class="material-symbols-outlined carte-lieu__icone" v-text="categorie.icon" aria-hidden="true"></span>
               <div>
                 <h3 v-text="categorie.name"></h3>
                 <p v-text="detail[categorie.link]?.()"></p>
               </div>
-              <span class="material-symbols-outlined carte-lieu__fleche">arrow_forward</span>
+              <span class="material-symbols-outlined carte-lieu__fleche" aria-hidden="true">arrow_forward</span>
             </div>
           </RouterLink>
         </div>
@@ -75,7 +76,7 @@
           </div>
           <RouterLink class="bouton bouton--vert" to="/service">
             Appel de service
-            <span class="material-symbols-outlined">person</span>
+            <span class="material-symbols-outlined" aria-hidden="true">person</span>
           </RouterLink>
         </div>
       </section>

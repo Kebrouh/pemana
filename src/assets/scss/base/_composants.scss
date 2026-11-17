@@ -219,8 +219,47 @@ a.lien-retour:visited{
     }
 }
 
+// lien d'évitement : invisible, il apparaît au premier Tab du clavier
+.lien-evitement{
+    position: absolute;
+    top: 0.75rem;
+    left: -9999px;
+    z-index: 20000;
+    padding: 0.75rem 1.25rem;
+    border: 2px solid var(--gris-fonce);
+    border-radius: var(--rayon-petit);
+    background-color: white;
+    color: var(--gris-fonce);
+    font-weight: 700;
+    text-decoration: none;
+
+    &:focus{
+        left: 0.75rem;
+        outline: 3px solid var(--vert-foret);
+        outline-offset: 2px;
+    }
+}
+a.lien-evitement:link,
+a.lien-evitement:visited{
+    color: var(--gris-fonce);
+}
+
+// lu par les lecteurs d'écran, absent de l'écran
+.visuellement-cache{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+}
+
 @media (prefers-reduced-motion: reduce){
     .bouton,
+    .carte-logement-bloc,
     .carte-logement,
     .carte-logement__photo img{
         transition: none !important;

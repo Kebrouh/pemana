@@ -21,10 +21,10 @@
         <EntetePage :surtitre="surtitre" :titre="titre">
             <template #actions>
                 <a class="bouton" :href="meteoUrl" target="_blank" rel="noopener noreferrer">
-                    Météo <span class="material-symbols-outlined">cloud</span>
+                    Météo <span class="material-symbols-outlined" aria-hidden="true">cloud</span>
                 </a>
                 <RouterLink class="bouton" to="/service">
-                    Appel de service <span class="material-symbols-outlined">person</span>
+                    Appel de service <span class="material-symbols-outlined" aria-hidden="true">person</span>
                 </RouterLink>
             </template>
         </EntetePage>

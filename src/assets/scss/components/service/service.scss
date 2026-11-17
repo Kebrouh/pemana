@@ -10,6 +10,12 @@
         max-width: 720px;
     }
 
+    & .service-requis{
+        margin: 0;
+        color: var(--texte-doux);
+        font-size: 0.95rem;
+    }
+
     & .service-intro{
         margin: 0 0 var(--espace-3);
         color: var(--texte-doux);
@@ -37,7 +43,7 @@
         & textarea{
             width: 100%;
             padding: 0.75rem 1rem;
-            border: 2px solid #d9d9d4;
+            border: 2px solid #8a8a85;      //3,5:1 sur le blanc : la limite du champ doit se voir (WCAG 1.4.11)
             border-radius: var(--rayon-petit);
             background-color: white;
             color: var(--texte);
@@ -46,8 +52,8 @@
 
             &:focus-visible{
                 border-color: var(--vert-foret);
-                outline: 3px solid var(--vert-pale);
-                outline-offset: 0;
+                outline: 3px solid var(--vert-foret);
+                outline-offset: 2px;
             }
         }
         & textarea{
